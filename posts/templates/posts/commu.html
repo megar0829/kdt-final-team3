@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'css/commu.css' %}" />
+{% endblock style %}
+
+{% block content %}
+<div class="commu-container">
+  <!--사이드바-->
+  <div>
+    <div class="commu-side">
+      <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="commu-side">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          언어
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item side">Python</li>
+          <li class="list-group-item side">JAVA</li>
+          <li class="list-group-item side">C언어</li>
+        </ul>
+      </div>
+    </div>
+    <div class="commu-side">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          후기
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item side">학원이름</li>
+          <li class="list-group-item side">학원이름</li>
+          <li class="list-group-item side">학원이름</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--메인-->
+  <main class="commu-main">
+    <div>
+      <div class="card">
+        <div class="card-header commu-card-header">
+          <div>
+            베스트글
+          </div>
+          <div>
+            <a href="#" class="commu-main-all">전체보기</a>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush pt-2">
+          <li class="list-group-item pt-2">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item pt-2">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <!--추천글-->
+  <div class="commu-recommend">
+    3
+  </div>
+</div>
+{% endblock content %}

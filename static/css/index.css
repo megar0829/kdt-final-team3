@@ -1,0 +1,47 @@
+.index-container {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-top: 50px;
+}
+
+.index-header {
+  padding: 20px;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+main .index-articles {
+  display: flex;
+}
+
+main .index-article {
+  width: 420px;
+  height: 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* footer */
+footer>span {
+  padding: 20px;
+}
+
+footer>div {
+  display: flex;
+}
+
+footer>div>div {
+  width: 25%;
+  background-color: #7e7d7d;
+  padding: 20px;
+  margin: 20px;
+}

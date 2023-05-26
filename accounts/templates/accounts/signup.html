@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+{% endblock style %}
+
+{% block content %}
+<main class="signup-container">
+  <div class="signup-title">
+    회원가입
+  </div>
+  <input class="form-control signup-input" type="text" placeholder="아이디">
+  <input class="form-control signup-input" type="text" placeholder="닉네임">
+  <input class="form-control signup-input" type="text" placeholder="비밀번호">
+  <input class="form-control signup-input" type="text" placeholder="비밀번호확인">
+  <div class="signup-api">
+    <div class="btn btn-outline-secondary m-3">API</div>
+    <div class="btn btn-outline-secondary m-3">API</div>
+    <div class="btn btn-outline-secondary m-3">API</div>
+  </div>
+  <button class="btn btn-outline-secondary signup-button">가입</button>
+</main>
+{% endblock content %}
