@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
-from .forms import PostForm, PostImageForm, CommunityForm, CommentForm
+from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm
 
 # Create your views here.
 
@@ -34,7 +34,7 @@ def bootscamp_create(request):
             image = imageForm.cleaned_data['post_image']
             Post_image.objects.create(post=bootcamp, post_image=image)
 
-            return redirect('boots_detail', bootcamp_id=bootcamp.id)
+            return redirect('posts:boots_detail', bootcamp.id)
     else:
         form = PostForm()
         imageForm = PostImageForm()
@@ -72,23 +72,28 @@ def bootscamp_like(request, boots_pk):
 
 def community_info(requset):
     commu = Post_community.objects.all()
+    commu_create = CommunityForm(requset.POST)
+    commu_image = CommuImageForm(requset.POST, requset.FILES)
     context = {
-        'commu':commu
+        'commu':commu,
+        'commu_create':commu_create,
+        'commu_image':commu_image,
+
     }
     return render(requset, 'posts/commu_info.html', context)
 
 def community_create(request):
     if request.method == "POST":
         form = CommunityForm(request.POST)
-        imageform = community_image(request.POST, request.FILES)
+        imageform = CommuImageForm(request.POST, request.FILES)
         if form.is_valid() and imageform.is_valid():
             title = form.cleaned_data['title']
             content = form.cleaned_data['content']
             commu = Post_community(title=title, content=content)
             commu.save()
             image = imageform.cleaned_data['community_image']
-            community_image.objects.create(post=commu, community_image=image)
-        return redirect ('posts:commu_detail', commu_id = commu.id)
+            community_image.objects.create(community_post=commu, community_image=image)
+        return redirect ('posts:commu_detail',commu.id)
     else:
         form = CommunityForm()
         imageform = community_image()
@@ -100,7 +105,7 @@ def community_create(request):
     return render(request, 'commun_info.html', context)
 
 def community_detail(request, community_pk):
-    commu = Post_community.get(pk=community_pk)
+    commu = Post_community.objects.get(pk=community_pk)
     context = {
         'commu':commu
     }
@@ -139,7 +144,7 @@ def community_update(request, community_pk):
                 commu.community_image.delete()
                 image = imageform.cleaned_data['community_image']
                 community_image.objects.create(post=commu, community_image=image)
-                return redirect('posts:commu_detail', commu_id=commu.id)
+                return redirect('posts:commu_detail',commu.id)
         else:
             form = CommunityForm(instance=commu)
             imageform = community_image()
