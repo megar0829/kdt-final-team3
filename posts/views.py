@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment
+from .forms import PostForm, PostImageForm
 
 # Create your views here.
 
@@ -19,12 +20,30 @@ def bootscampinfo(request):
     }
     return render(request, 'posts/bootscampinfo.html', context)
 
-def create(request):
-    title = request.POST.get('title')
-    content = request.POST.get('content')
-    post = Post_bootscamp(title=title, content=content)
-    post.save()
-    return redirect('posts:bootscampinfo')
+def post_create(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        imageForm = PostImageForm(request.POST, request.FILES)
+        if form.is_valid() and imageForm.is_valid():
+            title = form.cleaned_data['title']
+            content = form.cleaned_data['content']
+            start_data = form.cleaned_data['start_data']
+            duration = form.cleaned_data['duration']
+            bootcamp = Post_bootscamp(title=title, content=content, start_data=start_data, duration=duration)
+            bootcamp.save()
+            image = imageForm.cleaned_data['post_image']
+            Post_image.objects.create(post=bootcamp, post_image=image)
+
+            return redirect('bootscamp_detail', bootcamp_id=bootcamp.id)
+    else:
+        form = PostForm()
+        imageForm = PostImageForm()
+    context ={
+        'form':form,
+        'imageForm':imageForm
+    }
+    
+    return render(request, 'posts/post_create.html', context)
 
 def post_detail(request, post_pk):
     post = Post_bootscamp.objects.get(pk=post_pk)
