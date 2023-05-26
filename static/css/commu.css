@@ -1,0 +1,65 @@
+.commu-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.commu-side {
+  flex-basis: 20%;
+  margin: 30px;
+}
+
+.commu-main {
+  flex-basis: 60%;
+  margin: 30px;
+}
+
+.commu-recommend {
+  flex-basis: 20%;
+  background-color: lightgreen;
+}
+
+.side {
+  border: none;
+}
+
+.commu-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.commu-main-all {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+.commu-main-post {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.commu-main-title {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  padding-top: 20px;
+}
+
+.commu-cate {
+  order: 1;
+}
+
+.commu-post-info {
+  display: flex;
+  align-items: center;
+  order: 2;
+
+}
+
+.commu-post-info-item {
+  margin-left: 10px;
+}
