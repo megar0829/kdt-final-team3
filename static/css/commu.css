@@ -15,7 +15,7 @@
 
 .commu-recommend {
   flex-basis: 20%;
-  background-color: lightgreen;
+  margin: 30px;
 }
 
 .side {
@@ -46,7 +46,6 @@
   text-decoration: none;
   /* 밑줄 제거 */
   color: #000;
-  padding-top: 20px;
 }
 
 .commu-cate {
@@ -62,4 +61,31 @@
 
 .commu-post-info-item {
   margin-left: 10px;
+}
+
+.commu-recommend-all {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+
+.commu-recommend-title {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+.commu-recommend-post {
+  padding-top: 10px;
+}
+
+.commu-recommend-info {
+  display: flex;
+}
+
+.commu-recommend-info-item {
+  margin-right: 10px;
 }
