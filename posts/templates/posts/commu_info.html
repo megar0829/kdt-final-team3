@@ -1,12 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Commu_info Test</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'css/commu.css' %}" />
+{% endblock style %}
+
+{% block content %}
+<div class="commu-container">
+  <!--사이드바-->
+  <div>
+    <div class="commu-side">
+      <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+    </div>
+    <div class="commu-side">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          언어
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item side">Python</li>
+          <li class="list-group-item side">JAVA</li>
+          <li class="list-group-item side">C언어</li>
+        </ul>
+      </div>
+    </div>
+    <div class="commu-side">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          후기
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item side">학원이름</li>
+          <li class="list-group-item side">학원이름</li>
+          <li class="list-group-item side">학원이름</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--메인-->
+  <main class="commu-main">
+    <div>
+        <button href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <p class='mt-3'>Test글작성</p>
+          </button>
+      <div class="card">
+        <div class="card-header commu-card-header">
+          <div>
+            베스트글
+          </div>
+          <div>
+            <a href="#" class="commu-main-all">전체보기</a>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush pt-2">
+          <li class="list-group-item pt-2">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item pt-2">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <a href="#" class="commu-main-title">글 제목</a>
+              
+            <div class="commu-main-post">
+              <div class="commu-cate">카테고리</div>
+              <div class="commu-post-info">
+                <div class="commu-post-info-item">조회수</div>
+                <div class="commu-post-info-item">좋아요</div>
+                <div class="commu-post-info-item">댓글</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <!--추천글-->
+  <div class="commu-recommend">
+    3
+  </div>
+</div>
+
+   <!-- Modal -->
+   <div class="modal fade" style="font-family: 'S-CoreDream-3Light';" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+              <h5 class="modal-title">리뷰 남기기</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ commu_create.as_p }}
+                    {{ commu_image }}
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  <input type="submit" value="후기 작성" class="btn btn-success modal_form">
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+{% endblock content %}

@@ -25,9 +25,8 @@
           <a class="btn btn-outline-secondary" href="{% url 'posts:index' %}">로고</a>
         </span>
         <ul>
-          <a href="#" class="base-nav m-3">정보공유</a>
-          <a href="#" class="base-nav m-3">커뮤니티</a>
-          <a href="#" class="base-nav m-3">후기</a>
+          <a href="{% url 'posts:boots_info' %}" class="base-nav m-3">부트캠프</a>
+          <a href="{% url 'posts:commu_info' %}" class="base-nav m-3">커뮤니티</a>
         </ul>
       </div>
       <ul>

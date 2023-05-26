@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post_bootscamp, Post_community, Comment, Post_image
+from .models import Post_bootscamp, Post_community, Comment, Post_image, community_image
 
 class PostForm(forms.Form):
     title = forms.CharField(label='부트캠프 제목', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -48,3 +48,9 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content',)
+
+class CommuImageForm(forms.ModelForm):
+    class Meta:
+        model = community_image
+        fields = ('community_image',)
+        widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
