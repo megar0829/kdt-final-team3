@@ -14,15 +14,33 @@ class PostImageForm(forms.ModelForm):
         widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
 
 POST_ADDRESS_CHOICES = (
-    ("Django", "Django"), ("Java", "Java"), ("Spring", "Spring"),
-    ("DB", "DB"), ("JPA", "JPA"), ("백앤드", "백앤드"), ("프론트앤드", "프론트앤드")
+     ("Django", "Django"), ("Java", "Java"), ("Spring", "Spring"),
+    ("DB", "DB"), ("JPA", "JPA"), ("백엔드", "백엔드"), ("프론트엔드", "프론트엔드")
 )
 
 class CommunityForm(forms.ModelForm):
-    category = forms.CharField(
-        label="커뮤니티를 선택하세요",
+    title = forms.CharField(
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                'placeholder': '제목을 입력하세요'
+            }
+        )
+    )
+
+    content = forms.CharField(
+        label="",
+        widget= forms.Textarea(
+            attrs={
+                'placeholder': '내용을 입력하세요'
+            }
+        )
+    )
+
+    category = forms.ChoiceField(
+        label="",
+        choices=POST_ADDRESS_CHOICES,
         widget= forms.Select(
-            choices= POST_ADDRESS_CHOICES,
             attrs={
                 'class': 'form-select',
             }
@@ -30,11 +48,7 @@ class CommunityForm(forms.ModelForm):
     )
     class Meta:
         model = Post_community
-        fields = (
-            'category',
-            'title',
-            'content',
-        )
+        fields = ('category', 'title', 'content')
 
 class CommentForm(forms.ModelForm):
     content = forms.CharField(

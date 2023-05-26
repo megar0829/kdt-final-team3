@@ -5,8 +5,8 @@ from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuIma
 # Create your views here.
 
 def index(request):
-    boots = Post_bootscamp.objects.all()
-    commu = Post_community.objects.all()
+    boots = Post_bootscamp.objects.all().order_by('-pk')
+    commu = Post_community.objects.all().order_by('-pk')
     context = {
         'boots':boots,
         'commu':commu,
@@ -159,3 +159,10 @@ def community_update(request, community_pk):
 
 def community_like(request, community_pk):
     pass
+
+def community_filter(request, category):
+    commu = Post_community.objects.filter(category=category).order_by('-pk')
+    context = {
+        'commu':commu,
+    }
+    return render(request, 'posts/commu_info.html', context)
