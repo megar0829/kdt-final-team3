@@ -1,0 +1,55 @@
+.boots-info-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.boots-info-side {
+  flex-basis: 20%;
+  margin: 30px;
+}
+
+.boots-info-main {
+  flex-basis: 60%;
+  margin: 30px;
+}
+
+
+.side {
+  border: none;
+}
+
+.boots-info-card {
+  margin-top: 30px;
+}
+
+.boots-info-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.errorlist {
+  display: none;
+}
+
+.hide-clear-checkbox .clear-checkbox-label {
+  display: none;
+}
+
+.boots-info-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boots-info-recommend {
+  width: 50%;
+}
+
+.boots-info-deadline {
+  width: 50%;
+}
+
+.boots-info-main-post {
+  width: 100%;
+}

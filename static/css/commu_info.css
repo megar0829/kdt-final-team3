@@ -22,6 +22,19 @@
   border: none;
 }
 
+.commu-modal-btn {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.commu-modal-btn p {
+  margin: 0;
+}
+
+.commu-card {
+  margin-top: 30px;
+}
+
 .commu-card-header {
   display: flex;
   justify-content: space-between;
@@ -88,4 +101,12 @@
 
 .commu-recommend-info-item {
   margin-right: 10px;
+}
+
+.errorlist {
+  display: none;
+}
+
+.hide-clear-checkbox .clear-checkbox-label {
+  display: none;
 }
