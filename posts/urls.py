@@ -18,4 +18,5 @@ urlpatterns = [
     path('community/<int:community_pk>/like/', views.community_like, name='commu_like'),
     path('community/<int:community_pk>/comment/', views.comment_create, name='comment'),
     path('community/<int:community_pk>/comment/<int:comment_pk>/delete', views.comment_delete, name='comment_delete'),
+    path('community/filter/<str:category>/', views.community_filter, name='commu_filter')
 ]
