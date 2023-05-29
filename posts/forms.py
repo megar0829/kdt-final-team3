@@ -28,6 +28,30 @@ class CommunityForm(forms.ModelForm):
             }
         )
     )
+    title = forms.CharField(
+        label="제목",
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+            }
+        )
+    )
+    content = forms.CharField(
+        label="내용",
+        widget=forms.Textarea(
+            attrs={
+                'class': 'form-control',
+            }
+        )
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].label_classes = ['category-label']
+        self.fields['title'].label_classes = ['title-label']
+        self.fields['content'].label_classes = ['content-label']
+        self.label_suffix = ''
+    
     class Meta:
         model = Post_community
         fields = (
@@ -45,12 +69,22 @@ class CommentForm(forms.ModelForm):
             }
         )
     )
+    
     class Meta:
         model = Comment
         fields = ('content',)
 
 class CommuImageForm(forms.ModelForm):
+    community_image = forms.ImageField(
+        widget=forms.ClearableFileInput(attrs={'class': 'form-control-file hide-clear-checkbox'}),
+        label='',
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['community_image'].label = False
+
     class Meta:
         model = community_image
         fields = ('community_image',)
-        widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
+        # widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}

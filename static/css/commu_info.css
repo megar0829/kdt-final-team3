@@ -28,6 +28,19 @@
   border: none;
 }
 
+.commu-modal-btn {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.commu-modal-btn p {
+  margin: 0;
+}
+
+.commu-card {
+  margin-top: 30px;
+}
+
 .commu-card-header {
   display: flex;
   justify-content: space-between;
@@ -196,4 +209,12 @@ body {
   border-radius: 6px;
   background: rgb(247,247,240);
   color: rgb(41,179,30);
+}
+
+.errorlist {
+  display: none;
+}
+
+.hide-clear-checkbox .clear-checkbox-label {
+  display: none;
 }
