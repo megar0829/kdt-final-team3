@@ -19,6 +19,11 @@ class Post_community(models.Model):
     title  = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
     content = models.TextField()
+    views = models.IntegerField(default=0)
+
+    def increase_views(self):
+        self.views += 1
+        self.save()
 
 class Comment(models.Model):
     post = models.ForeignKey(Post_community, on_delete=models.CASCADE, related_name='comment')

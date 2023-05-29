@@ -70,17 +70,23 @@ def bootscamp_delete(request, boots_pk):
 def bootscamp_like(request, boots_pk):
     pass
 
-def community_info(requset):
+def community_info(request):
     commu = Post_community.objects.all()
-    commu_create = CommunityForm(requset.POST)
-    commu_image = CommuImageForm(requset.POST, requset.FILES)
+    top_posts = Post_community.objects.order_by('-views')[:3]
+    if request.method == 'POST':
+        commu_create = CommunityForm(request.POST)
+        commu_image = CommuImageForm(request.POST, request.FILES)
+    else:
+        commu_create = CommunityForm()
+        commu_image = CommuImageForm()
     context = {
         'commu':commu,
         'commu_create':commu_create,
         'commu_image':commu_image,
+        'top_posts':top_posts,
 
     }
-    return render(requset, 'posts/commu_info.html', context)
+    return render(request, 'posts/commu_info.html', context)
 
 def community_create(request):
     if request.method == "POST":
@@ -89,7 +95,8 @@ def community_create(request):
         if form.is_valid() and imageform.is_valid():
             title = form.cleaned_data['title']
             content = form.cleaned_data['content']
-            commu = Post_community(title=title, content=content)
+            category = form.cleaned_data['category']
+            commu = Post_community(title=title, content=content, category=category)
             commu.save()
             image = imageform.cleaned_data['community_image']
             community_image.objects.create(community_post=commu, community_image=image)
@@ -106,6 +113,7 @@ def community_create(request):
 
 def community_detail(request, community_pk):
     commu = Post_community.objects.get(pk=community_pk)
+    commu.increase_views()
     context = {
         'commu':commu
     }
@@ -159,3 +167,18 @@ def community_update(request, community_pk):
 
 def community_like(request, community_pk):
     pass
+
+def community_filter(request, category):
+    commu = Post_community.objects.filter(category=category).order_by('-pk')
+    if request.method == 'POST':
+        commu_create = CommunityForm(request.POST)
+        commu_image = CommuImageForm(request.POST, request.FILES)
+    else:
+        commu_create = CommunityForm()
+        commu_image = CommuImageForm()
+    context = {
+        'commu':commu,
+        'commu_create':commu_create,
+        'commu_image':commu_image,
+    }
+    return render(request, "posts/commu_info.html", context)
