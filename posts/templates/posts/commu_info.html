@@ -59,7 +59,7 @@
     <!--메인-->
     <main class="commu-main">
       <div class="commu-createBA">
-        {% if request.user.is_authenticated %}
+        {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
         <div>
 
         </div>
@@ -69,11 +69,11 @@
               test 글 작성
             </button>
         </div>
-        {% else %}
+        {% comment %} {% else %} {% endcomment %}
         <div class="commu-createBA-item2">
           아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요
         </div>
-        {% endif %}
+        {% comment %} {% endif %} {% endcomment %}
       </div>
         <div class="card bestTC">
         <div>
@@ -214,6 +214,7 @@
               <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ commu_create.as_p }}
+                {{ commu_image }}
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
                   <input type="submit" value="후기 작성" class="btn btn-success modal_form">

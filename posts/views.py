@@ -71,7 +71,7 @@ def bootscamp_like(request, boots_pk):
     pass
 
 def community_info(request):
-    commu = Post_community.objects.all()
+    commu = Post_community.objects.all().order_by('-pk')
     top_posts = Post_community.objects.order_by('-views')[:3]
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
@@ -103,7 +103,7 @@ def community_create(request):
         return redirect ('posts:commu_detail',commu.id)
     else:
         form = CommunityForm()
-        imageform = community_image()
+        imageform = CommuImageForm()
     
     context = {
         'form': form,
