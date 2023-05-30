@@ -29,12 +29,17 @@
         </ul>
       </div>
       <ul>
-        <li>
-          <a class="btn btn-outline-secondary" href="{% url 'accounts:login' %}">로그인</a>
-        </li>
-        <li>
-          <a class="btn btn-outline-secondary" href="{% url 'accounts:signup' %}">회원가입</a>
-        </li>
+        {% if request.user.is_authenticated %}
+          <li>
+            <span><a href="{% url 'accounts:profile' user %}" class="btn btn-outline-secondary">{{ user }}</a></span>
+            <a href="{% url 'accounts:logout' %}" class="btn btn-outline-secondary">로그아웃</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{% url 'accounts:login' %}" class="btn btn-outline-secondary">로그인</a>
+            <a href="{% url 'accounts:signup' %}" class="btn btn-outline-secondary">회원가입</a>
+          </li>
+        {% endif %}
       </ul>
     </nav>
   </header>
