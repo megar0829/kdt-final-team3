@@ -9,9 +9,11 @@
   <div class="login-title">
     로그인
   </div>
-  <input class="form-control login-input" placeholder ="아이디" type="text">
-  <input class="form-control login-input" placeholder ="비밀번호" type="text">
-
-  <button class="btn btn-outline-secondary m-5">로그인</button>
+  <form action="{% url 'accounts:login' %}", method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="로그인" class="btn btn-outline-secondary m-5">
+  </form> 
+  
 </main>
 {% endblock content %}
