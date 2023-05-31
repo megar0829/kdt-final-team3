@@ -9,3 +9,6 @@ def login(request):
 
 def profile(request):
     return render(request, "accounts/profile.html")
+
+def profile_note(request):
+    return render(request, "accounts/profile_note.html")
