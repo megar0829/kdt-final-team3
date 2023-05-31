@@ -112,21 +112,25 @@ def community_create(request):
     return render(request, 'commun_info.html', context)
 
 def community_detail(request, community_pk):
-    commu = Post_community.objects.get(pk=community_pk)
-    commu.increase_views()
+    commu_list = Post_community.objects.all().order_by('-pk')
+    commus = Post_community.objects.get(pk=community_pk)
+    commus.increase_views()
     context = {
-        'commu':commu
+        'commus':commus,
+        'commu_list':commu_list,
     }
     return render(request, 'posts/commu_detail.html', context)
 
 def comment_create(request, community_pk):
     commu = Post_community.objects.get(pk=community_pk)
-    commentform = CommentForm(request.POST)
-    if commentform.is_valid():
-        comment = commentform.save(commit=False)
-        comment.user = request.user
-        comment.commu = commu
-        comment.save()
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        commentform = CommentForm(request.POST)
+        if commentform.is_valid():
+            comment = commentform.save(commit=False)
+            comment.post = commu  # post 필드에 commu 값을 할당
+            comment.content = content
+            comment.save()
     return redirect('posts:commu_detail', community_pk)
 
 def comment_delete(request, community_pk, comment_pk):
