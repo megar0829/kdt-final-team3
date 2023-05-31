@@ -105,6 +105,230 @@ td {
 
 .Calendar>thead>tr:first-child>td { font-weight: bold; }
 
+  border: 1px solid lightgray;
+}
+
+
+/* cummu_info.css */
+.commu-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.commu-side {
+  flex-basis: 20%;
+  margin: 30px;
+}
+
+.commu-main {
+  flex-basis: 60%;
+  margin: 30px;
+  display: flex;
+  height: 100%;
+  width: 550px;
+  flex-direction: column;
+  flex: 1 1 0%;
+  gap: 20px;
+}
+
+.commu-recommend {
+  flex-basis: 20%;
+  margin: 30px;
+}
+
+.side {
+  border: none;
+}
+
+.commu-modal-btn {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.commu-modal-btn p {
+  margin: 0;
+}
+
+.commu-card {
+  margin-top: 30px;
+}
+
+.commu-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.commu-main-all {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+.commu-main-post {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.commu-main-title {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+}
+
+.commu-cate {
+  order: 1;
+}
+
+.commu-post-info {
+  display: flex;
+  align-items: center;
+  order: 2;
+
+}
+
+.commu-post-info-item {
+  margin-left: 10px;
+}
+
+.commu-recommend-all {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+
+.commu-recommend-title {
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: #000;
+  /* 원하는 색상으로 변경 */
+}
+
+.commu-recommend-post {
+  padding-top: 10px;
+}
+
+.commu-recommend-info {
+  display: flex;
+}
+
+.commu-recommend-info-item {
+  margin-right: 10px;
+}
+
+.commu_post {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  background-color: white;
+}
+
+.new_post {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.commuBA {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgb(205, 204, 198) 0px -0.5px 0px 0px;
+  padding-top: 12px;
+}
+
+.commuBA-item {
+  display: flex;
+  justify-content: center;
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.commuBA-group {
+  display: flex;
+  color: rgb(97, 97, 95);
+}
+
+.commu-createBA {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+}
+
+.commu-createBA-item2 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 8px 12px;
+  flex:1 1 0%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: text;
+}
+
+body {
+  background-color: rgb(247, 247, 240);
+}
+
+.commuT {
+  color: rgb(33,35,34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.commuC {
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(178,177,173);
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commuCA {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(247,247,240);
+  color: rgb(41,179,30);
+}
+
+.errorlist {
+  display: none;
+}
+
+.hide-clear-checkbox .clear-checkbox-label {
+  display: none;
 .Calendar>thead>tr:last-child>td {
   background-color: gray;
   color: white;

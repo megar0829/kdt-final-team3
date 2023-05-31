@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'posts',
     'accounts',
+    'imagekit',
+    'ckeditor',
+    'ckeditor_uploader',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -148,3 +151,6 @@ AUTH_USER_MODEL = 'accounts.User'
 
 LOGIN_REDIRECT_URL = 'posts/index'
 LOGOUT_REDIRECT_URL = 'posts/index'
+
+CKEDITOR_UPLOAD_PATH = 'upload/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'

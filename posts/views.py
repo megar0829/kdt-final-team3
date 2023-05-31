@@ -101,7 +101,7 @@ def community_create(request):
             commu.save()
             image = imageform.cleaned_data['community_image']
             community_image.objects.create(community_post=commu, community_image=image)
-        return redirect ('posts:commu_detail',commu.id)
+        return redirect ('posts:commu_detail', commu.id)
     else:
         form = CommunityForm()
         imageform = CommuImageForm()

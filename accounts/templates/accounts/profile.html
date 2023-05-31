@@ -77,13 +77,71 @@
     </div>
     <div class="m-2 profile-mypost-content">
       <div>
-        게시글 제목
+        {% if request.user.image %}
+          <img src="{{request.user.image.url}}" alt="{user.username}" class="profile-image">
+        {% else %}
+          이미지가 없습니다
+        {% endif %}
       </div>
       <div class="profile-mypost-v">
         <div class="pe-2">조회수</div>
         <div class="pe-2">좋아요</div>
         <div >댓글</div>
       </div>
+      <div>
+        유저 소개
+      </div>
+    </span>
+    <span>
+      내용 2
+    </span>
+  </header>
+</div>
+<div>
+  {% if not my_posts%}
+
+  {% else %}
+  {%for post in my_posts %}
+  <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post">
+    <div class="카테고리 d-flex">
+      <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% endif %}">
+        {{ post.category }}
+      </div>
+    </div>
+    <div class="제목/내용">
+      <div class="commuT">
+        {{ post.title}}
+      </div>
+      <div class="commuC">
+        {{ post.content }}
+      </div>
+    </div>
+    <div class="유저">
+      <div>
+        {{ post.username}}
+      </div>
+    </div>
+    <div class="commuBA">
+      <div></div>
+      <div class="commuBA-group">
+        <div class="commuBA-item">
+          <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+        </div>
+        {{ post.views }}
+        <div class="commuBA-item">
+          <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
+        </div>
+        {{ post.likeuser|length}}
+        <div class="commuBA-item">
+          <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
+        </div>
+        {{ post.comment|length}}
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+  {% endif %}
+</div>
     </div>
     
   </div>

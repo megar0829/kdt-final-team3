@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm, PasswordChangeForm
 from django import forms
+from .models import Editor
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -45,14 +46,46 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = ('username','email','password1','password2', )
+        fields = ('username','email','password1','password2')
 
 
 class CustomUserChangeForm(UserChangeForm):
-    
+    first_name = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.TextInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '성',
+                }
+            )
+        )
+    last_name = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.TextInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '이름',
+                }
+            )
+        )
+    email = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.EmailInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '이메일',
+                }
+            )
+        )
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
-        fields = '__all__'
+        fields = ['first_name', 'last_name', 'email', 'image',]
+
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs)
+
+        self.fields['image'].widget.attrs['class']='form-control'
+
         
         
 class CustomAuthenticationForm(AuthenticationForm):
@@ -114,3 +147,8 @@ class CustomPasswordChangeForm(PasswordChangeForm):
         model = get_user_model()
         fields = '__all__'
 
+
+class EditorForm(forms.ModelForm):
+    class Meta:
+        model = Editor
+        fields = '__all__'
