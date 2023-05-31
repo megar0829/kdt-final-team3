@@ -218,3 +218,21 @@ body {
 .hide-clear-checkbox .clear-checkbox-label {
   display: none;
 }
+
+.commuU {
+  color: rgb(33,35,34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  flex: 0 0 auto;
+}
+
+.time {
+  font-size: 12px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    width: fit-content;
+    color: rgb(178, 177, 173);
+    margin-top: 2px;
+}
