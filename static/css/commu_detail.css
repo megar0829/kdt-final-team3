@@ -116,6 +116,7 @@
   gap: 12px;
   width: 100%;
   background-color: white;
+  border-bottom: 1px solid rgb(232, 231, 224);
 }
 
 .new_post {
@@ -126,6 +127,7 @@
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-bottom: 1px solid rgb(205, 204, 198);
 }
 
 a {
@@ -232,7 +234,6 @@ body {
   margin-bottom: 24px;
   word-break: keep-all;
   overflow-wrap: break-word;
-  white-space: pre-wrap;
   overflow-x: auto;
 }
 
@@ -342,4 +343,68 @@ body {
   font-size: 16px;
   line-height: 26px;
   padding: 3px 12px;
+}
+
+.commu-user {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: none;
+}
+
+.commu-user-item {
+  display: flex;
+  font-size: 12px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.commu-user-item2 {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.commu-user-name {
+  color: rgb(33,35,34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  flex: 0 0 auto;
+}
+
+.commu-user-ico {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  isolation: isolate;
+}
+
+.commu-comment-section {
+  background-color: white;
+}
+
+.time {
+  font-size: 12px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    width: fit-content;
+    color: rgb(178, 177, 173);
+    margin-top: 2px;
+}
+
+.commuU {
+  color: rgb(33, 35, 34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  flex: 0 0 auto;
 }
