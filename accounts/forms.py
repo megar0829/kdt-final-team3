@@ -81,10 +81,36 @@ class CustomAuthenticationForm(AuthenticationForm):
 
 
 class CustomPasswordChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.PasswordInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '이전 비밀번호',
+                }
+            )
+        )
+    new_password1 = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.PasswordInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '변경 비밀번호',
+                }
+            )
+        )
     
+
+    new_password2 = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.PasswordInput(
+            attrs = {
+                'class': 'form-control signup-input',
+                'placeholder' : '비밀번호 확인',
+                }
+            )
+        )
     class Meta(PasswordChangeForm):
         model = get_user_model()
         fields = '__all__'
 
-
-label_suffix='',

@@ -5,7 +5,8 @@ from django.contrib.auth import (
     logout as auth_logout,
     update_session_auth_hash,
 )
-from posts.views import Post_bootscamp, Post_community
+from .models import User
+from posts.views import Post_bootscamp, Post_community, Comment
 from .forms import (
     CustomAuthenticationForm as AuthenticationForm, 
     CustomPasswordChangeForm as PasswordChangeForm,
@@ -27,7 +28,7 @@ def login(request):
     context = {
         'form': form,
     }
-    return render(request, "accounts/login.html", context)
+    return render(request, 'accounts/login.html', context)
 
 @login_required
 def logout(request):
@@ -36,7 +37,7 @@ def logout(request):
 
 
 def signup(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
@@ -71,9 +72,29 @@ def update(request):
     return render(request,'accounts/update.html',context)
 
 @login_required
-def password(reqeust):
-    pass
-
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            return redirect('posts:index')
+    else:
+        form = PasswordChangeForm(request.user)
+    context = {
+        'form': form,
+    }
+    return render(request, 'accounts/change_password.html', context)
+ 
 @login_required
-def profile(request):
-    return render(request, "accounts/profile.html")
+def profile(request, user_pk):
+    my_profile = User.objects.get(pk=user_pk)
+    my_posts = Post_community.objects.filter(pk=user_pk)
+    my_comments = Comment.objects.filter(pk=user_pk)
+
+    context = {
+        'my_posts': my_posts,
+        'my_comments': my_comments,
+    }
+    return render(request, 'accounts/profile.html', context)
+
