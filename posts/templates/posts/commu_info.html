@@ -107,7 +107,7 @@
         최신글
       </div>
       {%for post in commu%}
-      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post">
+      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
         <div class="카테고리 d-flex">
           <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% endif %}">
             {{ post.category }}
@@ -225,6 +225,8 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{%static 'js/detail.js'%}?after"></script>
 <script>
     // 현재 URL 확인
     var currentURL = window.location.href;
