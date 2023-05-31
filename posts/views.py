@@ -96,11 +96,11 @@ def community_create(request):
             title = form.cleaned_data['title']
             content = form.cleaned_data['content']
             category = form.cleaned_data['category']
-            commu = Post_community(title=title, content=content, category=category)
+            commu = Post_community(title=title, content=content, category=category, user_id=request.user.pk)
             commu.save()
             image = imageform.cleaned_data['community_image']
             community_image.objects.create(community_post=commu, community_image=image)
-        return redirect ('posts:commu_detail',commu.id)
+        return redirect ('posts:commu_detail', commu.id)
     else:
         form = CommunityForm()
         imageform = CommuImageForm()
