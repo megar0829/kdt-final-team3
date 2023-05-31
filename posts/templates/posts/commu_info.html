@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
+{% load custom_filters %}
 
 <link rel="stylesheet" href="{% static 'css/commu_info.css' %}?after " />
 {% endblock style %}
@@ -59,7 +60,7 @@
     <!--메인-->
     <main class="commu-main">
       <div class="commu-createBA">
-        {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
+        {% if request.user.is_authenticated %}
         <div>
 
         </div>
@@ -69,11 +70,11 @@
               test 글 작성
             </button>
         </div>
-        {% comment %} {% else %} {% endcomment %}
+        {% else %}
         <div class="commu-createBA-item2">
           아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요
         </div>
-        {% comment %} {% endif %} {% endcomment %}
+        {% endif %}
       </div>
         <div class="card bestTC">
         <div>
@@ -107,7 +108,7 @@
         최신글
       </div>
       {%for post in commu%}
-      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post">
+      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
         <div class="카테고리 d-flex">
           <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% endif %}">
             {{ post.category }}
@@ -121,13 +122,15 @@
             {{ post.content }}
           </div>
         </div>
-        <div class="유저">
-          <div>
-            {{ post.username}}
+        <div class="d-flex">
+          <div class="commuU">
+            {{ post.user}}
           </div>
         </div>
         <div class="commuBA">
-          <div></div>
+          <div class="time">
+            {{ post.create_at|custom_timesince }}
+          </div>
           <div class="commuBA-group">
             <div class="commuBA-item">
               <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
@@ -136,11 +139,11 @@
             <div class="commuBA-item">
               <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
             </div>
-            {{ post.likeuser|length}}
+            {{ post.like_user.count }}
             <div class="commuBA-item">
               <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
             </div>
-            {{ post.comment|length}}
+            {{ post.comment_count }}
           </div>
         </div>
       </a>
@@ -225,6 +228,8 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{%static 'js/detail.js'%}?after"></script>
 <script>
     // 현재 URL 확인
     var currentURL = window.location.href;

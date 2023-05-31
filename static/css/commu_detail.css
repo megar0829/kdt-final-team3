@@ -116,6 +116,7 @@
   gap: 12px;
   width: 100%;
   background-color: white;
+  border-bottom: 1px solid rgb(232, 231, 224);
 }
 
 .new_post {
@@ -126,6 +127,7 @@
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-bottom: 1px solid rgb(205, 204, 198);
 }
 
 a {
@@ -219,12 +221,173 @@ body {
   display: none;
 }
 
-.commuU {
+.commu-content-box {
+  padding: 20px;
+  display: block;
+}
+
+.commu-content {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(33,35,34);
+  margin-bottom: 24px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  overflow-x: auto;
+}
+
+.commu-detail {
+  background-color: white;
+  display: block;
+}
+
+.detail-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid rgb(232,231,224);
+  padding: 20px 0px;
+  margin: 0px 20px;
+}
+
+.commu-like-box {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.commu-like-item {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(205,204,198);
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.commu-post-like {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27px;
+  color: rgb(33,35,34);
+  margin-bottom: 4px;
+}
+.commu-like-ico {
+  width: 15px;
+  height: 15px;
+}
+
+.comm-comment-box {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 20px;
+  gap: 8px;
+}
+
+.commu-comment-item {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.commnet-box {
+  height: 82px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 100%;
+  margin: 3px 0px;
+  display: block;
+  overflow: auto;
+  word-break: break-all;
+  border: none;
+  min-height: 26px;
+  resize: vertical;
+}
+
+.commu-comment-button-box {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-top: 0.5px solid rgb(205,204,198);
+  align-items: center;
+  -webkit-box-align: center;
+  background-color: white;
+}
+
+.commu-comment-item {
+  height: initial;
+  min-width: initial;
+  padding: 3px 12px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.button-item {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(33,35,34);
+  color: white;
+  border-radius: 4px;
+  border: 1px solid rgb(33,35,34);
+  font-size: 16px;
+  line-height: 26px;
+  padding: 3px 12px;
+}
+
+.commu-user {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: none;
+}
+
+.commu-user-item {
+  display: flex;
+  font-size: 12px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.commu-user-item2 {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.commu-user-name {
   color: rgb(33,35,34);
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
   flex: 0 0 auto;
+}
+
+.commu-user-ico {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  isolation: isolate;
+}
+
+.commu-comment-section {
+  background-color: white;
 }
 
 .time {
@@ -235,4 +398,13 @@ body {
     width: fit-content;
     color: rgb(178, 177, 173);
     margin-top: 2px;
+}
+
+.commuU {
+  color: rgb(33, 35, 34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  flex: 0 0 auto;
 }

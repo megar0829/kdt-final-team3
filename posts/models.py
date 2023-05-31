@@ -11,7 +11,7 @@ class Post_bootscamp(models.Model):
     duration = models.IntegerField()
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
-    # like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_users')
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_users')
 
 
 class Post_community(models.Model):
@@ -20,6 +20,11 @@ class Post_community(models.Model):
     category = models.CharField(max_length=100)
     content = models.TextField()
     views = models.IntegerField(default=0)
+    create_at =models.DateTimeField(auto_now_add=True)
+    like_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_user')
+
+    def comment_count(self):
+        return self.comment.count()
 
     def increase_views(self):
         self.views += 1

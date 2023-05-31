@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
 from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -112,21 +113,27 @@ def community_create(request):
     return render(request, 'commun_info.html', context)
 
 def community_detail(request, community_pk):
-    commu = Post_community.objects.get(pk=community_pk)
-    commu.increase_views()
+    commus = Post_community.objects.get(pk=community_pk)
+    commus.increase_views()
+    commu_list = Post_community.objects.exclude(pk=community_pk).order_by('-pk')
     context = {
-        'commu':commu
+        'commus': commus,
+        'commu_list': commu_list,
     }
     return render(request, 'posts/commu_detail.html', context)
 
+
 def comment_create(request, community_pk):
     commu = Post_community.objects.get(pk=community_pk)
-    commentform = CommentForm(request.POST)
-    if commentform.is_valid():
-        comment = commentform.save(commit=False)
-        comment.user = request.user
-        comment.commu = commu
-        comment.save()
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        commentform = CommentForm(request.POST)
+        if commentform.is_valid():
+            comment = commentform.save(commit=False)
+            comment.post = commu  # post 필드에 commu 값을 할당
+            comment.user = request.user
+            comment.content = content
+            comment.save()
     return redirect('posts:commu_detail', community_pk)
 
 def comment_delete(request, community_pk, comment_pk):
@@ -166,7 +173,21 @@ def community_update(request, community_pk):
         return redirect('posts:commu_detail', commu_id=commu.id)
 
 def community_like(request, community_pk):
-    pass
+    post = Post_community.objects.get(pk=community_pk)
+    if request.user in post.like_user.all():
+        post.like_user.remove(request.user)
+        is_like_user = False
+    else:
+        post.like_user.add(request.user)
+        is_like_user = True
+    post.like_count = post.like_user.count()  # 좋아요 개수 업데이트
+    print(post.pk)
+    post.save()
+    context = {
+        'is_like_user':is_like_user,
+        'like_count': post.like_user.count()  # 좋아요 개수를 추가
+    }
+    return JsonResponse(context)
 
 def community_filter(request, category):
     commu = Post_community.objects.filter(category=category).order_by('-pk')
