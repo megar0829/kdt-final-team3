@@ -31,13 +31,14 @@
       <ul>
         {% if request.user.is_authenticated %}
           <li>
-            <span><a href="{% url 'accounts:profile' user %}" class="btn btn-outline-secondary">{{ user }}</a></span>
-            <a href="{% url 'accounts:logout' %}" class="btn btn-outline-secondary">로그아웃</a>
+            <span><a href="{% url 'accounts:profile' user.pk %}" class="btn btn-outline-secondary">{{ user }}</a></span>
+            <a href="{% url 'accounts:logout' %}?next = {{ request.path }}" class="btn btn-outline-secondary">로그아웃</a>
           </li>
         {% else %}
           <li>
-            <a href="{% url 'accounts:login' %}" class="btn btn-outline-secondary">로그인</a>
-            <a href="{% url 'accounts:signup' %}" class="btn btn-outline-secondary">회원가입</a>
+            <a href="{% url 'accounts:login' %}?next = {{ request.path }}" class="btn btn-outline-secondary">로그인</a>
+            {% comment %} ?next={{request.path}} >> 로그인 성공시 redirect페이지를 원래 있던 페이지로 이동 {% endcomment %}
+            <a href="{% url 'accounts:signup' %}?next = {{ reqeust.path }}" class="btn btn-outline-secondary">회원가입</a>
           </li>
         {% endif %}
       </ul>
