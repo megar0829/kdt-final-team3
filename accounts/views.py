@@ -98,3 +98,6 @@ def profile(request, user_pk):
     }
     return render(request, 'accounts/profile.html', context)
 
+# 테스트 용
+def profile_note(request):
+    return render(request, 'accounts/profile_note.html')
