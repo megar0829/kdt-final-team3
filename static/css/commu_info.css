@@ -19,6 +19,9 @@
   gap: 20px;
 }
 
+.last-item {
+  border-radius: 5%;
+}
 .commu-recommend {
   flex-basis: 20%;
   margin: 30px;
@@ -59,6 +62,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 .commu-main-title {
@@ -175,6 +179,7 @@ a {
   -webkit-box-align: center;
   align-items: center;
   cursor: text;
+  justify-content: space-between;
 }
 
 body {
@@ -235,4 +240,74 @@ body {
     width: fit-content;
     color: rgb(178, 177, 173);
     margin-top: 2px;
+}
+
+.category-django {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(249, 249, 241);
+  color: rgb(53, 113, 3);
+}
+
+.category-java {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(255 228 243);
+  color: rgb(240, 45, 45);
+}
+
+.category-spring {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(225 255 225);
+  color: rgb(103, 240, 45);
+}
+
+.category-db {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(192 227 255);
+  color: rgb(30 47 228);
+}
+
+.category-jpa {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(255 254 235);
+  color: rgb(179 171 12);
+}
+
+.category-back {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(255 244 245);
+  color: rgb(120 52 227);
+}
+
+.category-front {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(235 254 250);
+  color: rgb(24 227 195);
 }

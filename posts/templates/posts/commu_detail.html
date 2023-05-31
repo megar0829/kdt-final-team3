@@ -11,42 +11,43 @@
 <div class="commu- container">
   <div class="d-flex justify-content-between">
     <!--사이드바-->
-    <div>
-      <div class="commu-side">
+     <!--사이드바-->
+     <div style="width: 15rem;">
+      <div class="commu-side" style="width: 11rem;">
         <input type="text" class="form-control" placeholder="검색어를 입력하세요">
       </div>
       <div class="commu-side">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 11rem;">
           <div class="card-header">
             언어
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Django'%}">Django</a>
+              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Java'%}">Java</a>
+              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Spring'%}">Spring</a>
+              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'DB'%}">DB</a>
+              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}">JPA</a>
+              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '백엔드'%}">백엔드</a>
+              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
             </li>
             <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '프론트엔드'%}">프론트 엔드</a>
+              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="commu-side">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 11rem;">
           <div class="card-header">
             후기
           </div>
@@ -105,7 +106,6 @@
         <comment>
             <div style="width:100%; background-color: white;">
                 <div class="commu-comment-box">
-                    <div></div>
                     <div class="commu-comment-item">
                         <form id="comment-form" method="POST" action="{%url 'posts:comment' commus.pk%}">
                         {% csrf_token %}

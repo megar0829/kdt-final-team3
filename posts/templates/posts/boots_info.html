@@ -6,28 +6,47 @@
 {% endblock style %}
 
 {% block content %}
-<div class="boots-info-container">
+<div>
+  <div class="d-flex justify-content-between">
     <!--사이드바-->
-    <div>
-      <div class="boots-info-side">
+    <div style="width: 15rem;">
+      <div class="commu-side" style="width: 11rem;">
         <input type="text" class="form-control" placeholder="검색어를 입력하세요">
       </div>
-      <div class="boots-info-side">
-        <div class="card" style="width: 18rem;">
+      <div class="commu-side">
+        <div class="card" style="width: 11rem;">
           <div class="card-header">
-            인기태그
+            언어
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item side">Python</li>
-            <li class="list-group-item side">JAVA</li>
-            <li class="list-group-item side">C언어</li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+            </li>
+            <li class="list-group-item side">
+              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="boots-info-side">
-        <div class="card" style="width: 18rem;">
+      <div class="commu-side">
+        <div class="card" style="width: 11rem;">
           <div class="card-header">
-            학원별
+            후기
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item side">학원이름</li>
@@ -104,4 +123,6 @@
         </div>
       </div>
     </main>
+  </div>
+</div>
 {% endblock content %}
