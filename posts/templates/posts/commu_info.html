@@ -7,7 +7,7 @@
 {% endblock style %}
 
 {% block content %}
-<div class="commu">
+<div class="commu container">
   <div class="d-flex justify-content-between">
     <!--사이드바-->
     <div style="width: 15rem;">
@@ -90,9 +90,7 @@
               {% for post in top_posts %}
               <li class="list-group-item pt-2 {% if forloop.last %}last-item{% endif %}" >
                 <a href="{%url 'posts:commu_detail' post.pk %}" class="commu-main-title" data-pk="{{ post.pk }}">
-                {{ post.title }}</a>
-                
-                  
+                {{ post.title }}</a>     
                 <div class="commu-main-post">
                   <div class="commu-cate">
                     <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
@@ -137,7 +135,7 @@
         <div class="제목/내용">
           
           <div class="commuC">
-            {{ post.content }}
+            {{ post.content|strip_html_tags }}
           </div>
         </div>
         <div class="d-flex">

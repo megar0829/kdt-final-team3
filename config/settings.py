@@ -154,3 +154,9 @@ LOGOUT_REDIRECT_URL = 'posts/index'
 
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': '100%', 
+    },
+}

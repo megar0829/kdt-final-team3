@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Boots_update Test</h1>
+    <form action="">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+    </form>
+    <button  id="comment-submit" class="button-item">등록</button>
 </body>
 </html>
