@@ -60,7 +60,7 @@
 
 .commu-main-post {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   padding-top: 20px;
   margin-bottom: 10px;
 }
@@ -126,10 +126,27 @@
   font-size: 16px;
   line-height: 26px;
   font-weight: 600;
-  display: flex;
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+}
+
+.new_post_all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.best_post {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+}
+.best_post_all {
+  display: flex;
+  justify-content: space-between;
 }
 
 a {

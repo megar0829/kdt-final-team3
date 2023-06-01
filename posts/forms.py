@@ -65,3 +65,4 @@ class EditorForm(forms.ModelForm):
     class Meta:
         model = Post_community
         fields = ('title','content' )
+

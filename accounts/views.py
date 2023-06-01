@@ -5,6 +5,7 @@ from django.contrib.auth import (
     logout as auth_logout,
     update_session_auth_hash,
 )
+from django.contrib import messages
 from .models import User, Editor
 from posts.views import Post_bootscamp, Post_community, Comment
 from .forms import (
@@ -24,6 +25,8 @@ def login(request):
         if form.is_valid():
             auth_login(request, form.get_user())
             return redirect('posts:index')
+        else:
+            messages.error(request, '비밀번호를 다시 확인해주세요.')
     else:
         form = AuthenticationForm(request)
     context = {
