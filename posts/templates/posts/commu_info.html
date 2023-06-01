@@ -7,7 +7,7 @@
 {% endblock style %}
 
 {% block content %}
-<div class="commu">
+<div class="commu container">
   <div class="d-flex justify-content-between">
     <!--사이드바-->
     <div style="width: 15rem;">
@@ -144,7 +144,7 @@
         <div class="제목/내용">
           
           <div class="commuC">
-            {{ post.content }}
+            {{ post.content|strip_html_tags }}
           </div>
         </div>
         <div class="d-flex">
