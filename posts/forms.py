@@ -45,4 +45,4 @@ class CommuImageForm(forms.ModelForm):
     class Meta:
         model = community_image
         fields = ('community_image',)
-        widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
+        widgets = {'community_image':forms.ClearableFileInput(attrs={'class': 'form-control-file'})}

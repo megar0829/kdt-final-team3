@@ -18,5 +18,8 @@ urlpatterns = [
     path('community/<int:community_pk>/like/', views.community_like, name='commu_like'),
     path('community/<int:community_pk>/comment/', views.comment_create, name='comment'),
     path('community/<int:community_pk>/comment/<int:comment_pk>/delete', views.comment_delete, name='comment_delete'),
-    path('community/filter/<str:category>/', views.community_filter, name='commu_filter')
+    path('community/filter/<str:category>/', views.community_filter, name='commu_filter'),
+
+    path('community/best/',views.community_info_best, name="commu_info_best"),
+    path('community/new/',views.community_info_new, name="commu_info_new")
 ]

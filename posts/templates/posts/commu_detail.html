@@ -8,7 +8,7 @@
 {% endblock style %}
 
 {% block content %}
-<div class="commu- container">
+<div class="commu-container">
   <div class="d-flex justify-content-between">
     <!--사이드바-->
      <!--사이드바-->
@@ -104,6 +104,9 @@
         </article>
     </div>
         <comment>
+          <div class="new_post">
+            댓글 달기
+          </div>
             <div style="width:100%; background-color: white;">
                 <div class="commu-comment-box">
                     <div class="commu-comment-item">
@@ -113,7 +116,7 @@
                     </div>
                 </div>
                 <div class="commu-comment-button-box">
-                    <div class="commu-comment-item">
+                    <div class="commu-comment-item commu-comment-btn">
                         <button  id="comment-submit" class="button-item">등록</button>
                     </div>
                 </div>
@@ -141,15 +144,12 @@
             </div>
             <div class="commu-content-box">
               <div class="commu-content">
-                {{commus.content}}
+                {{comment.content}}
               </div>
             </div>
           </div>
         {% endfor %}
       </section>
-      <div class="new_post">
-        이 게시판의 최신글
-    </div>
     {%for post in commu_list%}
     {% if post.category == commus.category %}
     {%if post.pk != commus.pk %}

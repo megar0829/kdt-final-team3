@@ -72,8 +72,13 @@ def bootscamp_like(request, boots_pk):
     pass
 
 def community_info(request):
-    commu = Post_community.objects.all().order_by('-pk')
-    top_posts = Post_community.objects.order_by('-views')[:3]
+    post_list = Post_community.objects.all().order_by('-pk')
+    paginator = Paginator(post_list, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    # commu = Post_community.objects.all().order_by('-pk')
+    top_posts = Post_community.objects.order_by('-views')[:2]
+
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
         commu_image = CommuImageForm(request.POST, request.FILES)
@@ -81,7 +86,7 @@ def community_info(request):
         commu_create = CommunityForm()
         commu_image = CommuImageForm()
     context = {
-        'commu':commu,
+         'commu': page_obj,
         'commu_create':commu_create,
         'commu_image':commu_image,
         'top_posts':top_posts,
@@ -203,3 +208,57 @@ def community_filter(request, category):
         'commu_image':commu_image,
     }
     return render(request, "posts/commu_info.html", context)
+
+def community_info_best(request):
+    commu = Post_community.objects.all().order_by('-pk')
+    top_posts_all = Post_community.objects.order_by('-views')[:5]
+
+    if request.method == 'POST':
+        commu_create = CommunityForm(request.POST)
+        commu_image = CommuImageForm(request.POST, request.FILES)
+    else:
+        commu_create = CommunityForm()
+        commu_image = CommuImageForm()
+    context = {
+        'commu':commu,
+        'commu_create':commu_create,
+        'commu_image':commu_image,
+        'top_posts_all':top_posts_all,
+
+    }
+    return render(request, 'posts/commu_info_best.html', context)
+
+def community_info_new(request):
+    post_list = Post_community.objects.all().order_by('-pk')
+    paginator = Paginator(post_list, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    # commu = Post_community.objects.all().order_by('-pk')
+    top_posts = Post_community.objects.order_by('-views')[:4]
+
+    if request.method == 'POST':
+        commu_create = CommunityForm(request.POST)
+        commu_image = CommuImageForm(request.POST, request.FILES)
+    else:
+        commu_create = CommunityForm()
+        commu_image = CommuImageForm()
+    context = {
+        'commu': page_obj,
+        'commu_create':commu_create,
+        'commu_image':commu_image,
+        'top_posts':top_posts,
+
+    }
+    return render(request, 'posts/commu_info_new.html', context)
+
+from django.core.paginator import Paginator
+
+def community_list(request):
+    post_list = Post_community.objects.all()
+    paginator = Paginator(post_list, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {
+        'commu': page_obj,  # commu 변수를 page_obj로 변경
+    }
+    return render(request, 'posts/community_list.html', context)
