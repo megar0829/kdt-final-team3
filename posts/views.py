@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
-from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm
+from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm, EditorForm
 from django.http import JsonResponse
+
 
 # Create your views here.
 
@@ -143,7 +144,7 @@ def comment_delete(request, community_pk, comment_pk):
     return redirect('posts:commu_detail', community_pk)
 
 def community_delete(request, community_pk):
-    commu = Post_community.get(pk=community_pk)
+    commu = Post_community.objects.get(pk=community_pk)
     if request.user == commu.user:
         commu.delete()
     return redirect('posts:commu_info')
@@ -152,25 +153,24 @@ def community_update(request, community_pk):
     commu = Post_community.objects.get(pk=community_pk)
     if commu.user == request.user:
         if request.method == "POST":
-            form = CommunityForm(request.POST, instance=commu)
-            imageform = community_image(request.POST, request.FILES)
+            form = EditorForm(request.POST, instance=commu)
+            imageform = CommuImageForm(request.POST, request.FILES)
             if form.is_valid() and imageform.is_valid():
                 form.save()
-                commu.community_image.delete()
                 image = imageform.cleaned_data['community_image']
-                community_image.objects.create(post=commu, community_image=image)
-                return redirect('posts:commu_detail',commu.id)
+                community_image.objects.create(community_post=commu, community_image=image)
+                return redirect('posts:commu_detail', commu.id)
         else:
-            form = CommunityForm(instance=commu)
-            imageform = community_image()
+            form = EditorForm(instance=commu)
+            imageform = CommuImageForm()
         context = {
             'form': form,
             'imageform': imageform,
             'commu': commu,
         }
-        return render(request, 'commu_update.html', context)
+        return render(request, 'posts/commu_update.html', context)
     else:
-        return redirect('posts:commu_detail', commu_id=commu.id)
+        return redirect('posts:commu_detail', commu.id)
 
 def community_like(request, community_pk):
     post = Post_community.objects.get(pk=community_pk)

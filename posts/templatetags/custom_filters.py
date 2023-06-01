@@ -1,5 +1,6 @@
 from django.utils import timezone
 from django import template
+from django.utils.html import strip_tags
 
 register = template.Library()
 
@@ -22,3 +23,7 @@ def custom_timesince(value):
         return f'{diff.seconds // 60}분 전'
     else:
         return '방금 전'
+
+@register.filter
+def strip_html_tags(value):
+    return strip_tags(value)
