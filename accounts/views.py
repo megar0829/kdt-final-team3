@@ -25,8 +25,6 @@ def login(request):
         if form.is_valid():
             auth_login(request, form.get_user())
             return redirect('posts:index')
-        else:
-            messages.error(request, '비밀번호를 다시 확인해주세요.')
     else:
         form = AuthenticationForm(request)
     context = {

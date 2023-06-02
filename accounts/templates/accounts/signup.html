@@ -7,9 +7,9 @@
 {% block content %}
 <main class="signup-container">
   <div class="signup-title">
-    회원가입
+    <h3>회원 가입</h3>
   </div>
-  <form action="{% url 'accounts:signup' %}", method="POST", enctype="multipart/form-data">
+  <form action="{% url 'accounts:signup' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <div class="signup-api">
@@ -17,7 +17,8 @@
       <div class="btn btn-outline-secondary m-3">API</div>
       <div class="btn btn-outline-secondary m-3">API</div>
     </div>
-    <input type="submit" value="가입" class="btn btn-outline-secondary signup-button">
+    <input type="submit" value="가입" class="btn btn-secondary signup-button">
   </form>
-</main>
+<script>
+
 {% endblock content %}
