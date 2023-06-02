@@ -7,25 +7,13 @@
 {% block content %}
 <main class="login-container">
   <div class="login-title">
-    로그인
+    <h3>로 그 인</h3>
   </div>
-  <form action="{% url 'accounts:login' %}", method="POST" class="m-auto">
+  <form action="{% url 'accounts:login' %}", method="POST">
     {% csrf_token %}
-    {% comment %} {{ form.as_p }} {% endcomment %}
-    <div>
-      <input type="text" class="form-control" name="username"placeholder="아이디를 입력해주세요">
-      <input type="password" class="form-control" name="password"placeholder="비밀번호를 입력해주세요">
-    </div>
-    <div>
-      <input type="submit" value="로그인" class="btn btn-outline-secondary m-auto">
-    </div>
-    {% if messages %}
-      <ul class="messages">
-        {% for message in messages %}
-          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    {{ form.as_p }}
+    <input type="submit" value="로그인" class="btn btn-secondary login-btn">
+    
   </form>
   
   

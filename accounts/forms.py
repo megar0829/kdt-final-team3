@@ -48,7 +48,6 @@ class CustomUserCreationForm(UserCreationForm):
         model = get_user_model()
         fields = ('username','email','password1','password2')
 
-
 class CustomUserChangeForm(UserChangeForm):
     first_name = forms.CharField(
         label=False, label_suffix='',

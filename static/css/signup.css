@@ -1,12 +1,13 @@
+body {
+  background-color: rgb(247, 247, 240);
+}
+
 .signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
   height: 630px;
-  border: 1px solid black;
   margin: 0 auto;
-  margin-top: 100px;
 }
 
 .signup-title {
@@ -15,16 +16,25 @@
 
 .signup-input {
   margin-top: 40px;
-  width: 250px;
   height: 40px;
+  width: 330px;
 }
 
 .signup-button {
-  width: 250px;
+  width: 100%;
   padding-bottom: 10px;
 }
 
 .signup-api {
   display: flex;
   margin: 20px;
+  justify-content: space-between;
+}
+
+.errorlist {
+  text-align: center;
+  padding:0;
+  margin-top:10px;
+  color:rgb(161, 161, 161);
+  width: 327px;
 }
