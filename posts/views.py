@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
 from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm, EditorForm
 from django.http import JsonResponse
+from django.db.models import Q
 
 
 # Create your views here.
@@ -262,3 +263,12 @@ def community_list(request):
         'commu': page_obj,  # commu 변수를 page_obj로 변경
     }
     return render(request, 'posts/community_list.html', context)
+
+def search(request, keyword):
+    keyword = request.GET.get('keyword')
+    commu = Post_community.objects.filter(Q(title__icontains=keyword)|Q(content__icontains=keyword)).order_by('-pk')
+    context = {
+        'commu':commu,
+        'keyword':keyword,
+    }
+    return render(request, 'posts/commu_info.html', context)

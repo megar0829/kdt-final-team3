@@ -328,3 +328,24 @@ body {
   background: rgb(235 254 250);
   color: rgb(24 227 195);
 }
+
+.search-box {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-keyword {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin-bottom: 8px;
+}
+
+.search-conunt {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: rgb(97, 97, 95);
+}

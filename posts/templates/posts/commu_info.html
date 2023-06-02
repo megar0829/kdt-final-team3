@@ -12,7 +12,9 @@
     <!--사이드바-->
     <div style="width: 15rem;">
       <div class="commu-side" style="width: 11rem;">
-        <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+        <form action="{%url 'posts:search' 'keyword' %}" method="get">
+        <input type="text" class="form-control" placeholder="검색어를 입력하세요" name="keyword">
+        </form>
       </div>
       <div class="commu-side">
         <div class="card" style="width: 11rem;">
@@ -59,11 +61,16 @@
     </div>
     <!--메인-->
     <main class="commu-main">
-      <div class="commu-createBA">
-        {% if request.user.is_authenticated %}
-        <div>
-
+      <div class="search-box" style="display: none;">
+        <div class="search-keyword">
+          검색'{{ keyword }}'
         </div>
+        <div class="search-conunt">
+          {{ commu.count }}개의 검색결과
+        </div>
+      </div>
+      {% if request.user.is_authenticated %}
+      <div class="commu-createBA">
         <div class="commu-createBA-item2">
           <div> 회원님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
           <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
@@ -296,16 +303,32 @@
     var currentURL = window.location.href;
   
     // 숨길 태그의 CSS 클래스명
-    var targetClass = "bestTC";
+    var targetClass = "best_post";
+    var targetClass2 = "commu-createBA"
+    var targetClass3 = "new_post"
+    var targetClass4 = "search-box"
   
     // URL에 따라 태그 숨기기
     var category = "{{ category }}"
+    var keyword = "{{ keywords }}"
+    console.log(keyword)
     if (currentURL.includes("community/filter/" + category)) {
       var targetElement = document.querySelector("." + targetClass);
       if (targetElement) {
-        targetElement.style.display = "none";
+          targetElement.style.display = "none";
       }
-    }
+  } else if (currentURL.includes("community/search/keyword?keyword=" + keyword)) {
+      var targetElement = document.querySelector("." + targetClass);
+      var targetElement2 = document.querySelector("." + targetClass2);
+      var targetElement3 = document.querySelector("." + targetClass3);
+      var targetElement4 = document.querySelector("." + targetClass4);
+      if (targetElement && targetElement2 && targetElement3 ) {
+          targetElement.style.display = "none";
+          targetElement2.style.display = "none";
+          targetElement3.style.display = "none";
+          targetElement4.style.display = "block";
+      }
+  }
     console.log(currentURL,targetElement.style )
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
