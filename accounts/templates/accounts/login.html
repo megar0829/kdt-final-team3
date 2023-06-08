@@ -12,10 +12,16 @@
   <form action="{% url 'accounts:login' %}", method="POST">
     {% csrf_token %}
     {{ form.as_p }}
+
+  <div class="signup-api">
+      <div class="btn btn-outline-secondary m-3">API</div>
+      <div class="btn btn-outline-secondary m-3">API</div>
+      <div class="btn btn-outline-secondary m-3">API</div>
+  </div>
+
     <input type="submit" value="로그인" class="btn btn-secondary login-btn">
     
   </form>
-  
   
 </main>
 {% endblock content %}
