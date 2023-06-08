@@ -15,6 +15,7 @@ from .forms import (
     CustomUserCreationForm as UserCreationForm,
     EditorForm
 )
+from django.db.models import Count
 
 # Create your views here.
 
@@ -95,10 +96,12 @@ def change_password(request):
 def profile(request, user_pk):
     # my_profile = User.objects.get(pk=user_pk)
     my_posts = Post_community.objects.filter(user=user_pk)
+    top_posts = Post_community.objects.annotate(like_count=Count('like_user')).filter(like_count__gte=3).order_by('-like_count')[:2]
     # my_comments = Comment.objects.filter(pk=user_pk)
     # print(my_posts)
     context = {
         'my_posts': my_posts,
+        'top_posts': top_posts,
         # 'my_comments': my_comments,
     }
     return render(request, 'accounts/profile.html', context)

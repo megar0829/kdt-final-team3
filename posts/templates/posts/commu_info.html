@@ -17,47 +17,44 @@
         </form>
       </div>
       <div class="commu-side">
-        <div class="card" style="width: 11rem;">
-          <div class="card-header">
+        <div style="width: 11rem;">
+          <div class="best_post mb-4 p-2 ps-3">
             언어
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="commu-side">
-        <div class="card" style="width: 11rem;">
-          <div class="card-header">
-            후기
+          <div class="best_post p-3">
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+              </span>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item side">학원이름</li>
-            <li class="list-group-item side">학원이름</li>
-            <li class="list-group-item side">학원이름</li>
-          </ul>
         </div>
       </div>
+      
     </div>
     <!--메인-->
     <main class="commu-main">
@@ -69,67 +66,66 @@
           {{ commu.count }}개의 검색결과
         </div>
       </div>
-      {% if request.user.is_authenticated %}
       <div class="commu-createBA">
-        <div class="commu-createBA-item2">
-          <div> 회원님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
-          <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
-            글 작성
-          </button>
-        </div>
-        {% else %}
-        <div class="commu-createBA-item2">
-          아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요
-        </div>
+        {% if request.user.is_authenticated %}
+          <div class="commu-createBA-item2">
+            <div> 회원님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
+            <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
+              글 작성
+            </button>
+          </div>
+          {% else %}
+          <div class="commu-createBA-item2">
+            <div>아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요</div>
+          </div>
         {% endif %}
       </div>
-          <div class="best_post">
-            <div class="best_post_all">
-              <div>
-                베스트글
-              </div>
-              <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all">TOP5 보기</a>
-            </div>
+      <div class="best_post">
+        <div class="best_post_all">
+          <div>
+            베스트글
           </div>
-            {% for post in top_posts %}
-            {% if forloop.counter0|divisibleby:2 %}
-              <div class="row">
-            {% endif %}
-              <div class="col-6">
-                <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post col-6" data-pk="{{ post.pk }}">
-                  <div class="카테고리 d-flex" style="justify-content: space-between;">
-                    <div class="commuT">
-                      {{ post.title}}
-                    </div>
-                    <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
-                      {{ post.category }}
-                    </div>
-                  </div>
-                  <div class="commu-main-post">
-                    <div class="commu-post-info">
-                      <div class="commuBA-group">
-                        <div class="commuBA-item">
-                          <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
-                        </div>
-                        {{ post.views }}
-                        <div class="commuBA-item">
-                          <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
-                        </div>
-                        {{ post.like_user.count }}
-                        <div class="commuBA-item">
-                          <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
-                        </div>
-                        {{ post.comment_count }}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              {% if forloop.counter|divisibleby:2 or forloop.last %}
+          <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all">TOP5 보기</a>
+        </div>
+      </div>
+      {% for post in top_posts %}
+        {% if forloop.counter0|divisibleby:2 %}
+          <div class="row">
+        {% endif %}
+          <div class="col-6">
+            <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post col-6" data-pk="{{ post.pk }}">
+              <div class="카테고리 d-flex" style="justify-content: space-between;">
+                <div class="commuT">
+                  {{ post.title}}
                 </div>
-              {% endif %}
-              
-            {% endfor %}
+                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                  {{ post.category }}
+                </div>
+              </div>
+              <div class="commu-main-post">
+                <div class="commu-post-info">
+                  <div class="commuBA-group">
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+                    </div>
+                    {{ post.views }}
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
+                    </div>
+                    {{ post.like_user.count }}
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
+                    </div>
+                    {{ post.comment_count }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% if forloop.counter|divisibleby:2 or forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
       <div class="new_post">
         <div class="new_post_all">
           <div>
@@ -139,49 +135,49 @@
         </div>
       </div>
       {%for post in commu%}
-      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
-        <div class="카테고리 d-flex" style="justify-content: space-between;">
-          <div class="commuT">
-            {{ post.title}}
-          </div>
-          <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
-            {{ post.category }}
-          </div>
-        </div>
-        <div class="제목/내용">
-          
-          <div class="commuC">
-            {{ post.content|strip_html_tags }}
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="commuU">
-            <div class="commu-user-ico">
-              <img src="{%static 'commu_ico/user3.png'%}" alt="" style="pe-3"> {{ post.user}}
+        <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
+          <div class="카테고리 d-flex" style="justify-content: space-between;">
+            <div class="commuT">
+              {{ post.title}}
             </div>
+            <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+              {{ post.category }}
+            </div>
+          </div>
+          <div class="제목/내용">
             
-          </div>
-        </div>
-        <div class="commuBA">
-          <div class="time">
-            {{ post.create_at|custom_timesince }}
-          </div>
-          <div class="commuBA-group">
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+            <div class="commuC">
+              {{ post.content|strip_html_tags }}
             </div>
-            {{ post.views }}
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
-            </div>
-            {{ post.like_user.count }}
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
-            </div>
-            {{ post.comment_count }}
           </div>
-        </div>
-      </a>
+          <div class="d-flex">
+            <div class="commuU">
+              <div class="commu-user-ico">
+                <img src="{%static 'commu_ico/user3.png'%}" alt="" style="pe-3"> {{ post.user}}
+              </div>
+              
+            </div>
+          </div>
+          <div class="commuBA">
+            <div class="time">
+              {{ post.create_at|custom_timesince }}
+            </div>
+            <div class="commuBA-group">
+              <div class="commuBA-item">
+                <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+              </div>
+              {{ post.views }}
+              <div class="commuBA-item">
+                <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
+              </div>
+              {{ post.like_user.count }}
+              <div class="commuBA-item">
+                <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
+              </div>
+              {{ post.comment_count }}
+            </div>
+          </div>
+        </a>
       {% endfor %}
       {% if commu.has_previous or commu.has_next %}
         <div class="pagination justify-content-center">
@@ -193,61 +189,60 @@
 
     </main>
     <!--추천글-->
-    <div class="commu-recommend">
-      <div>
-        <div class="card">
-          <div class="card-header commu-card-header">
-            <div>
-              추천글
-            </div>
-            <div>
-              <a href="#" class="commu-recommend-all">더보기</a>
-            </div>
+    <div class="like-main">
+      <div class="like_post">
+        <div class="like_post_all">
+          <div>
+            추천글
           </div>
-          <ul class="list-group list-group-flush pt-2">
-            <li class="list-group-item pt-2">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item pt-2">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
         </div>
       </div>
+      <div>
+        {% regroup commu_filtered by like_user.count as commu_grouped %}
+        {% for group in commu_grouped|dictsortreversed:'grouper' %}
+          {% if group.grouper >= 3 %}
+            {% for post in group.list|dictsortreversed:'like_user.count' %}
+              {% if forloop.counter0 < 2 %}
+                <div>
+                  <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
+                    <div class="카테고리 d-flex" style="justify-content: space-between;">
+                      <div class="commuT">
+                        {{ post.title }}
+                      </div>
+                      <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                        {{ post.category }}
+                      </div>
+                    </div>
+                    <div class="commu-main-post">
+                      <div class="commu-post-info">
+                        <div class="commuBA-group">
+                          <div class="commuBA-item">
+                            <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+                          </div>
+                          {{ post.views }}
+                          <div class="commuBA-item">
+                            <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
+                          </div>
+                          {{ post.like_user.count }}
+                          <div class="commuBA-item">
+                            <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
+                          </div>
+                          {{ post.comment_count }}
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
-</div>
-
+    
+    
+    
    <!-- Modal -->
    <div class="modal fade" style="font-family: 'S-CoreDream-3Light';" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -296,6 +291,7 @@
       </div>
     </div>
   </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{%static 'js/detail.js'%}?after"></script>
 <script>
