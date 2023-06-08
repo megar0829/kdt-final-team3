@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
 from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm, EditorForm
 from django.http import JsonResponse
+from django.db import models
 from django.db.models import Q
 
 
@@ -81,6 +82,8 @@ def community_info(request):
     # commu = Post_community.objects.all().order_by('-pk')
     top_posts = Post_community.objects.order_by('-views')[:2]
 
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
+    
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
         commu_image = CommuImageForm(request.POST, request.FILES)
@@ -88,10 +91,11 @@ def community_info(request):
         commu_create = CommunityForm()
         commu_image = CommuImageForm()
     context = {
-         'commu': page_obj,
+        'commu': page_obj,
         'commu_create':commu_create,
         'commu_image':commu_image,
         'top_posts':top_posts,
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
 
     }
     return render(request, 'posts/commu_info.html', context)
@@ -123,9 +127,11 @@ def community_detail(request, community_pk):
     commus = Post_community.objects.get(pk=community_pk)
     commus.increase_views()
     commu_list = Post_community.objects.exclude(pk=community_pk).order_by('-pk')
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
     context = {
         'commus': commus,
         'commu_list': commu_list,
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
     }
     return render(request, 'posts/commu_detail.html', context)
 
@@ -197,6 +203,7 @@ def community_like(request, community_pk):
 
 def community_filter(request, category):
     commu = Post_community.objects.filter(category=category).order_by('-pk')
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
         commu_image = CommuImageForm(request.POST, request.FILES)
@@ -207,13 +214,14 @@ def community_filter(request, category):
         'commu':commu,
         'commu_create':commu_create,
         'commu_image':commu_image,
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
     }
     return render(request, "posts/commu_info.html", context)
 
 def community_info_best(request):
     commu = Post_community.objects.all().order_by('-pk')
     top_posts_all = Post_community.objects.order_by('-views')[:5]
-
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
         commu_image = CommuImageForm(request.POST, request.FILES)
@@ -225,7 +233,7 @@ def community_info_best(request):
         'commu_create':commu_create,
         'commu_image':commu_image,
         'top_posts_all':top_posts_all,
-
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
     }
     return render(request, 'posts/commu_info_best.html', context)
 
@@ -236,7 +244,7 @@ def community_info_new(request):
     page_obj = paginator.get_page(page_number)
     # commu = Post_community.objects.all().order_by('-pk')
     top_posts = Post_community.objects.order_by('-views')[:4]
-
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
     if request.method == 'POST':
         commu_create = CommunityForm(request.POST)
         commu_image = CommuImageForm(request.POST, request.FILES)
@@ -248,6 +256,7 @@ def community_info_new(request):
         'commu_create':commu_create,
         'commu_image':commu_image,
         'top_posts':top_posts,
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
 
     }
     return render(request, 'posts/commu_info_new.html', context)
@@ -272,3 +281,28 @@ def search(request, keyword):
         'keyword':keyword,
     }
     return render(request, 'posts/commu_info.html', context)
+
+def community_info_like(request):
+    post_list = Post_community.objects.all().order_by('-pk')
+    paginator = Paginator(post_list, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    # commu = Post_community.objects.all().order_by('-pk')
+    top_posts = Post_community.objects.order_by('-views')[:4]
+    commu_filtered = Post_community.objects.annotate(like_count=models.Count('like_user')).filter(like_count__gte=3)
+
+    if request.method == 'POST':
+        commu_create = CommunityForm(request.POST)
+        commu_image = CommuImageForm(request.POST, request.FILES)
+    else:
+        commu_create = CommunityForm()
+        commu_image = CommuImageForm()
+    context = {
+        'commu': page_obj,
+        'commu_create':commu_create,
+        'commu_image':commu_image,
+        'top_posts':top_posts,
+        'commu_filtered': commu_filtered,  # 추천글 (좋아요3개이상)
+
+    }
+    return render(request, 'posts/commu_info_like.html', context)
