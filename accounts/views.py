@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import (
     login as auth_login,
@@ -14,7 +14,12 @@ from .forms import (
     CustomUserCreationForm as UserCreationForm,
     EditorForm
 )
-
+import math
+from django.template.loader import render_to_string
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.core.mail import EmailMessage
+from django.utils.encoding import force_bytes, force_text
+from .tokens import account_activation_token
 # Create your views here.
 
 
@@ -24,6 +29,8 @@ def login(request):
         if form.is_valid():
             auth_login(request, form.get_user())
             return redirect('posts:index')
+        # else:
+            # return redirect('accounts:login')            
     else:
         form = AuthenticationForm(request)
     context = {
@@ -42,7 +49,24 @@ def signup(request):
         form = UserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
-            auth_login(request, user)
+            user.is_active = False
+            # user = user.save()
+            print(user)
+            
+            # current_site = get_current_site(request)
+            current_site = request.META['HTTP_HOST'],
+            message = render_to_string('accounts/activation_email.html', {
+                'user': user,
+                'domain': current_site[0],
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
+            })
+            mail_title = '계정 활성화 확인 이메일'
+            mail_to = request.POST['email']
+            email = EmailMessage(mail_title, message, to=[mail_to])
+            email.send()
+            # auth_login(request, user)
+            return render(request, 'accounts/success.html')
             return redirect('posts:index')
     else:
         form = UserCreationForm()
@@ -92,13 +116,17 @@ def change_password(request):
  
 @login_required
 def profile(request, user_pk):
-    # my_profile = User.objects.get(pk=user_pk)
     my_posts = Post_community.objects.filter(user=user_pk)
-    # my_comments = Comment.objects.filter(pk=user_pk)
-    # print(my_posts)
+    experience_max = int(math.log((request.user.level)*10) * 10)
+    percent = int(((request.user.experience)/experience_max) * 100)
+    percent_surplus = 100 - percent
+    experience_surplus = (experience_max) - (request.user.experience)
     context = {
         'my_posts': my_posts,
-        # 'my_comments': my_comments,
+        'experience_max' : experience_max,
+        'percent' : percent,
+        'percent_surplus' : percent_surplus,
+        'experience_surplus' : experience_surplus,
     }
     return render(request, 'accounts/profile.html', context)
 
@@ -106,4 +134,18 @@ def profile(request, user_pk):
 # 테스트 용
 def profile_note(request):
     return render(request, 'accounts/profile_note.html')
+
+
+def activate(request, uidb64, token):
+    try:
+        uid = force_text(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+        if user is not None and account_activation_token.check_token(user, token):
+            User.objects.filter(pk=uid).update(is_active=True)
+            return redirect("posts:index")
+    except(TypeError, ValueError, OverflowError, User.DoesNotExsit):
+        user = None
+    else:
+        return render(request, 'accounts/activation_email.html', {'error' : '계정 활성화 오류'})
+    return 
 
