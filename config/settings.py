@@ -16,14 +16,15 @@ import json
 import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ROOT_DIR = os.path.dirname(BASE_DIR)
-SECRET_BASE_FILE = os.path.join(BASE_DIR, 'secrets.json')
+# ROOT_DIR = os.path.dirname(BASE_DIR)
+# SECRET_BASE_FILE = os.path.join(BASE_DIR, 'secrets.json')
 
-secrets = json.loads(open(SECRET_BASE_FILE).read())
-for key, value in secrets.items():
-    setattr(sys.modules[__name__], key, value)
+# secrets = json.loads(open(SECRET_BASE_FILE).read())
+# for key, value in secrets.items():
+#     setattr(sys.modules[__name__], key, value)
     
 
 # Quick-start development settings - unsuitable for production
@@ -63,6 +64,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
     'rest_framework',
+    'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
     'dj_rest_auth',
     'dj_rest_auth.registration',
@@ -211,13 +213,15 @@ REST_FRAMEWORK = {
 # ACCOUNT_EMAIL_REQUIRED = True            
 # ACCOUNT_USERNAME_REQUIRED = False        
 # ACCOUNT_AUTHENTICATION_METHOD = 'email'
-REST_USE_JWT = True
-from datetime import timedelta
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=2),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
-    'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': True,
+# REST_USE_JWT = True
+# from datetime import timedelta
+# SIMPLE_JWT = {
+#     'ACCESS_TOKEN_LIFETIME': timedelta(hours=2),
+#     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+#     'ROTATE_REFRESH_TOKENS': False,
+#     'BLACKLIST_AFTER_ROTATION': True,
+# }
+
 CKEDITOR_CONFIGS = {
     'default': {
         'width': '100%', 
