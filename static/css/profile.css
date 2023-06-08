@@ -106,11 +106,11 @@ td {
   text-align: center;
   margin: 0 auto; 
 }
-
+/* 
 .Calendar>thead>tr:first-child>td { font-weight: bold; }
 
   border: 1px solid lightgray;
-}
+} */
 
 
 /* cummu_info.css */
@@ -231,6 +231,7 @@ td {
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  margin-bottom: 20px;
   background-color: white;
 }
 
@@ -333,6 +334,8 @@ body {
 
 .hide-clear-checkbox .clear-checkbox-label {
   display: none;
+}
+
 .Calendar>thead>tr:last-child>td {
   background-color: gray;
   color: white;

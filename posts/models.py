@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 import math
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
@@ -19,7 +20,7 @@ class Post_community(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title  = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
-    content = models.TextField()
+    content = RichTextUploadingField(blank=True, null=True)
     views = models.IntegerField(default=0)
     create_at =models.DateTimeField(auto_now_add=True)
     like_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_user')
@@ -65,3 +66,6 @@ class Post_image(models.Model):
 class community_image(models.Model):
     community_post = models.ForeignKey(Post_community, on_delete=models.CASCADE)
     community_image = models.ImageField(upload_to='community_image/%Y/%m/%d/', blank=True, null=True)
+
+class Editor(models.Model):
+    text = RichTextUploadingField(blank=True, null=True)

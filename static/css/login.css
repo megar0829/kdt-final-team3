@@ -1,12 +1,14 @@
+body {
+  background-color: rgb(247, 247, 240);
+}
+
+
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
   height: 350px;
-  border: 1px solid black;
   margin: 0 auto;
-  margin-top: 100px;
 }
 
 .login-title {
@@ -15,6 +17,20 @@
 
 .login-input {
   margin-top: 40px;
-  width: 250px;
-  height: 30px;
+  width: 330px;
+  height: 40px;
+}
+
+.login-btn {
+  width: 100%;
+  padding-bottom: 10px;
+  margin-top:20px;
+}
+
+.errorlist {
+  text-align: center;
+  padding:0;
+  margin-top:10px;
+  color:rgb(161, 161, 161);
+  width:327px;
 }

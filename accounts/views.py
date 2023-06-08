@@ -5,6 +5,7 @@ from django.contrib.auth import (
     logout as auth_logout,
     update_session_auth_hash,
 )
+from django.contrib import messages
 from .models import User, Editor
 from posts.views import Post_bootscamp, Post_community, Comment
 from .forms import (
@@ -20,6 +21,8 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.core.mail import EmailMessage
 from django.utils.encoding import force_bytes, force_text
 from .tokens import account_activation_token
+from django.db.models import Count
+
 # Create your views here.
 
 
@@ -117,16 +120,22 @@ def change_password(request):
 @login_required
 def profile(request, user_pk):
     my_posts = Post_community.objects.filter(user=user_pk)
+
     experience_max = int(math.log((request.user.level)*10) * 10)
     percent = int(((request.user.experience)/experience_max) * 100)
     percent_surplus = 100 - percent
     experience_surplus = (experience_max) - (request.user.experience)
+    top_posts = Post_community.objects.annotate(like_count=Count('like_user')).filter(like_count__gte=3).order_by('-like_count')[:2]
+    # my_comments = Comment.objects.filter(pk=user_pk)
+    # print(my_posts)
     context = {
         'my_posts': my_posts,
         'experience_max' : experience_max,
         'percent' : percent,
         'percent_surplus' : percent_surplus,
         'experience_surplus' : experience_surplus,
+        'top_posts': top_posts,
+        # 'my_comments': my_comments,
     }
     return render(request, 'accounts/profile.html', context)
 

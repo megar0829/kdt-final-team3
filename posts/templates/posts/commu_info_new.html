@@ -1,19 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
-{% load humanize %}
-{% load custom_filters%}
+{% load custom_filters %}
 
-<link rel="stylesheet" href="{% static 'css/commu_detail.css' %}?after " />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="{% static 'css/commu_info.css' %}?after " />
 {% endblock style %}
 
 {% block content %}
-<div>
+<div class="commu">
   <div class="d-flex justify-content-between">
     <!--사이드바-->
-     <!--사이드바-->
-     <div style="width: 15rem;">
+    <div style="width: 15rem;">
       <div class="commu-side" style="width: 11rem;">
         <input type="text" class="form-control" placeholder="검색어를 입력하세요">
       </div>
@@ -55,150 +52,45 @@
           </div>
         </div>
       </div>
+      
     </div>
     <!--메인-->
     <main class="commu-main">
-    <div class="commu-detail">
-        <header class="detail-header">
-          {% if commus.user == request.user %}
-            <div class="dropdown dropstart">
-              <img src="{%static 'commu_ico/dots.svg'%}" class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="ture">
-              </img>
-            
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="{%url 'posts:commu_update' commus.pk %}">글 수정</a></li>
-                <li><a class="dropdown-item" href="{%url 'posts:commu_delete' commus.pk %}">글 삭제</a></li>
-              </ul>
-            </div>
-          {% endif %}
-          <div class="d-flex">
-            <a href="{%url 'posts:commu_filter' commus.category %}">
-              <div class="commuCA {% if commus.category == 'Django' %}category-django{% elif commus.category == 'Java' %}category-java{% elif commus.category == 'Spring' %}category-spring{% elif commus.category == 'DB' %}category-db{% elif commus.category == 'JPA' %}category-jpa{% elif commus.category == '백엔드' %}category-back{% elif commus.category == '프론트엔드' %}category-front{% endif %}">
-                {{ commus.category }}
-              </div>
-            </a>
+      <div class="new_post">
+        <div class="new_post_all">
+          <div>
+            최신글 
+            <span class="ps-2"style="color: lightgray; font-size:12px;">전체 게시글을 최신순으로 조회합니다</span>
           </div>
-          <div class="commu-title">
-            <h1 class="commuT">{{ commus.title }}</h1>
-            <div class="time">
-              {{ commus.create_at|date:"m.j H:i" }} | 조회수 {{commus.views}}
-            </div>
-          </div>
-          <div class="commu-user">
-            <div class="commu-user-ico">
-              <img src="{%static 'commu_ico/user3.png'%}" alt="">
-            </div>
-            <div class="commu-user-item">
-              <div class="commu-user-item2">
-                <span title="{{commus.user}}" class="commu-user-name">{{ commus.user }}</span>
-              </div>
-            </div>
-          </div>
-        </header>
-        <article class="commu-content-box">
-            <div class="commu-content">
-              {{commus.content|safe}}
-            </div>
-            <div class="commu-like-box">
-                <form id="like-form" data-post-id="{{ commus.pk }}">
-                  {% csrf_token %}
-                <div class="commu-like-item">
-                  <div class="commu-post-like">
-                    {{ commus.like_user.count }}
-                  </div>
-                  <div class="commu-like-ico">
-                    <img src="{%static 'commu_ico/like.jpg' %}" alt="좋아요" style="width:20px; height:auto; margin-bottom: 8px;" class="">
-                  </div>
-                </div>
-              </div>
-            </form>
-        </article>
-    </div>
-        <comment>
-          <div class="new_post">
-            댓글 달기
-          </div>
-            <div style="width:100%; background-color: white;">
-                <div class="commu-comment-box">
-                    <div class="commu-comment-item">
-                        <form id="comment-form" method="POST" action="{%url 'posts:comment' commus.pk%}">
-                        {% csrf_token %}
-                        <textarea class="commnet-box" contenteditable="true" role="textbox" aria-multiline="true" aria-placeholder="댓글 달기..." aria-required="true" name="content"></textarea>
-                    </div>
-                </div>
-                <div class="commu-comment-button-box">
-                    <div class="commu-comment-item commu-comment-btn">
-                        <button  id="comment-submit" class="button-item">등록</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-        </comment>
-      <section class="commu-comment-section">
-        <div class="new_post">
-          전체 댓글 {{ commus.comment_count }}
         </div>
-        {% for comment in commus.comment.all  %}
-          <div class="commu_post">
-            {% if comment.user == request.user %}
-            <div class="dropdown dropstart">
-              <img src="{%static 'commu_ico/dots.svg'%}" class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="ture">
-              </img>
-            
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">댓글 수정</a></li>
-                <li><a class="dropdown-item" href="{%url 'posts:comment_delete' commus.pk comment.pk%}">댓글 삭제</a></li>
-              </ul>
-            </div>
-            {% endif %}
-            <div class="commu-user">
-              <div class="commu-user-ico">
-                <img src="{%static 'commu_ico/user3.png'%}" alt="">
-              </div>
-              <div class="commu-user-item">
-                <div class="commu-user-item2">
-                  <span title="{{commus.user}}" class="commu-user-name">{{ comment.user }}</span>
-                </div>
-                <div class="time">
-                  {{ comment.create_at|custom_timesince }}
-                </div>
-              </div>
-            </div>
-            <div class="commu-content-box">
-              <div class="commu-content">
-                {{comment.content}}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </section>
-    {%for post in commu_list%}
-    {% if post.category == commus.category %}
-    {%if post.pk != commus.pk %}
+      </div>
+      {%for post in commu%}
       <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
-        <div class="카테고리 d-flex">
+        <div class="카테고리 d-flex" style="justify-content: space-between;">
+          <div class="commuT">
+            {{ post.title}}
+          </div>
           <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
             {{ post.category }}
           </div>
         </div>
         <div class="제목/내용">
-          <div class="commuT">
-            {{ post.title}}
-          </div>
+          
           <div class="commuC">
-            {{ post.content|strip_html_tags }}
+            {{ post.content }}
           </div>
         </div>
-        <div class="유저">
+        <div class="d-flex">
           <div class="commuU">
             <div class="commu-user-ico">
               <img src="{%static 'commu_ico/user3.png'%}" alt="" style="pe-3"> {{ post.user}}
             </div>
+            
           </div>
         </div>
         <div class="commuBA">
           <div class="time">
-            {{ post.create_at|timesince }}전
+            {{ post.create_at|custom_timesince }}
           </div>
           <div class="commuBA-group">
             <div class="commuBA-item">
@@ -216,9 +108,27 @@
           </div>
         </div>
       </a>
-      {% endif %}
-      {% endif %}
       {% endfor %}
+      {% if commu.has_previous or commu.has_next %}
+        <div class="pagination justify-content-center">
+            {% if commu.has_previous %}
+                <a class="page-link" href="?page=1">&laquo;</a>
+            {% endif %}
+
+            {% for num in commu.paginator.page_range %}
+                {% if commu.number == num %}
+                    <span class="current-page page-link">{{ num }}</span>
+                {% else %}
+                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if commu.has_next %}
+                <a class="page-link" href="?page={{ commu.paginator.num_pages }}">&raquo;</a>
+            {% endif %}
+        </div>
+      {% endif %}
+
     </main>
     <!--추천글-->
     <div class="like-main">
@@ -278,7 +188,74 @@
   </div>
   </div>
 </div>
-<script src="{%static 'js/detail.js'%}?after "></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+   <!-- Modal -->
+   <div class="modal fade" style="font-family: 'S-CoreDream-3Light';" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+              <h5 class="modal-title">리뷰 남기기</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            {% comment %} <div class="modal-body">
+              <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ commu_create.as_p }}
+                {{ commu_image }}
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  <input type="submit" value="후기 작성" class="btn btn-success modal_form">
+                </div>
+              </form>
+            </div> {% endcomment %}
+            <div class="modal-body">
+              <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="id_category">커뮤니티를 선택하세요</label>
+                  {{ commu_create.category }}
+                </div>
+                <div class="mb-3">
+
+                  <input type="text" class="form-control" id="id_title" name="title" placeholder="제목을 입력하세요">
+                </div>
+                <div class="mb-3">
+                  <textarea name="content" id="id_content" class="form-control" rows="10"placeholder="내용을 입력하세요"></textarea>
+                </div>
+                <div class="mb-3">
+                  <div class="input-group">
+                    <input type="file" name="image" id="id_image" class="form-control" accept="image/*">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  <input type="submit" value="후기 작성" class="btn btn-success modal_form">
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{%static 'js/detail.js'%}?after"></script>
+<script>
+    // 현재 URL 확인
+    var currentURL = window.location.href;
+  
+    // 숨길 태그의 CSS 클래스명
+    var targetClass = "bestTC";
+  
+    // URL에 따라 태그 숨기기
+    var category = "{{ category }}"
+    if (currentURL.includes("community/filter/" + category)) {
+      var targetElement = document.querySelector("." + targetClass);
+      if (targetElement) {
+        targetElement.style.display = "none";
+      }
+    }
+    console.log(currentURL,targetElement.style )
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 {% endblock content %}

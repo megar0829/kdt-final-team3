@@ -1,5 +1,6 @@
 from django import forms
-from .models import Post_bootscamp, Post_community, Comment, Post_image, community_image
+from .models import Post_bootscamp, Post_community, Comment, Post_image, community_image, Editor
+from ckeditor.widgets import CKEditorWidget
 
 class PostForm(forms.Form):
     title = forms.CharField(label='부트캠프 제목', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -46,3 +47,22 @@ class CommuImageForm(forms.ModelForm):
         model = community_image
         fields = ('community_image',)
         widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
+
+class EditorForm(forms.ModelForm):
+    content = forms.CharField(
+        label= "",
+        widget=CKEditorWidget()
+    )
+
+    title = forms.CharField(
+        label="",
+        widget= forms.TextInput(
+            attrs={
+                'style': 'width:100%;'
+            }
+        )
+    )
+    class Meta:
+        model = Post_community
+        fields = ('title','content' )
+
