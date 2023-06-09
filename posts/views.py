@@ -38,6 +38,7 @@ def bootscamp_create(request):
             image = imageForm.cleaned_data['post_image']
             Post_image.objects.create(post=bootcamp, post_image=image)
 
+
             return redirect('posts:boots_detail', bootcamp.id)
     else:
         form = PostForm()
