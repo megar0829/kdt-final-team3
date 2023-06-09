@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image
+from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image, Tag
 from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm, EditorForm
 from django.http import JsonResponse
 from django.db import models
@@ -28,34 +28,62 @@ def bootscamp_info(request):
 
 def bootscamp_create(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
-        imageForm = PostImageForm(request.POST, request.FILES)
-        if form.is_valid() and imageForm.is_valid():
-            title = form.cleaned_data['title']
-            content = form.cleaned_data['content']
-            start_data = form.cleaned_data['start_data']
-            duration = form.cleaned_data['duration']
-            bootcamp = Post_bootscamp(title=title, content=content, start_data=start_data, duration=duration)
-            bootcamp.save()
-            image = imageForm.cleaned_data['post_image']
+        form = PostImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            title = request.POST.get('title')
+            tags = request.POST.getlist('tags')
+            start_data1 = request.POST.get('start_data1')
+            start_data2 = request.POST.get('start_data2')
+            end_data = request.POST.get('end_data')
+            time = request.POST.get('time')
+            people = request.POST.get('people')
+            class_method = request.POST.get('class_method')
+            equipment = request.POST.get('equipment')
+            onoff = request.POST.get('onoff')
+            location = request.POST.get('location')
+            content = request.POST.get('content')
+            price = request.POST.get('price')
+            card = request.POST.get('card')
+            image = form.cleaned_data['post_image']
+
+            bootcamp = Post_bootscamp.objects.create(
+                user_id = request.user.pk,
+                title=title,
+                start_data1=start_data1,
+                start_data2=start_data2,
+                end_data=end_data,
+                time=time,
+                people=people,
+                class_method=class_method,
+                equipment=equipment,
+                onoff=onoff,
+                location=location,
+                content=content,
+                price=price,
+                card=card,
+            )
+
             Post_image.objects.create(post=bootcamp, post_image=image)
 
+            for tag_name in tags:
+                tag, _ = Tag.objects.get_or_create(name=tag_name)
+                bootcamp.tags.add(tag)
 
             return redirect('posts:boots_detail', bootcamp.id)
     else:
-        form = PostForm()
-        imageForm = PostImageForm()
-    context ={
-        'form':form,
-        'imageForm':imageForm
+        form = PostImageForm()
+
+    context = {
+        'imageForm': form
     }
-    
     return render(request, 'posts/boots_create.html', context)
 
 def bootscamp_detail(request, boots_pk):
-    boots = Post_bootscamp.objects.get(pk=boots_pk)
+    post = Post_bootscamp.objects.get(pk=boots_pk)
+    tags = Tag.objects.get(pk=boots_pk)
     context = {
-        'boots': boots,
+        'post': post,
+        'tags': tags,
     }
     return render(request, 'posts/boots_detail.html', context)
 

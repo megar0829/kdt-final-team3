@@ -1,12 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Boots_detail Test</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+{% load humanize %}
+{% load custom_filters%}
+    
+<link rel="stylesheet" href="{% static 'css/btcreate.css' %}?after " />
+    
+{%endblock style %}
+    
+    
+{% block content %}
+<div class="container">
+    <div class="camp_container" style="margin-top: 48px;">
+        <div class="camp_title2" style="text-align: center;">
+            <h5>
+                <a href="#" target="_blank">{{ post.title }}</a>
+            </h5>
+        </div>
+        <div style="text-align: left;">
+            <div class="camp_descriptiontitle">
+                <h4>교육과정</h4>
+                <span>정확한 정보는 내용을 확인해주세요.</span>
+            </div>
+              <div class="grid-row">
+                <div class="flex-row"  id="tags-container">
+                    {% for tag in post.tags.all %}
+                    <span class="ant-tag prep-tag" style="margin-bottom:3px">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="camp_descriptiontitle">
+              <h4>일정 및 수업</h4>
+              <span>변경가능성이 있으므로, 정확한 정보는 홈페이지에서 확인해주세요.</span>
+            </div>
+            <div class="ant-row" style="margin-left: -6px; margin-right: -6px; row-gap: 12px;">
+              <div class="ant-col">
+                <div class="camp_infocard">
+                  <div class="grid-row">
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%;">
+                        <span class="ant-tag second-text-color">모집마감</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{ post.start_data1}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">수업일정</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.start_data2}}
+                          ~
+                          {{post.end_data}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">수업시간</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.time}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">모집정원</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.people}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ant-col">
+                <div class="camp_infocard">
+                  <div class="grid-row">
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">수업방식</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.class_method}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">학습장비</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.equipment}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">온 / 오프</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.onoff}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-row-nowrap">
+                      <div style="height: 100%">
+                        <span class="ant-tag second-text-color">학습장소</span>
+                      </div>
+                      <div style="text-align: left;">
+                        <div class="flex-row">
+                          {{post.location}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="camp_content" style="margin-top:12px">
+              <h5>💡 이번 일정에 참여가 어렵다면?</h5>
+              {{post.content}}
+            </div>
+            <div class="camp_descriptiontitle">
+              <h4>
+                <big style="margin-right: 8px;">💳</big>
+                수강료
+              </h4>
+            </div>
+            <div class="grid-row">
+              <div class="flex-row-nowrap">
+                <div style="height: 100%;">
+                  <span class="ant-tag second-text-color">수강료</span>
+                </div>
+                <div style="text-align: left;">
+                  <div class="flex-row">
+                    {{post.price}}
+                  </div>
+                </div>
+              </div>
+              <div class="flex-row-nowrap">
+                <div style="height: 100%;">
+                  <span class="ant-tag second-text-color">내카배</span>
+                </div>
+                <div style="text-align: left;">
+                  <div class="flex-row">
+                    {{post.card}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    {% endblock content %}
 </body>
 </html>
