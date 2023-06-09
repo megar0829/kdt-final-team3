@@ -15,7 +15,9 @@
      <!--사이드바-->
      <div style="width: 15rem;">
       <div class="commu-side" style="width: 11rem;">
-        <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+        <form action="{%url 'posts:search' 'keyword' %}" method="get">
+          <input type="text" class="form-control" placeholder="검색어를 입력하세요" name="keyword">
+        </form>
       </div>
       <div class="commu-side">
         <div class="card" style="width: 11rem;">

@@ -3,17 +3,36 @@ from django.conf import settings
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
 
 class Post_bootscamp(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
+    tags = models.ManyToManyField(Tag)
+
+
+    # 일정
+    start_data1 =models.DateField()
+    end_data = models.DateField()
+    start_data2 = models.DateField()
+    time = models.CharField(max_length=50)
+    people = models.CharField(max_length=50)
+    class_method = models.CharField(max_length=50)
+    equipment = models.CharField(max_length=50)
+    onoff = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
     content = models.TextField()
-    start_data = models.DateField()
-    duration = models.IntegerField()
-    create_at = models.DateTimeField(auto_now_add=True)
-    update_at = models.DateTimeField(auto_now=True)
+
+    # 수강료
+    price = models.CharField(max_length=50)
+    card = models.CharField(max_length=50)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_users')
 
+    
 
 class Post_community(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
