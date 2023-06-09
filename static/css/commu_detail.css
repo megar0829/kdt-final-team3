@@ -19,6 +19,12 @@
   gap: 20px;
 }
 
+.commu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .commu-recommend {
   flex-basis: 20%;
   margin: 30px;
@@ -111,14 +117,14 @@
 }
 
 .commu_post {
-  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
+  width: 94%;
   background-color: white;
-  border-bottom: 1px solid rgb(232, 231, 224);
+  /* border-bottom: 1px solid rgb(232, 231, 224); */
   position: relative;
+  margin:15px;
 }
 
 .new_post {
@@ -127,9 +133,10 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 10px 15px;
   background-color: white;
-  border-bottom: 1px solid rgb(205, 204, 198);
+  border-bottom: 0.5px solid lightgray;
+  margin:15px;
 }
 
 a {
@@ -293,6 +300,10 @@ body {
   padding: 16px 20px;
   gap: 8px;
 }
+.commu-comment-box {
+  padding: 10px;
+  display: block;
+}
 
 .commu-comment-item {
   box-sizing: border-box;
@@ -305,8 +316,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  width: 100%;
-  margin: 3px 0px;
+  width: 96%;
+  margin: 3px 15px;
   display: block;
   overflow: auto;
   word-break: break-all;
@@ -325,6 +336,7 @@ body {
   align-items: center;
   -webkit-box-align: center;
   background-color: white;
+  margin: 0 15px;
 }
 
 .commu-comment-item {
@@ -360,6 +372,7 @@ body {
   overflow: hidden;
   width: 100%;
   pointer-events: none;
+  padding: 0 10px;
 }
 
 .commu-user-item {

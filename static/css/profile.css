@@ -1,7 +1,6 @@
 .profile-container {
   display: flex;
   justify-content: center;
-  border: 1px solid lightgray;
   margin: 30px 30px;
   flex-direction: column;
   align-items: center;
@@ -47,68 +46,9 @@
 .profile-introduction {
   height: 100px;
   margin: 20px 30px;
-  border:1px solid lightgray;
   
 }
 
-.profile-study {
-  margin-top:20px;
-}
-
-.profile-study-record {
-  width: 80%;
-
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-study-record-left {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-study-record-right {
-  width: 80%;
-  margin: 30px;
-  border:1px solid black;
-}
-
-.profile-mypost-content{
-  display: flex;
-  justify-content: space-between;
-}
-.profile-mypost {
-  width: 80%;
-  height: 100%;
-  margin: 30px;
-  border:1px solid lightgray;
-  padding: 20px;
-}
-
-.profile-mypost-v {
-  display: flex;
-  justify-content: end;
-}
-/* 달력 */
-td {
-  width: 50px;
-  height: 50px;
-  margin:10px;
-}
-
-.Calendar { 
-  text-align: center;
-  margin: 0 auto; 
-}
-/* 
-.Calendar>thead>tr:first-child>td { font-weight: bold; }
-
-  border: 1px solid lightgray;
-} */
 
 
 /* cummu_info.css */
@@ -334,28 +274,8 @@ body {
   display: none;
 }
 
-.Calendar>thead>tr:last-child>td {
-  background-color: gray;
-  color: white;
-}        
-
-.pastDay{ 
-  background-color: #FFFFFF; 
-  cursor: pointer;
-}
-
-.today{            
-  background-color: #FFCA64;            
-  cursor: pointer;
-}
-
-.futureDay{            
-  background-color: #FFFFFF;
-  cursor: pointer;
-}
-
-.futureDay.choiceDay, .today.choiceDay, .pastDay.choiceDay{            
-  background-color: #3E85EF;            
-  color: #fff;
-  cursor: pointer;
+.lv-bar {
+  margin: auto;
+  height: 18px;
+  width: 200px;
 }

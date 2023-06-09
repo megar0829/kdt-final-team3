@@ -8,46 +8,61 @@
 {% block content %}
 <div class="index-container">
   <header class="index-header">
-    OOO 커뮤니티에서 자유롭게 이야기 나눠보세요
+    000 에 오신걸 환영합니다.
   </header>
   <main>
     <div class="index-articles">
       <div>
-        <div class="index-article">
-          카테고리
-          <div>
-            게시글 제목
+        <a href="#" class="commu-main-all index-a">
+          <div class="index-article">
+            <div>
+              부트갬프 게시글 바로가기
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-      <div>
-        <div class="index-article">
-          카테고리
-          <div>
-            게시글 제목
+      <div style="display:flex;">
+        <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all index-a">
+          <div class="index-article">
+            <div>
+              베스트글 TOP5 바로가기
+            </div>
           </div>
-        </div>
+        </a>
+        <a href="{% url 'posts:commu_info_new' %}" class="commu-main-all index-a">
+          <div class="index-article">
+            <div>
+              최신글 바로가기
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </main>
-  <footer>
-    <span>
-      유저님 정보 입니다.
-    </span>
-    <div>
+  {% comment %} <footer>
+    {% if user.is_authenticated %}
+      <span>
+        {{ user.username }}님 정보입니다.
+      </span>
       <div>
-        카드 1
+        <div>
+          레벨: {{ user.level }}
+        </div>
+        <div>
+          내 게시글 개수: {{ my_posts_new|length }}
+        </div>
+        <div>
+          카드 3
+        </div>
+        <div>
+          카드 4
+        </div>
       </div>
-      <div>
-        카드 2
-      </div>
-      <div>
-        카드 3
-      </div>
-      <div>
-        카드 4
-      </div>
-    </div>
-  </footer>
+    {% else %}
+      <span>
+        로그인이 필요한 정보입니다.
+      </span>
+    {% endif %}
+  </footer> {% endcomment %}
 </div>
 {% endblock content %}

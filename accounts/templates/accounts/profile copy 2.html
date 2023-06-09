@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}?after" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+{% endblock style %}
+
+{% block content %}
+<div class="profile-container">
+  <div class="profile-main">
+    <div class="dropdown profile-dropdown">
+      <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-three-dots-vertical"></i>
+      </a>
+    
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">프로필수정</a></li>
+        <li><a class="dropdown-item" href="#">쪽지함</a></li>
+        <li><a class="dropdown-item" href="#">회원탈퇴</a></li>
+        <li><a class="dropdown-item" href="#">로그인</a></li>
+      </ul>
+    </div>
+    <div class="profile-img">
+      <!-- 프로필 유저 이미지-->
+      <img src="https://placeimg.com/200/200/animals/sepia" /> 
+    </div>
+    <div>
+      <!-- 프로필 유저의 포인트 -->
+      포인트
+    </div>
+    <div class="profile-name">
+      <!-- 프로필 유저의 등급, 유저네임, 쪽지 아이콘-->
+        등급(아이콘) 유저네임 쪽지(아이콘)
+      레벨 : {{user.level}}
+    </div>
+    <!--경험치 바-->
+    <div class="progress position-relative align-items-start">
+      <div class="progress-bar position-relative" style="z-index: 1;" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="exp-bar">{{user.experience}}</div>
+      <div class="progress-bar bg-info position-relative m-0" style="z-index: 1;" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="exp-bar_surplus">{{experience_surplus}}</div>
+    </div>
+    <div class="profile-introduction">
+      <!-- 프로필 유저의 소개글 -->
+      유저 소개글
+    </div>
+  </div>
+  
+  <!-- 내가 쓴 게시글 -->
+  <div class="profile-mypost">
+    <div>
+      {% if not my_posts_new %}
+        <!-- 게시글이 없을 경우 표시할 내용 -->
+      {% else %}
+      {% for post in page_obj %}
+        <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post">
+          <div class="카테고리 d-flex">
+            <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% endif %}">
+              {{ post.category }}
+            </div>
+          </div>
+          <div class="제목/내용">
+            <div class="commuT">
+              {{ post.title}} {{post.create_at.date}}
+            </div>
+            <div class="commuC">
+              {{ post.content }}
+            </div>
+          </div>
+          <div class="유저">
+            <div>
+              {{ post.username}}
+            </div>
+          </div>
+          <div class="commuBA">
+            <div></div>
+            <div class="commuBA-group">
+              <div class="commuBA-item">
+                <img src="{% static 'commu_ico/views.svg' %}" alt="조회수">
+              </div>
+              {{ post.views }}
+              <div class="commuBA-item">
+                <img src="{% static 'commu_ico/like.svg' %}" alt="좋아요">
+              </div>
+              {{ post.likeuser|length }}
+              <div class="commuBA-item">
+                <img src="{% static 'commu_ico/comment.svg' %}" alt="코멘트">
+              </div>
+              {{ post.comment|length }}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+      {% if page_obj.has_previous or page_obj.has_next %}
+        <div class="pagination justify-content-center">
+          {% if page_obj.has_previous %}
+            <a class="page-link" href="?page=1">&laquo;</a>
+          {% endif %}
+          {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+              <span class="current-page page-link">{{ num }}</span>
+            {% else %}
+              <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+          {% endfor %}
+          {% if page_obj.has_next %}
+            <a class="page-link" href="?page={{ my_posts_new_page.paginator.num_pages }}">&raquo;</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endif %}
+    </div>
+  </div>    
+</div>
+<script>
+
+  // 경험치 바 구현
+
+  var exp = {{ user.experience }};
+  var percent = {{percent}}
+
+  var expBar = document.getElementById('exp-bar');
+
+  expBar.style.width = percent + '%';
+  expBar.setAttribute('aria-valuenow', exp);
+
+  var exp_surplus = {{experience_surplus}};
+  var percent_surplus = {{percent_surplus}};
+
+  var expBar_surplus = document.getElementById('exp-bar_surplus');
+
+  expBar_surplus.style.width = percent_surplus + '%';
+  expBar_surplus.setAttribute('aria-valuenow', exp_surplus);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+{% endblock content %}

@@ -79,7 +79,7 @@
             </a>
           </div>
           <div class="commu-title">
-            <h1 class="commuT">{{ commus.title }}</h1>
+            <div class="commuT">{{ commus.title }}</div>
             <div class="time">
               {{ commus.create_at|date:"m.j H:i" }} | 조회수 {{commus.views}}
             </div>
@@ -114,12 +114,12 @@
             </form>
         </article>
     </div>
-        <comment>
+        <comment class="commu-detail">
           <div class="new_post">
             댓글 달기
           </div>
             <div style="width:100%; background-color: white;">
-                <div class="commu-comment-box">
+                <div class="commu-content-box">
                     <div class="commu-comment-item">
                         <form id="comment-form" method="POST" action="{%url 'posts:comment' commus.pk%}">
                         {% csrf_token %}
@@ -164,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <div class="commu-content-box">
+            <div class="commu-comment-box">
               <div class="commu-content">
                 {{comment.content}}
               </div>
