@@ -197,3 +197,22 @@ a {
   background: rgb(235 254 250);
   color: rgb(24 227 195);
 }
+
+.best_post {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+}
+.best_post_all {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.commu-side {
+  flex-basis: 20%;
+  margin: 30px;
+}

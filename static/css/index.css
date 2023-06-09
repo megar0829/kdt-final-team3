@@ -1,14 +1,19 @@
+body {
+  background-color: rgb(247, 247, 240);
+}
+
 .index-container {
   display: flex;
   flex-direction: column;
   width: 1000px;
   margin: 0 auto;
-  border: 1px solid black;
   margin-top: 50px;
 }
 
 .index-header {
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /* main */
@@ -23,11 +28,14 @@ main .index-articles {
 }
 
 main .index-article {
-  width: 420px;
-  height: 300px;
+  width: 220px;
+  height: 80px;
   background-color: #f2f2f2;
   padding: 20px;
   margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* footer */
@@ -44,4 +52,9 @@ footer>div>div {
   background-color: #7e7d7d;
   padding: 20px;
   margin: 20px;
+}
+
+.index-a {
+  text-decoration: none;
+  color: #000;
 }

@@ -11,9 +11,11 @@ from django.db.models import Q
 def index(request):
     boots = Post_bootscamp.objects.all()
     commu = Post_community.objects.all()
+    # my_posts_new = Post_community.objects.filter(user=request.user).order_by('-create_at')
     context = {
         'boots':boots,
         'commu':commu,
+        # 'my_posts_new':my_posts_new,
     }
     return render(request, 'posts/index.html', context)
 

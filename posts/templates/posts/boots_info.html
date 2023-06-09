@@ -13,36 +13,45 @@
       <div class="boots-info-side" style="width: 11rem;">
         <input type="text" class="form-control" placeholder="검색어를 입력하세요">
       </div>
-      <div class="boots-info-side">
-        <div class="card" style="width: 11rem;">
-          <div class="card-header">
+      <div class="commu-side">
+        <div style="width: 11rem;">
+          <div class="best_post mb-4 p-2 ps-3">
             언어
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
-            </li>
-          </ul>
+          <div class="best_post p-3">
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
+      
     </div>
     <!--메인-->
     <main class="boots-info-main">

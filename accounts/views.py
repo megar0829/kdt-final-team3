@@ -165,3 +165,19 @@ def activate(request, uidb64, token):
         return render(request, 'accounts/activation_email.html', {'error' : '계정 활성화 오류'})
     return 
 
+def my_posts(request,user_pk):
+    my_posts = Post_community.objects.filter(user=user_pk)
+    my_posts_new = Post_community.objects.filter(user=request.user).order_by('-create_at')
+    top_posts = Post_community.objects.annotate(like_count=Count('like_user')).filter(like_count__gte=3).order_by('-like_count')[:2]
+    paginator = Paginator(my_posts_new, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'my_posts': my_posts,
+        'my_posts_new': my_posts_new,
+        'top_posts': top_posts,
+        'page_obj' : page_obj,
+        'page_number': page_number,  # 페이지 번호 변수 추가
+    }
+    return render(request, 'accounts/my_posts.html',context)

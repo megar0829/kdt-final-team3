@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 10px 25px;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -24,6 +24,7 @@ nav .nav-left li {
 nav ul {
   display: flex;
   list-style: none;
+  margin:0px;
 }
 
 nav ul li {
@@ -32,9 +33,7 @@ nav ul li {
 
 .base-nav {
   text-decoration: none;
-  /* 밑줄 제거 */
   color: #000;
-  /* 원하는 색상으로 변경 */
 }
 
 /* 
