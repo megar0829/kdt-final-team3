@@ -15,54 +15,52 @@
         <input type="text" class="form-control" placeholder="검색어를 입력하세요">
       </div>
       <div class="commu-side">
-        <div class="card" style="width: 11rem;">
-          <div class="card-header">
+        <div style="width: 11rem;">
+          <div class="best_post mb-4 p-2 ps-3">
             언어
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
-            </li>
-            <li class="list-group-item side">
-              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="commu-side">
-        <div class="card" style="width: 11rem;">
-          <div class="card-header">
-            후기
+          <div class="best_post p-3">
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+              </span>
+              <span>
+                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+              </span>
+            </div>
+            <div class="mb-3">
+              <span class="pe-3">
+                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+              </span>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item side">학원이름</li>
-            <li class="list-group-item side">학원이름</li>
-            <li class="list-group-item side">학원이름</li>
-          </ul>
         </div>
       </div>
+      
     </div>
     <!--메인-->
     <main class="commu-main">
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            최신글
+            최신글 
+            <span class="ps-2"style="color: lightgray; font-size:12px;">전체 게시글을 최신순으로 조회합니다</span>
           </div>
         </div>
       </div>
@@ -133,108 +131,63 @@
 
     </main>
     <!--추천글-->
-    <div class="commu-recommend">
-      <div>
-        <div class="card">
-          <div class="card-header commu-card-header">
-            <div>
-              추천글
-            </div>
-            <div>
-              <a href="#" class="commu-recommend-all">더보기</a>
-            </div>
+    <div class="like-main">
+      <div class="like_post">
+        <div class="like_post_all">
+          <div>
+            추천글
           </div>
-          <ul class="list-group list-group-flush pt-2">
-            <li class="list-group-item pt-2">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item pt-2">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="commu-recommend-title">글 제목</a>
-                
-              <div class="commu-recommend-post">
-                <div class="commu-cate">카테고리</div>
-                <div class="commu-recommend-info">
-                  <div class="commu-recommend-info-item">조회수</div>
-                  <div class="commu-recommend-info-item">좋아요</div>
-                  <div class="commu-recommend-info-item">댓글</div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-   <!-- Modal -->
-   <div class="modal fade" style="font-family: 'S-CoreDream-3Light';" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-              <h5 class="modal-title">리뷰 남기기</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            {% comment %} <div class="modal-body">
-              <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ commu_create.as_p }}
-                {{ commu_image }}
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                  <input type="submit" value="후기 작성" class="btn btn-success modal_form">
+      <div>
+        {% regroup commu_filtered by like_user.count as commu_grouped %}
+        {% for group in commu_grouped|dictsortreversed:'grouper' %}
+          {% if group.grouper >= 3 %}
+            {% for post in group.list %}
+              {% if forloop.counter0|divisibleby:2 %}
+          <div>
+        {% endif %}
+          <div>
+            <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
+              <div class="카테고리 d-flex" style="justify-content: space-between;">
+                <div class="commuT">
+                  {{ post.title }}
                 </div>
-              </form>
-            </div> {% endcomment %}
-            <div class="modal-body">
-              <form action="{% url 'posts:commu_create' %}" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="mb-3">
-                  <label for="id_category">커뮤니티를 선택하세요</label>
-                  {{ commu_create.category }}
+                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                  {{ post.category }}
                 </div>
-                <div class="mb-3">
-
-                  <input type="text" class="form-control" id="id_title" name="title" placeholder="제목을 입력하세요">
-                </div>
-                <div class="mb-3">
-                  <textarea name="content" id="id_content" class="form-control" rows="10"placeholder="내용을 입력하세요"></textarea>
-                </div>
-                <div class="mb-3">
-                  <div class="input-group">
-                    <input type="file" name="image" id="id_image" class="form-control" accept="image/*">
+              </div>
+              <div class="commu-main-post">
+                <div class="commu-post-info">
+                  <div class="commuBA-group">
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
+                    </div>
+                    {{ post.views }}
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
+                    </div>
+                    {{ post.like_user.count }}
+                    <div class="commuBA-item">
+                      <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
+                    </div>
+                    {{ post.comment_count }}
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                  <input type="submit" value="후기 작성" class="btn btn-success modal_form">
-                </div>
-              </form>
-            </div>
-        </div>
-      </div>
-    </div>
+              </div>
+            </a>
+          </div>
+          {% if forloop.counter|divisibleby:2 or forloop.last %}
+          </div>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+  </div>
+</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{%static 'js/detail.js'%}?after"></script>

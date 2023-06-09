@@ -14,6 +14,15 @@ class CustomUserCreationForm(UserCreationForm):
                 }
             )
         )
+    nickname = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.TextInput(
+            attrs= {
+                'class': 'form-control signup-input',
+                'placeholder': '닉네임',
+                }
+            )
+        )
     email = forms.CharField(
         label=False, label_suffix='',
         widget=forms.EmailInput(
@@ -44,9 +53,10 @@ class CustomUserCreationForm(UserCreationForm):
             )
         )
 
+
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
-        fields = ('username','email','password1','password2')
+        fields = ('username','nickname','email','password1','password2')
 
 class CustomUserChangeForm(UserChangeForm):
     first_name = forms.CharField(
@@ -67,6 +77,15 @@ class CustomUserChangeForm(UserChangeForm):
                 }
             )
         )
+    nickname = forms.CharField(
+        label=False, label_suffix='',
+        widget=forms.TextInput(
+            attrs= {
+                'class': 'form-control signup-input',
+                'placeholder': '닉네임',
+                }
+            )
+        )
     email = forms.CharField(
         label=False, label_suffix='',
         widget=forms.EmailInput(
@@ -78,7 +97,7 @@ class CustomUserChangeForm(UserChangeForm):
         )
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
-        fields = ['first_name', 'last_name', 'email', 'image',]
+        fields = ['first_name', 'last_name', 'nickname', 'email', 'image',]
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)

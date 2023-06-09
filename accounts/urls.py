@@ -10,7 +10,7 @@ urlpatterns = [
     path('update/', views.update, name='update'),
     path('password/', views.change_password, name="change_password"),
     path('profile/<int:user_pk>/', views.profile, name="profile"),
-
+    path('activate/<str:uidb64>/<str:token>/', views.activate, name='activate'),
     # 테스트 (프로필 쪽지)
     path('profile/note/', views.profile_note, name="profile_note")
 ]

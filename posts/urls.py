@@ -22,5 +22,6 @@ urlpatterns = [
     path('community/best/',views.community_info_best, name="commu_info_best"),
     path('community/new/',views.community_info_new, name="commu_info_new"),
     path('community/search/<str:keyword>', views.search, name='search'),
+    path('community/like/',views.community_info_like, name="commu_info_like"),
 
 ]
