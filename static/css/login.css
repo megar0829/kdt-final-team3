@@ -2,6 +2,9 @@ body {
   background-color: rgb(247, 247, 240);
 }
 
+a {
+  text-decoration: none;
+}
 
 .login-container {
   display: flex;
@@ -33,4 +36,13 @@ body {
   margin-top:10px;
   color:rgb(161, 161, 161);
   width:327px;
+}
+.logo-img-main {
+  width:50px;
+  border-radius: 10%; 
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-evenly;;
 }

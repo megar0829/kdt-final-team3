@@ -145,7 +145,16 @@
           <div class="d-flex">
             <div class="commuU">
               <div class="commu-user-ico">
-                <img src="{%static 'commu_ico/user3.png'%}" alt="" style="pe-3"> {{ post.user}}
+                <div class="profile-img">
+                  <!-- 게시글 유저 이미지 -->
+                  {% if user.image %}
+                    <img src="{{ post.user.image.url }}" alt="">
+                  {% else %}
+                    <img src="{% static 'img/user.png' %}" alt="">
+                  {% endif %}
+                  {{post.user.username}}
+                </div>
+                 
               </div>
               
             </div>
