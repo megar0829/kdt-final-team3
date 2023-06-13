@@ -8,15 +8,16 @@
 {% block content %}
 <div class="index-container">
   <header class="index-header">
-    000 에 오신걸 환영합니다.
+    <img src="{%static 'img/logo.png' %}" alt="로고" class="logo-img-main">
+    <div class="ms-3"style="display: flex; align-items: center;"> </div>
   </header>
   <main>
     <div class="index-articles">
       <div>
-        <a href="#" class="commu-main-all index-a">
+        <a href="{% url 'posts:boots_info' %}" class="commu-main-all index-a">
           <div class="index-article">
             <div>
-              부트갬프 게시글 바로가기
+              🏕️ 부트캠프 최신글 바로가기
             </div>
           </div>
         </a>
@@ -25,14 +26,14 @@
         <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all index-a">
           <div class="index-article">
             <div>
-              베스트글 TOP5 바로가기
+              🔥 커뮤니티 베스트글 바로가기
             </div>
           </div>
         </a>
         <a href="{% url 'posts:commu_info_new' %}" class="commu-main-all index-a">
           <div class="index-article">
             <div>
-              최신글 바로가기
+              💥 커뮤니티 최신글 바로가기
             </div>
           </div>
         </a>

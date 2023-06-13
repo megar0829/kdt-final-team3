@@ -46,12 +46,12 @@
                 <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
               </span>
               <span>
-                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+                <a href="{%url 'posts:commu_filter' '백앤드'%}" class="category-back">백앤드</a>
               </span>
             </div>
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+                <a href="{%url 'posts:commu_filter' '프론트앤드'%}" class="category-front">프론트 앤드</a>
               </span>
             </div>
           </div>
@@ -75,7 +75,7 @@
           {% endif %}
           <div class="d-flex">
             <a href="{%url 'posts:commu_filter' commus.category %}">
-              <div class="commuCA {% if commus.category == 'Django' %}category-django{% elif commus.category == 'Java' %}category-java{% elif commus.category == 'Spring' %}category-spring{% elif commus.category == 'DB' %}category-db{% elif commus.category == 'JPA' %}category-jpa{% elif commus.category == '백엔드' %}category-back{% elif commus.category == '프론트엔드' %}category-front{% endif %}">
+              <div class="commuCA {% if commus.category == 'Django' %}category-django{% elif commus.category == 'Java' %}category-java{% elif commus.category == 'Spring' %}category-spring{% elif commus.category == 'DB' %}category-db{% elif commus.category == 'JPA' %}category-jpa{% elif commus.category == '백앤드' %}category-back{% elif commus.category == '프론트앤드' %}category-front{% endif %}">
                 {{ commus.category }}
               </div>
             </a>
@@ -174,60 +174,14 @@
           </div>
         {% endfor %}
       </section>
-    {%for post in commu_list%}
-    {% if post.category == commus.category %}
-    {%if post.pk != commus.pk %}
-      <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
-        <div class="카테고리 d-flex">
-          <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
-            {{ post.category }}
-          </div>
-        </div>
-        <div class="제목/내용">
-          <div class="commuT">
-            {{ post.title}}
-          </div>
-          <div class="commuC">
-            {{ post.content|strip_html_tags }}
-          </div>
-        </div>
-        <div class="유저">
-          <div class="commuU">
-            <div class="commu-user-ico">
-              <img src="{%static 'commu_ico/user3.png'%}" alt="" style="pe-3"> {{ post.user}}
-            </div>
-          </div>
-        </div>
-        <div class="commuBA">
-          <div class="time">
-            {{ post.create_at|timesince }}전
-          </div>
-          <div class="commuBA-group">
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
-            </div>
-            {{ post.views }}
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
-            </div>
-            {{ post.like_user.count }}
-            <div class="commuBA-item">
-              <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
-            </div>
-            {{ post.comment_count }}
-          </div>
-        </div>
-      </a>
-      {% endif %}
-      {% endif %}
-      {% endfor %}
+  
     </main>
     <!--추천글-->
     <div class="like-main">
       <div class="like_post">
         <div class="like_post_all">
           <div>
-            추천글
+            👍 추천글
           </div>
           <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
         </div>
@@ -246,7 +200,7 @@
                 <div class="commuT">
                   {{ post.title }}
                 </div>
-                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
                   {{ post.category }}
                 </div>
               </div>

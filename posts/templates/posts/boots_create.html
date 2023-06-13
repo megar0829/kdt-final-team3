@@ -12,24 +12,29 @@
 {% block content %}
 <form action="{%url 'posts:boots_create'%}" method="POST" enctype="multipart/form-data">
   <div class="container">
-      {% csrf_token %}
-      <div class="camp_container" style="margin-top: 48px;">
-        <div class="camp_title2" style="text-align: center;">
-            <input type="text" name="title" placeholder="회사명">
-            {{ imageForm }}
+    {% csrf_token %}
+    <div class="camp_container" style="margin-bottom: 48px;">
+      <div class="camp_title2">
+        <div>
+          <input class="form-control"type="text" name="title" placeholder="회사명">
         </div>
-        <div style="text-align: left;">
-          <div class="camp_descriptiontitle">
-            <h4>교육과정</h4>
-            <span>정확한 정보는 내용을 확인해주세요.</span>
-          </div>
-          <div class="grid-row">
-            <div class="flex-row"  id="tags-container">
-              <button type="button" id="add-tag-btn">과목 추가</button>
-              <input type="text" name="tags" placeholder="교육과목">
-            </div>
+        <div>
+          {{ imageForm }}
+        </div>
+      </div>
+      <div class="camp_content1" style="text-align: left;">
+        <div class="camp_descriptiontitle">
+          <h4>교육과정</h4>
+          <span>정확한 정보는 내용을 확인해주세요.</span>
+        </div>
+        <div class="grid-row">
+          <div class="flex-row"  id="tags-container">
+            <button class="btn btn-outline-secondary add-tag-input" type="button" id="add-tag-btn">과목 추가</button>
+            <input class="form-control add-tag-input" type="text" name="tags" placeholder="교육과목">
           </div>
         </div>
+      </div>
+      <div class="camp_content1">
         <div class="camp_descriptiontitle">
           <h4>일정 및 수업</h4>
           <span>변경가능성이 있으므로, 정확한 정보는 홈페이지에서 확인해주세요.</span>
@@ -44,7 +49,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="date" name="start_data1"> 
+                      <input type="date" class="form-control" name="start_data1" style="width:97%"> 
                     </div>
                   </div>
                 </div>
@@ -54,9 +59,9 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="date" name="start_data2">
-                      ~
-                      <input type="date" name="end_data">
+                      <input type="date" class="form-control" name="start_data2" style="width:60%">
+                      
+                      <input type="date" class="form-control" name="end_data" style="width:60%">
                     </div>
                   </div>
                 </div>
@@ -66,7 +71,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="time" placeholder="요일/시간">
+                      <input class="form-control" type="text" name="time" placeholder="요일/시간">
                     </div>
                   </div>
                 </div>
@@ -76,7 +81,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="people" placeholder="모집정원">
+                      <input class="form-control" type="text" name="people" placeholder="모집정원">
                     </div>
                   </div>
                 </div>
@@ -92,7 +97,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="class_method" placeholder="수업방식">
+                      <input class="form-control" type="text" name="class_method" placeholder="수업방식">
                     </div>
                   </div>
                 </div>
@@ -102,7 +107,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="equipment" placeholder="학습장비">
+                      <input class="form-control" type="text" name="equipment" placeholder="학습장비">
                     </div>
                   </div>
                 </div>
@@ -112,7 +117,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="onoff" placeholder="온/ 오프">
+                      <input class="form-control" type="text" name="onoff" placeholder="온/ 오프">
                     </div>
                   </div>
                 </div>
@@ -122,7 +127,7 @@
                   </div>
                   <div style="text-align: left;">
                     <div class="flex-row">
-                      <input type="text" name="location" placeholder="장소">
+                      <input class="form-control" type="text" name="location" placeholder="장소">
                     </div>
                   </div>
                 </div>
@@ -130,10 +135,12 @@
             </div>
           </div>
         </div>
-        <div class="camp_content" style="margin-top:12px">
-          <h5>💡 이번 일정에 참여가 어렵다면?</h5>
-          <textarea name="content"cols="100" rows="10"></textarea>
-        </div>
+      </div>
+      <div class="camp_content1">
+        <h5>💡 교육과정에 대한 추가내용</h5>
+        <textarea name="content"cols="100" rows="10" style="width:100%;"  class="form-control"></textarea>
+      </div>
+      <div class="camp_content1">
         <div class="camp_descriptiontitle">
           <h4>
             <big style="margin-right: 8px;">💳</big>
@@ -147,7 +154,7 @@
             </div>
             <div style="text-align: left;">
               <div class="flex-row">
-                <input type="text" name="price"> 
+                <input class="form-control" type="text" name="price"> 
               </div>
             </div>
           </div>
@@ -157,7 +164,7 @@
             </div>
             <div style="text-align: left;">
               <div class="flex-row">
-                <select name="card">
+                <select name="card"  class="form-select">
                   <option value="필요">내일배움 카드필요해요</option>
                   <option value="불필요">내일배움 카드필요없어요</option>
                 </select> 
@@ -165,8 +172,11 @@
             </div>
           </div>
         </div>
-        <button type="submit">캠프 등록</button>
+        <div class="sub-btn">
+          <button  class="btn btn-outline-secondary"type="submit">캠프 등록</button>
+        </div>
       </div>
+    </div>
   </div>
 </form>
 <script>
@@ -176,6 +186,8 @@
         input.type = 'text';
         input.name = 'tags';
         input.placeholder = '교육과목';
+        input.classList.add('form-control');
+        input.classList.add('add-tag-input');
         tagsContainer.appendChild(input);
     });
 </script>

@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(247, 247, 240);
+}
 .container {
   font-size: 16px;
   max-width: 850px;
@@ -8,14 +11,38 @@
   width: 100%;
   margin-top: 36px;
   padding: 24px 36px;
-  background: rgb(247, 247, 247);
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.camp_title3 {
+  font-size: 16px;
+  width: 100%;
+  margin-top: 36px;
+  padding: 24px 36px;
+  background: white;
+  border-radius: 8px;
+  display: column;
+  justify-content: space-between;
+}
+
+.add-tag-input {
+  width:18%;
+  margin-right: 10px;
+}
+.camp_content1 {
+  font-size: 16px;
+  width: 100%;
+  margin-top: 36px;
+  padding: 24px 36px;
+  background: white;
   border-radius: 8px;
 }
 
 .camp_descriptiontitle {
   text-align: left;
-    margin-top: 84px;
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 h4 {
@@ -60,6 +87,7 @@ span {
   padding-left: 6px;
   padding-right: 6px;
   height: initial;
+  width:50%;
 }
 
 .camp_infocard {
@@ -133,4 +161,9 @@ span {
 
 a {
   text-decoration: none;
+}
+
+.sub-btn {
+  margin-top: 20px;
+  text-align: end;
 }
