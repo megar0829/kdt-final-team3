@@ -13,7 +13,8 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class User(AbstractUser):
     nickname = models.CharField(
         max_length=10,
-        unique=True,
+        # null=True,
+        # unique=False,
         error_messages={
             'unique': ("이미 사용 중인 닉네임입니다."),
         },

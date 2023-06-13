@@ -12,12 +12,12 @@
       <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-three-dots-vertical"></i>
       </a>
-    
+      
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">프로필수정</a></li>
+        <li><a class="dropdown-item" href="{% url 'accounts:update' %}">프로필 수정</a></li>
+        <li><a class="dropdown-item" href="{% url 'accounts:change_password' %}">비밀번호 변경</a></li>
         <li><a class="dropdown-item" href="#">쪽지함</a></li>
-        <li><a class="dropdown-item" href="#">회원탈퇴</a></li>
-        <li><a class="dropdown-item" href="#">로그인</a></li>
+        <li><a class="dropdown-item" href="{% url 'accounts:delete' %}">회원탈퇴</a></li>
       </ul>
     </div>
     <div class="profile-img">

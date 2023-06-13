@@ -93,7 +93,7 @@ def update(request):
         if form.is_valid():
             form.save()
             editor = edit.save()
-            return redirect('posts:index', editor.pk)
+            return redirect('posts:index')
     else:
         form = UserChangeForm(instance=request.user)
         edit = EditorForm()
@@ -181,3 +181,7 @@ def my_posts(request,user_pk):
         'page_number': page_number,  # 페이지 번호 변수 추가
     }
     return render(request, 'accounts/my_posts.html',context)
+
+
+def naver_login(request):
+    return redirect('posts:index')

@@ -12,20 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import json
-import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# ROOT_DIR = os.path.dirname(BASE_DIR)
-# SECRET_BASE_FILE = os.path.join(BASE_DIR, 'secrets.json')
-
-# secrets = json.loads(open(SECRET_BASE_FILE).read())
-# for key, value in secrets.items():
-#     setattr(sys.modules[__name__], key, value)
-    
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -62,12 +52,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.naver',
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'rest_framework_simplejwt.token_blacklist',
-    'dj_rest_auth',
-    'dj_rest_auth.registration',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +69,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates', 'accounts')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -194,33 +178,12 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_EMAIL_SUBJECT_PREFIX = '[이메일 인증]'
 
-LOGIN_REDIRECT_URL = 'posts/index'
-LOGOUT_REDIRECT_URL = 'posts/index'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
-REST_FRAMEWORK = {
-   'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
-    ),
-}
-# ACCOUNT_USER_MODEL_USERNAME_FIELD = None 
-# ACCOUNT_EMAIL_REQUIRED = True            
-# ACCOUNT_USERNAME_REQUIRED = False        
-# ACCOUNT_AUTHENTICATION_METHOD = 'email'
-# REST_USE_JWT = True
-# from datetime import timedelta
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(hours=2),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
-#     'ROTATE_REFRESH_TOKENS': False,
-#     'BLACKLIST_AFTER_ROTATION': True,
-# }
 
 CKEDITOR_CONFIGS = {
     'default': {
