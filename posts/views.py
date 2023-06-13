@@ -21,8 +21,12 @@ def index(request):
 
 def bootscamp_info(request):
     boots = Post_bootscamp.objects.all()
+    paginator = Paginator(boots, 5)  # 한 페이지에 표시할 게시글 수를 5로 설정
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
-        'boots':boots
+        'boots':boots,
+        'page_obj': page_obj,
     }
     return render(request, 'posts/boots_info.html', context)
 

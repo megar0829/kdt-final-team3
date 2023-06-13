@@ -7,7 +7,7 @@
 {% endblock style %}
 
 {% block content %}
-<div class="commu container">
+<div>
   <div class="d-flex justify-content-between">
     <!--사이드바-->
     <div style="width: 15rem;">
@@ -21,35 +21,27 @@
           <div class="best_post mb-4 p-2 ps-3">
             언어
           </div>
-          <div class="best_post p-3">
-            <div class="mb-3">
-              <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
-              </span>
-              <span>
-                <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
-              </span>
+          <div class="side_post p-3">
+            <div class="pe-3">
+              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
             </div>
-            <div class="mb-3">
-              <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
-              </span>
-              <span>
-                <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
-              </span>
+            <div>
+              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
             </div>
-            <div class="mb-3">
-              <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
-              </span>
-              <span>
-                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
-              </span>
+            <div class="pe-3">
+              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-spring">Spring</a>
             </div>
-            <div class="mb-3">
-              <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
-              </span>
+            <div>
+              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
+            </div>
+            <div class="pe-3">
+              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+            </div>
+            <div>
+              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+            </div>
+            <div class="pe-3">
+              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트엔드</a>
             </div>
           </div>
         </div>
@@ -69,7 +61,7 @@
       <div class="commu-createBA">
         {% if request.user.is_authenticated %}
           <div class="commu-createBA-item2">
-            <div> 회원님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
+            <div> {{user}} 님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
             <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
               글 작성
             </button>
@@ -83,7 +75,7 @@
       <div class="best_post">
         <div class="best_post_all">
           <div>
-            베스트글
+            🔥 베스트글
           </div>
           <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all">TOP5 보기</a>
         </div>
@@ -129,7 +121,7 @@
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            최신글
+            💥 최신글
           </div>
           <a href="{% url 'posts:commu_info_new' %}" class="commu-main-all">전체보기</a>
         </div>
@@ -204,7 +196,7 @@
       <div class="like_post">
         <div class="like_post_all">
           <div>
-            추천글
+            👍 추천글
           </div>
           <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
         </div>

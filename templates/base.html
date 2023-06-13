@@ -21,11 +21,13 @@
     <nav>
       <div class="nav-left">
         <span>
-          <a href="{% url 'posts:index' %}" class="base-nav">로고</a>
+          <a href="{% url 'posts:index' %}" class="base-nav">
+            <img src="{%static 'img/logo.png' %}" alt="로고" class="logo-img">
+          </a>
         </span>
         <ul>
-          <a href="{% url 'posts:boots_info' %}" class="base-nav m-3">부트캠프</a>
-          <a href="{% url 'posts:commu_info' %}" class="base-nav m-3">커뮤니티</a>
+          <a href="{% url 'posts:boots_info' %}" class="base-nav m-3">🏕️ 부트캠프</a>
+          <a href="{% url 'posts:commu_info' %}" class="base-nav m-3">✨ 커뮤니티</a>
         </ul>
       </div>
       <ul>

@@ -144,6 +144,18 @@
   padding: 12px 20px;
   background-color: white;
 }
+.side_post {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .best_post_all {
   display: flex;
   justify-content: space-between;
