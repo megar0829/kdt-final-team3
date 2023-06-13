@@ -21,8 +21,12 @@
       </ul>
     </div>
     <div class="profile-img">
-      <!-- 프로필 유저 이미지-->
-      <img src="https://placeimg.com/200/200/animals/sepia" /> 
+      <!-- 프로필 유저 이미지 -->
+      {% if user.image %}
+        <img src="{{ user.image.url }}" alt="">
+      {% else %}
+        <img src="{% static 'img/user.png' %}" alt="">
+      {% endif %}
     </div>
     <div>
       <!-- 프로필 유저의 포인트 -->
@@ -30,7 +34,7 @@
     </div>
     <div class="profile-name">
       <!-- 프로필 유저의 등급, 유저네임, 쪽지 아이콘-->
-        등급(아이콘) 유저네임 쪽지(아이콘)
+        등급(아이콘) {{user.username}} 쪽지(아이콘)
       레벨 : {{user.level}}
     </div>
     <!--경험치 바-->
@@ -40,7 +44,7 @@
     </div>
     <div class="profile-introduction">
       <!-- 프로필 유저의 소개글 -->
-      유저 소개글
+      {{Editor.text}}
     </div>
     <!-- 내가 쓴 게시글 -->
     <div>

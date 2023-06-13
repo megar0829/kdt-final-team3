@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
+{% block style %}
+
+<style>
+  body {
+    background-color: rgb(247, 247, 240);
+  }
+</style>
+{% endblock style %}
+
 
 {% comment %} {% block head_title %}{% trans "Sign In" %}{% endblock %} {% endcomment %}
 
@@ -16,6 +26,16 @@
 
 <form method="post">
   {% csrf_token %}
-  <button type="submit">{% trans "Continue" %}</button>
+  <div style="display:flex; justify-content:center;" class="mt-5">
+    <button type="submit" 
+    style="background: none;
+          border: none;
+          outline: none;">
+      <img src="{%static 'img/logo.png' %}" alt="로고" class="logo-img-main">
+      <div class="mt-2" style="color:lightgray">
+        클릭시 로그인 페이지로 이동합니다
+      </div>
+    </button>
+  </div>
 </form>
 {% endblock %}

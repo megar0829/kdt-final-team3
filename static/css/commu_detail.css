@@ -558,3 +558,15 @@ body {
   padding: 12px 20px;
   background-color: white;
 }
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
