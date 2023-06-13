@@ -12,6 +12,7 @@ urlpatterns = [
     path('profile/<int:user_pk>/', views.profile, name="profile"),
     path('activate/<str:uidb64>/<str:token>/', views.activate, name='activate'),
     path('profile/<int:user_pk>/my_posts', views.my_posts, name="my_posts"),
+    path('naver/login/?process=login/', views.naver_login, name='naver_login'),
     # 테스트 (프로필 쪽지)
     path('profile/note/', views.profile_note, name="profile_note")
 ]
