@@ -41,12 +41,12 @@
                 <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
               </span>
               <span>
-                <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-back">백엔드</a>
+                <a href="{%url 'posts:commu_filter' '백앤드'%}" class="category-back">백앤드</a>
               </span>
             </div>
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-front">프론트 엔드</a>
+                <a href="{%url 'posts:commu_filter' '프론트앤드'%}" class="category-front">프론트 앤드</a>
               </span>
             </div>
           </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="commu-main-post">
                   <div class="commu-cate">
-                    <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                    <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
                       {{ post.category }}
                     </div>
                   </div>
@@ -119,7 +119,7 @@
                 <div class="commuT">
                   {{ post.title }}
                 </div>
-                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백엔드' %}category-back{% elif post.category == '프론트엔드' %}category-front{% endif %}">
+                <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
                   {{ post.category }}
                 </div>
               </div>
