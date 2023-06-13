@@ -18,7 +18,7 @@
       {% for post in page_obj %}
         <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post">
           <div class="카테고리 d-flex">
-            <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% endif %}">
+            <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
               {{ post.category }}
             </div>
           </div>

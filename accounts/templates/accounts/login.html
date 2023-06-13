@@ -16,11 +16,16 @@
   <form action="{% url 'accounts:login' %}", method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-  
-    <div class="signup-api">
-      <a href="/accounts/naver/login/?process=login/?next={{request.path}}" role="button"><div class="btn btn-outline-secondary m-3">Naver</div></a>
-      <a href="/accounts/google/login/?process=login/?next={{request.path}}" role="button"><div class="btn btn-outline-secondary m-3">Google</div></a>
-      <a href="/accounts/kakao/login/?process=login/?next={{request.path}}" role="button"><div class="btn btn-outline-secondary m-3">Kakao</div></a>
+    <div class="social-login">
+      <a href="/accounts/naver/login/?process=login/?next={{request.path}}" role="button">
+        <img src="{%static 'img/naver.webp' %}" alt="로고" class="logo-img-main m-3">
+      </a>
+      <a href="/accounts/google/login/?process=login/?next={{request.path}}" role="button">
+        <img src="{%static 'img/google.png' %}" alt="로고" class="logo-img-main m-3">
+      </a>
+      <a href="/accounts/kakao/login/?process=login/?next={{request.path}}" role="button">
+        <img src="{%static 'img/kakao.png' %}" alt="로고" class="logo-img-main m-3">
+      </a>
     </div>
     {% include "socialaccount/snippets/login_extra.html" %}
 
