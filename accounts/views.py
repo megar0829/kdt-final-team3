@@ -52,12 +52,10 @@ def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST, request.FILES)
         if form.is_valid():
-            user = form.save()
+            form.save()
+            user = User.objects.get(username=request.POST['username'])
             user.is_active = False
-            # user = user.save()
-            print(user)
-            
-            # current_site = get_current_site(request)
+            user.save()
             current_site = request.META['HTTP_HOST'],
             message = render_to_string('accounts/activation_email.html', {
                 'user': user,

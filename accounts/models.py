@@ -14,7 +14,7 @@ class User(AbstractUser):
     nickname = models.CharField(
         max_length=10,
         # null=True,
-        # unique=False,
+        unique=False,
         error_messages={
             'unique': ("이미 사용 중인 닉네임입니다."),
         },
