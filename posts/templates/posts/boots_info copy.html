@@ -19,25 +19,25 @@
             과정
           </div>
           <div class="best_post p-3">
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-1">풀스택(웹)</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-2">백엔드</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-3">프론트엔드</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-4">퍼블리싱</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-5">안드로이드</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-6">iOS</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-7">데브옵스</a>
             </div>
           </div>
@@ -50,7 +50,7 @@
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            🏕️ 부트캠프 
+            부트캠프 
             <span class="ps-2"style="color: lightgray; font-size:12px;">부트캠프 전체게시글을 조회합니다.</span>
           </div>
         </div>
@@ -123,7 +123,84 @@
           {% endif %}
       </div>
       {% endif %}
-       
+        <div>
+        {% for post in boots%}
+        <div>
+          {{post.title}}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="boots-info-main">
+        <div class="boots-info-recommend">
+          <div class="boots-info-title">
+              추천게시글
+          </div>
+          <div class="boots-info-row">
+              <div class="boots-info-left">
+                <!-- 추천 학원 = 랜덤 or 좋아요 순 or 조회순 -->
+                  학원명 <!-- 추천 학원명 -->
+              </div>
+              <div class="boots-info-right">
+                  과정  <!-- 추천 학원 과정 -->
+              </div>
+          </div>
+          <div class="pt-2">
+              과정명  <!-- 추천 학원 과정명-->
+          </div>
+          <div class="pt-2">
+              간단한 내용  <!-- 추천 학원 간단한 소개글-->
+          </div>
+        </div>
+        <div class="boots-info-deadline">
+          <div class="boots-info-title">
+            <!-- 마감임박 = 시작일이랑 가까운 순 -->
+              마감임박
+          </div>
+          <div class="boots-info-row">
+              <div class="boots-info-left">
+                  학원명 <!-- 마감임박 학원명-->
+              </div>
+              <div class="boots-info-right">
+                  과정 <!-- 마감임박 과정 -->
+              </div>
+          </div>
+          <div class="pt-2">
+              과정명 <!-- 마감임박 과정명-->
+          </div>
+          <div class="pt-2">
+              간단한 내용 <!-- 마감임박 학원 간단한 소개글 -->
+          </div>
+        </div>
+
+        <div class="mt-3 boots-info-main-post-title">
+          부트캠프 소개 & 후기
+        </div>
+        <!-- 카드형식으로 여러 소개글 나열 for 문 -->
+        <div class="mt-3 boots-info-main-post">
+          <div class="boots-info-main-row">
+            <div>
+              학원명 <!-- 학원명 -->
+            </div>
+            <div> 
+              남은 날짜 <!-- 시작일 기준 남은 일수 / ex) 12일전 , 5시간전 등-->
+            </div>
+          </div>
+          <div>
+            과정명 <!-- 과정명 -->
+          </div>
+          <div>
+            <div class="boots-info-main-row-3 mt-2">
+              <div class="pe-2">과정기간</div> <!-- 전체 과정 기간 -->
+              <div class="pe-2">금액</div> <!-- 전체 금액 ex) 무료, 100만원, -->
+              <div class="pe-2">온라인 or 오프라인</div> <!-- 수업 방식 -->
+            </div>
+          </div>
+          <div>
+            <div>기술스택</div> <!-- 기술스택 , 언어 -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock content %}

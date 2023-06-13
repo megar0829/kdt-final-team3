@@ -12,8 +12,6 @@ nav .nav-left {
 }
 
 nav .nav-left span {
-  margin-right: 30px;
-  padding-right: 30px;
   font-size: 20px;
 }
 
@@ -36,6 +34,11 @@ nav ul li {
   color: #000;
 }
 
+.logo-img {
+  width:50px;
+  border-radius: 10%;
+  
+}
 /* 
 .bass-dropdown {
   position: relative;
