@@ -33,8 +33,8 @@ class PostImageForm(forms.ModelForm):
         widgets = {forms.ClearableFileInput(attrs={'class': 'form-control-file'})}
 
 POST_ADDRESS_CHOICES = (
-    ("Django", "Django"), ("Java", "Java"), ("Spring", "Spring"),
-    ("DB", "DB"), ("JPA", "JPA"), ("백앤드", "백앤드"), ("프론트앤드", "프론트앤드")
+    ("자유", "자유"), ("Java", "Java"), ("Spring", "Spring"),
+    ("DB", "DB"), ("Django", "Django"), ("백앤드", "백앤드"), ("프론트앤드", "프론트앤드")
 )
 
 class CommunityForm(forms.ModelForm):

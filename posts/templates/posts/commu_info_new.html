@@ -22,7 +22,7 @@
           <div class="best_post p-3">
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+                <a href="{%url 'posts:commu_filter' '자유'%}" class="category-django">자유</a>
               </span>
               <span>
                 <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
@@ -38,7 +38,7 @@
             </div>
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-jpa">Django</a>
               </span>
               <span>
                 <a href="{%url 'posts:commu_filter' '백앤드'%}" class="category-back">백앤드</a>
@@ -90,7 +90,7 @@
                 {% else %}
                   <img src="{% static 'img/user.png' %}" alt="">
                 {% endif %}
-                {{post.user.username}}
+                {{post.user.nickname}}
               </div>
             </div>
             

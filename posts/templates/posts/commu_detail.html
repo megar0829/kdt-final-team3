@@ -27,7 +27,7 @@
           <div class="best_post p-3">
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+                <a href="{%url 'posts:commu_filter' '자유'%}" class="category-django">자유</a>
               </span>
               <span>
                 <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
@@ -43,7 +43,7 @@
             </div>
             <div class="mb-3">
               <span class="pe-3">
-                <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+                <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-jpa">Django</a>
               </span>
               <span>
                 <a href="{%url 'posts:commu_filter' '백앤드'%}" class="category-back">백앤드</a>
@@ -99,7 +99,7 @@
             </div>
             <div class="commu-user-item">
               <div class="commu-user-item2">
-                <span title="{{commus.user}}" class="commu-user-name">{{ commus.user }}</span>
+                <span title="{{commus.user}}" class="commu-user-name">{{ commus.user.nickname }}</span>
               </div>
             </div>
           </div>
@@ -173,7 +173,7 @@
               </div>
               <div class="commu-user-item">
                 <div class="commu-user-item2">
-                  <span title="{{commus.user}}" class="commu-user-name">{{ comment.user }}</span>
+                  <span title="{{commus.user}}" class="commu-user-name">{{ comment.user.nickname }}</span>
                 </div>
                 <div class="time">
                   {{ comment.create_at|custom_timesince }}
