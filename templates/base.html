@@ -28,6 +28,9 @@
         <ul>
           <a href="{% url 'posts:boots_info' %}" class="base-nav m-3">🏕️ 부트캠프</a>
           <a href="{% url 'posts:commu_info' %}" class="base-nav m-3">✨ 커뮤니티</a>
+          {% if user.is_staff %}
+          <a href="{%url 'posts:boots_create'%}" class="base-nav m-3"> 부트캠프 등록</a>
+          {% endif %}
         </ul>
       </div>
       <ul>
@@ -43,6 +46,7 @@
             <a href="{% url 'accounts:signup' %}?next = {{ reqeust.path }}" class="btn btn-outline-secondary">회원가입</a>
           </li>
         {% endif %}
+        
       </ul>
     </nav>
   </header>

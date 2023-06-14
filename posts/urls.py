@@ -10,6 +10,7 @@ urlpatterns = [
     path('boots/<int:boots_pk>/delete/', views.bootscamp_delete, name='boots_delete'),
     path('boots/<int:boots_pk>/update/', views.bootscamp_update, name='boots_update'),
     path('boots/<int:boots_pk>/like/', views.bootscamp_like, name='boots_like'),
+    path('boots/filter/<str:category>/', views.boots_filter, name="boots_filter"),
     path('community/', views.community_info, name='commu_info'),
     path('community/create/', views.community_create, name='commu_create'),
     path('community/<int:community_pk>/', views.community_detail, name='commu_detail'),

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Post_image, Post_bootscamp, Post_community, Comment, community_image, Tag
 from .forms import PostForm, PostImageForm, CommunityForm, CommentForm, CommuImageForm, EditorForm
 from django.http import JsonResponse
+from django.contrib.admin.views.decorators import staff_member_required
 from django.db import models
 from django.db.models import Q
 
@@ -30,11 +31,13 @@ def bootscamp_info(request):
     }
     return render(request, 'posts/boots_info.html', context)
 
+@staff_member_required
 def bootscamp_create(request):
     if request.method == 'POST':
         form = PostImageForm(request.POST, request.FILES)
         if form.is_valid():
             title = request.POST.get('title')
+            url = request.POST.get('url')
             tags = request.POST.getlist('tags')
             start_data1 = request.POST.get('start_data1')
             start_data2 = request.POST.get('start_data2')
@@ -53,6 +56,7 @@ def bootscamp_create(request):
             bootcamp = Post_bootscamp.objects.create(
                 user_id = request.user.pk,
                 title=title,
+                url = url,
                 start_data1=start_data1,
                 start_data2=start_data2,
                 end_data=end_data,
@@ -84,7 +88,7 @@ def bootscamp_create(request):
 
 def bootscamp_detail(request, boots_pk):
     post = Post_bootscamp.objects.get(pk=boots_pk)
-    tags = Tag.objects.get(pk=boots_pk)
+    tags = Tag.objects.all()
     context = {
         'post': post,
         'tags': tags,
@@ -108,6 +112,16 @@ def bootscamp_delete(request, boots_pk):
 
 def bootscamp_like(request, boots_pk):
     pass
+
+def boots_filter(request, category):
+    post = Post_bootscamp.objects.filter(tags__name=category)
+
+    context = {
+        'page_obj':post,
+    }
+
+    return render(request, 'posts/boots_info.html', context)
+
 
 def community_info(request):
     post_list = Post_community.objects.all().order_by('-pk')

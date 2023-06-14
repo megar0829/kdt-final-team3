@@ -1,5 +1,6 @@
 from django.utils import timezone
 from django import template
+from datetime import datetime
 from django.utils.html import strip_tags
 
 register = template.Library()
@@ -27,3 +28,9 @@ def custom_timesince(value):
 @register.filter
 def strip_html_tags(value):
     return strip_tags(value)
+
+@register.filter
+def remaining_days(end_date):
+    today = datetime.now().date()
+    remaining = end_date - today
+    return remaining.days

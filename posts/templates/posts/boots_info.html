@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
+{% load tz %}
+{% load humanize %}
+{% load custom_filters%}
 
 <link rel="stylesheet" href="{% static 'css/boots_info.css' %}" />
 {% endblock style %}
@@ -20,25 +23,25 @@
           </div>
           <div class="best_post p-3">
             <div class="pe-3 mb-3">
-              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-1">풀스택(웹)</a>
+              <a href="{%url 'posts:boots_filter' '풀스택'%}" class="category-1">풀스택(웹)</a>
             </div>
             <div class="mb-3">
-              <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-2">백엔드</a>
+              <a href="{%url 'posts:boots_filter' '백엔드'%}" class="category-2">백엔드</a>
             </div>
             <div class="pe-3 mb-3">
-              <a href="{%url 'posts:commu_filter' 'Spring'%}" class="category-3">프론트엔드</a>
+              <a href="{%url 'posts:boots_filter' '프론트엔드'%}" class="category-3">프론트엔드</a>
             </div>
             <div class="mb-3">
-              <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-4">퍼블리싱</a>
+              <a href="{%url 'posts:boots_filter' '퍼플리싱'%}" class="category-4">퍼블리싱</a>
             </div>
             <div class="pe-3 mb-3">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-5">안드로이드</a>
+              <a href="{%url 'posts:boots_filter' '안드로이드'%}" class="category-5">안드로이드</a>
             </div>
             <div class="mb-3">
-              <a href="{%url 'posts:commu_filter' '백엔드'%}" class="category-6">iOS</a>
+              <a href="{%url 'posts:boots_filter' 'iOS'%}" class="category-6">iOS</a>
             </div>
             <div class="pe-3 mb-3">
-              <a href="{%url 'posts:commu_filter' '프론트엔드'%}" class="category-7">데브옵스</a>
+              <a href="{%url 'posts:boots_filter' '데브옵스'%}" class="category-7">데브옵스</a>
             </div>
           </div>
         </div>
@@ -62,7 +65,14 @@
             {{ post.title}}
           </div>
           <div class="boots-info-date">
+            {% with remaining_days=post.start_data1|remaining_days %}
             {{ post.start_data1|date:'m/d' }}
+                {% if remaining_days > 0 %}
+                    <p>모집 마감까지: {{ remaining_days }}일전</p>
+                {% else %}
+                    <p>마감되었습니다.</p>
+                {% endif %}
+            {% endwith %}
           </div>
         </div>
         <div class="제목/내용">

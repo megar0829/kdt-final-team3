@@ -23,7 +23,7 @@
           </div>
           <div class="side_post p-3">
             <div class="pe-3">
-              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-django">Django</a>
+              <a href="{%url 'posts:commu_filter' '자유'%}" class="category-django">자유</a>
             </div>
             <div>
               <a href="{%url 'posts:commu_filter' 'Java'%}" class="category-java">Java</a>
@@ -35,7 +35,7 @@
               <a href="{%url 'posts:commu_filter' 'DB'%}" class="category-db">DB</a>
             </div>
             <div class="pe-3">
-              <a href="{%url 'posts:commu_filter' 'JPA'%}" class="category-jpa">JPA</a>
+              <a href="{%url 'posts:commu_filter' 'Django'%}" class="category-jpa">Django</a>
             </div>
             <div>
               <a href="{%url 'posts:commu_filter' '백앤드'%}" class="category-back">백앤드</a>
@@ -61,7 +61,7 @@
       <div class="commu-createBA">
         {% if request.user.is_authenticated %}
           <div class="commu-createBA-item2">
-            <div> {{user}} 님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
+            <div> {{user.nickname}} 님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
             <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
               글 작성
             </button>
@@ -152,7 +152,7 @@
                   {% else %}
                     <img src="{% static 'img/user.png' %}" alt="">
                   {% endif %}
-                  {{post.user.username}}
+                  {{post.user.nickname}}
                 </div>
                  
               </div>
