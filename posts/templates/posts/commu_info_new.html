@@ -59,7 +59,9 @@
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            💥 최신글 
+            <span  style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
+              💥 최신글 
+            </span>
             <span class="ps-2"style="color: lightgray; font-size:12px;">전체 게시글을 최신순으로 조회합니다</span>
           </div>
         </div>
@@ -67,7 +69,7 @@
       {%for post in commu%}
       <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
         <div class="카테고리 d-flex" style="justify-content: space-between;">
-          <div class="commuT">
+          <div class="commuT" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
             {{ post.title}}
           </div>
           <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
@@ -76,7 +78,7 @@
         </div>
         <div class="제목/내용">
           
-          <div class="commuC">
+          <div class="commuC d-inline-block text-truncate" style="max-width: 200px; font-size:13px;">
             {{ post.content|strip_html_tags }}
           </div>
         </div>
@@ -85,11 +87,7 @@
             <div class="commu-user-ico">
               <div class="profile-img">
                 <!-- 게시글 유저 이미지 -->
-                {% if user.image %}
-                  <img src="{{ post.user.image.url }}" alt="">
-                {% else %}
                   <img src="{% static 'img/user.png' %}" alt="">
-                {% endif %}
                 {{post.user.nickname}}
               </div>
             </div>
@@ -142,10 +140,10 @@
     <div class="like-main">
       <div class="like_post">
         <div class="like_post_all">
-          <div>
+          <div style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
             👍 추천글
           </div>
-          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
+          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">더 보기</a>
         </div>
       </div>
       <div>
@@ -159,7 +157,7 @@
           <div>
             <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
               <div class="카테고리 d-flex" style="justify-content: space-between;">
-                <div class="commuT">
+                <div class="commuT" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
                   {{ post.title }}
                 </div>
                 <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">

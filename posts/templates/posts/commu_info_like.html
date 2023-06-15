@@ -60,7 +60,9 @@
         <div class="like_post">
           <div class="like_post_all">
             <div>
-              👍 추천글
+              <span  style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
+                👍 추천글
+              </span>
               <span class="ps-2"style="color: lightgray; font-size:12px;">좋아요가 3개 이상인 글을 좋아요가 많은 순으로 조회합니다</span>
             </div>
           </div>
@@ -76,7 +78,7 @@
                 <div>
                   <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
                     <div class="카테고리 d-flex" style="justify-content: space-between;">
-                      <div class="commuT">
+                      <div class="commuT" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
                         {{ post.title }}
                       </div>
                       <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">

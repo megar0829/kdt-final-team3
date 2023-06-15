@@ -120,6 +120,7 @@
   gap: 12px;
   width: 100%;
   background-color: white;
+  border-radius: 10px;
 }
 
 .new_post {
@@ -129,6 +130,7 @@
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 
 .new_post_all {
@@ -143,6 +145,7 @@
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 .side_post {
   font-size: 16px;
@@ -153,6 +156,7 @@
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 10px;
 }
 
 
@@ -195,6 +199,7 @@ a {
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 
 .commu-createBA-item2 {
@@ -379,6 +384,7 @@ body {
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 .like_post_all {
   display: flex;

@@ -3,7 +3,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 0.5px solid lightgrey;
+  background: white;
 }
 
 nav .nav-left {

@@ -9,17 +9,12 @@
 {% block content %}
 <main class="signup-container">
   <div class="signup-title">
-    <h3>회원 가입</h3>
+    <h3 style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">회원 가입</h3>
   </div>
   <form action="{% url 'accounts:signup' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <div class="signup-api">
-      <div class="btn btn-outline-secondary m-3">API</div>
-      <div class="btn btn-outline-secondary m-3">API</div>
-      <div class="btn btn-outline-secondary m-3">API</div>
-    </div>
-    <input type="submit" value="가입" class="btn btn-secondary signup-button">
+    <input type="submit" value="가입" class="btn btn-secondary signup-button mt-3">
   </form>
 <script>
 

@@ -353,6 +353,7 @@ body {
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 .like_post_all {
   display: flex;
@@ -366,4 +367,5 @@ body {
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }

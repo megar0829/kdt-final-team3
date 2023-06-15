@@ -19,28 +19,30 @@
       <div class="commu-side">
         <div style="width: 11rem;">
           <div class="best_post mb-4 p-2 ps-3">
-            과정
+            <span style="color: #6f6e7a; text-shadow:1px 1px lightgray;">
+              💻 과정
+            </span>
           </div>
           <div class="best_post p-3">
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:boots_filter' '풀스택'%}" class="category-1">풀스택(웹)</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:boots_filter' '백엔드'%}" class="category-2">백엔드</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:boots_filter' '프론트엔드'%}" class="category-3">프론트엔드</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:boots_filter' '퍼플리싱'%}" class="category-4">퍼블리싱</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:boots_filter' '안드로이드'%}" class="category-5">안드로이드</a>
             </div>
-            <div class="mb-3">
+            <div>
               <a href="{%url 'posts:boots_filter' 'iOS'%}" class="category-6">iOS</a>
             </div>
-            <div class="pe-3 mb-3">
+            <div class="pe-3">
               <a href="{%url 'posts:boots_filter' '데브옵스'%}" class="category-7">데브옵스</a>
             </div>
           </div>
@@ -53,15 +55,17 @@
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            🏕️ 부트캠프 
+            <span style="color: #6f6e7a; text-shadow:1px 1px lightgray;">
+              🏕️ 부트캠프 
+            </span>
             <span class="ps-2"style="color: lightgray; font-size:12px;">부트캠프 전체게시글을 조회합니다.</span>
           </div>
         </div>
       </div>
       {%for post in page_obj%}
       <a href="{%url 'posts:boots_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
-        <div class="카테고리 d-flex" style="justify-content: space-between;">
-          <div class="commuT">
+        <div class="카테고리 d-flex" style="justify-content: space-between; height:40px; font-size:20px;">
+          <div class="commuT" style="color: #6f6e7a; text-shadow:1px 1px lightgray" >
             {{ post.title}}
           </div>
           <div class="boots-info-date">
@@ -78,7 +82,7 @@
         <div class="제목/내용">
           <div class="flex-row-nowrap">
             <div style="height: 100%">
-              <div class="flex-row boots-info-date">
+              <div class="flex-row boots-info-date" style="font-size:12px;">
                 {{post.start_data2|date:"Y/m/d"}}
                 ~
                 {{post.end_data|date:"Y/m/d"}} | {{post.price}}원 |  {{post.onoff}}
@@ -87,7 +91,7 @@
             <div style="text-align: left;">
             </div>
           </div>
-          <div class="commuC">
+          <div class="commuC d-inline-block text-truncate" style="max-width: 450px; color: #bfc0a8; font-size:14px;">
             {{ post.content }}
           </div>
           <div class="mt-3">
@@ -96,7 +100,7 @@
                 {{ tag }}
               </span> {% endcomment %}
               <div class="commuCA 
-              {% if tag in "백엔드" %}category-1
+              {% if tag == "백엔드" %}category-1
               {% elif tag == 'Java' %}category-2
               {% elif tag == 'Spring' %}category-3
               {% elif tag == 'DB' %}category-4
@@ -117,19 +121,19 @@
       {% if page_obj.has_previous or page_obj.has_next %}
       <div class="pagination justify-content-center">
           {% if page_obj.has_previous %}
-              <a class="page-link" href="?page=1">&laquo;</a>
+              <a class="page-link" href="?page=1" style="color:gray;">&laquo;</a>
           {% endif %}
   
           {% for num in page_obj.paginator.page_range %}
               {% if page_obj.number == num %}
-                  <span class="current-page page-link">{{ num }}</span>
+                  <span class="current-page page-link" style="color:gray;">{{ num }}</span>
               {% else %}
-                  <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                  <a class="page-link" style="color:gray;" href="?page={{ num }}">{{ num }}</a>
               {% endif %}
           {% endfor %}
   
           {% if page_obj.has_next %}
-              <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+              <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" style="color:gray;">&raquo;</a>
           {% endif %}
       </div>
       {% endif %}
