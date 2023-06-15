@@ -19,7 +19,9 @@
       <div class="commu-side">
         <div style="width: 11rem;">
           <div class="best_post mb-4 p-2 ps-3">
-            언어
+            <span style="color: #6f6e7a; text-shadow:1px 1px lightgray;">
+              🎯 주제
+            </span>
           </div>
           <div class="side_post p-3">
             <div class="pe-3">
@@ -61,23 +63,34 @@
       <div class="commu-createBA">
         {% if request.user.is_authenticated %}
           <div class="commu-createBA-item2">
-            <div> {{user.nickname}} 님, 지금 수많은 회원님들과 이야기를 나눠보세요.</div>
+            <div> 
+              <span style="font-size:18px;font-weight: bold; color:#b9b9b6; text-shadow: 1px 1px #e7f22b;">
+                🙋🏻 {{user.nickname}} 
+              </span>
+              <span style="font-size:14px; color:gray">
+                님, 지금 수많은 회원님들과 이야기를 나눠보세요.
+              </span>
+            </div>
             <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
-              글 작성
+              <span style="color: #6f6e7a;">
+                글 작성
+              </span>
             </button>
           </div>
           {% else %}
           <div class="commu-createBA-item2">
-            <div>아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요</div>
+            <div style="color: #6f6e7a; text-shadow:1px 1px lightgray;">아직 회원이 아니신가요? 회원가입하고 이야기를 나눠보세요</div>
           </div>
         {% endif %}
       </div>
       <div class="best_post">
         <div class="best_post_all">
           <div>
-            🔥 베스트글
+            <span style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
+              🔥 베스트글
+            </span>
           </div>
-          <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all">TOP5 보기</a>
+          <a href="{% url 'posts:commu_info_best' %}" class="commu-main-all"style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">TOP5 보기</a>
         </div>
       </div>
       {% for post in top_posts %}
@@ -88,7 +101,9 @@
             <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post col-6" data-pk="{{ post.pk }}">
               <div class="카테고리 d-flex" style="justify-content: space-between;">
                 <div class="commuT">
-                  {{ post.title}}
+                  <span style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">
+                    {{ post.title}}
+                  </span>
                 </div>
                 <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
                   {{ post.category }}
@@ -100,15 +115,21 @@
                     <div class="commuBA-item">
                       <img src="{%static 'commu_ico/views.svg' %}" alt="조회수">
                     </div>
-                    {{ post.views }}
+                    <span style="color:gray  text-shadow: 1px 1px lightgray;">
+                      {{ post.views }}
+                    </span>
                     <div class="commuBA-item">
                       <img src="{%static 'commu_ico/like.svg' %}" alt="좋아요">
                     </div>
-                    {{ post.like_user.count }}
+                    <span style="color:gray  text-shadow: 1px 1px lightgray;">
+                      {{ post.like_user.count }}
+                    </span>
                     <div class="commuBA-item">
                       <img src="{%static 'commu_ico/comment.svg'%}" alt="코멘트">
                     </div>
-                    {{ post.comment_count }}
+                    <span style="color:gray  text-shadow: 1px 1px lightgray;">
+                      {{ post.comment_count }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -121,24 +142,27 @@
       <div class="new_post">
         <div class="new_post_all">
           <div>
-            💥 최신글
+            <span style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">
+              💥 최신글
+            </span>
           </div>
-          <a href="{% url 'posts:commu_info_new' %}" class="commu-main-all">전체보기</a>
+          <a href="{% url 'posts:commu_info_new' %}" class="commu-main-all" style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">전체보기</a>
         </div>
       </div>
       {%for post in commu%}
         <a href="{%url 'posts:commu_detail' post.pk %}" class="commu_post" data-pk="{{ post.pk }}">
           <div class="카테고리 d-flex" style="justify-content: space-between;">
             <div class="commuT">
-              {{ post.title}}
+              <span style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">
+                {{ post.title}}
+              </span>
             </div>
             <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
               {{ post.category }}
             </div>
           </div>
           <div class="제목/내용">
-            
-            <div class="commuC">
+            <div class="commuC d-inline-block text-truncate" style="max-width: 200px; font-size:13px;">
               {{ post.content|strip_html_tags }}
             </div>
           </div>
@@ -147,12 +171,10 @@
               <div class="commu-user-ico">
                 <div class="profile-img">
                   <!-- 게시글 유저 이미지 -->
-                  {% if user.image %}
-                    <img src="{{ post.user.image.url }}" alt="">
-                  {% else %}
-                    <img src="{% static 'img/user.png' %}" alt="">
-                  {% endif %}
-                  {{post.user.nickname}}
+                  <img src="{% static 'img/user.png' %}" alt="">
+                  <span style="color:#b6b189;"> 
+                    {{post.user.nickname}}
+                  </span>
                 </div>
                  
               </div>
@@ -205,9 +227,11 @@
       <div class="like_post">
         <div class="like_post_all">
           <div>
-            👍 추천글
+            <span style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">
+              👍 추천글
+            </span>
           </div>
-          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
+          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all" style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">더 보기</a>
         </div>
       </div>
       <div>
@@ -220,7 +244,9 @@
                   <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
                     <div class="카테고리 d-flex" style="justify-content: space-between;">
                       <div class="commuT">
-                        {{ post.title }}
+                        <span style="color: #6f6e7a;">
+                          {{ post.title }}
+                        </span>
                       </div>
                       <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
                         {{ post.category }}

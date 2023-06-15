@@ -1,1 +1,1906 @@
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2023-06-14T07:59:00.794Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "tester001", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2023-06-14T07:59:12.404Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "tester001", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2023-06-14T07:59:36.470Z", "user": 1, "content_type": 14, "object_id": "3", "object_repr": "tester002", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2023-06-14T07:59:38.162Z", "user": 1, "content_type": 14, "object_id": "3", "object_repr": "tester002", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2023-06-14T07:59:55.933Z", "user": 1, "content_type": 14, "object_id": "4", "object_repr": "tester003", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2023-06-14T07:59:57.655Z", "user": 1, "content_type": 14, "object_id": "4", "object_repr": "tester003", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2023-06-14T08:00:05.474Z", "user": 1, "content_type": 14, "object_id": "5", "object_repr": "tester004", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2023-06-14T08:00:07.360Z", "user": 1, "content_type": 14, "object_id": "5", "object_repr": "tester004", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2023-06-14T08:00:20.435Z", "user": 1, "content_type": 14, "object_id": "6", "object_repr": "tester005", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2023-06-14T08:00:23.222Z", "user": 1, "content_type": 14, "object_id": "6", "object_repr": "tester005", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2023-06-14T08:00:31.561Z", "user": 1, "content_type": 14, "object_id": "7", "object_repr": "tester006", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2023-06-14T08:00:33.065Z", "user": 1, "content_type": 14, "object_id": "7", "object_repr": "tester006", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2023-06-14T08:00:41.143Z", "user": 1, "content_type": 14, "object_id": "8", "object_repr": "tester007", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2023-06-14T08:00:42.906Z", "user": 1, "content_type": 14, "object_id": "8", "object_repr": "tester007", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2023-06-14T08:00:49.922Z", "user": 1, "content_type": 14, "object_id": "9", "object_repr": "tester008", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2023-06-14T08:00:52.088Z", "user": 1, "content_type": 14, "object_id": "9", "object_repr": "tester008", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2023-06-14T08:01:00.555Z", "user": 1, "content_type": 14, "object_id": "10", "object_repr": "tester009", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2023-06-14T08:01:01.994Z", "user": 1, "content_type": 14, "object_id": "10", "object_repr": "tester009", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2023-06-14T08:01:09.102Z", "user": 1, "content_type": 14, "object_id": "11", "object_repr": "tester010", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2023-06-14T08:01:10.863Z", "user": 1, "content_type": 14, "object_id": "11", "object_repr": "tester010", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2023-06-14T08:01:24.336Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "tester001", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2023-06-14T08:24:00.452Z", "user": 1, "content_type": 14, "object_id": "10", "object_repr": "tester009", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2023-06-14T08:24:13.197Z", "user": 1, "content_type": 14, "object_id": "11", "object_repr": "tester010", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2023-06-14T08:24:15.737Z", "user": 1, "content_type": 14, "object_id": "10", "object_repr": "tester009", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2023-06-14T08:24:26.019Z", "user": 1, "content_type": 14, "object_id": "9", "object_repr": "tester008", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2023-06-14T08:24:29.891Z", "user": 1, "content_type": 14, "object_id": "9", "object_repr": "tester008", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2023-06-14T08:24:40.199Z", "user": 1, "content_type": 14, "object_id": "8", "object_repr": "tester007", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2023-06-14T08:24:44.080Z", "user": 1, "content_type": 14, "object_id": "8", "object_repr": "tester007", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2023-06-14T08:24:55.161Z", "user": 1, "content_type": 14, "object_id": "7", "object_repr": "tester006", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2023-06-14T08:25:07.768Z", "user": 1, "content_type": 14, "object_id": "6", "object_repr": "tester005", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2023-06-14T08:25:16.957Z", "user": 1, "content_type": 14, "object_id": "5", "object_repr": "tester004", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2023-06-14T08:25:26.225Z", "user": 1, "content_type": 14, "object_id": "4", "object_repr": "tester003", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2023-06-14T08:25:36.451Z", "user": 1, "content_type": 14, "object_id": "3", "object_repr": "tester002", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2023-06-14T08:25:46.421Z", "user": 1, "content_type": 14, "object_id": "2", "object_repr": "tester001", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add content type", "content_type": 4, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change content type", "content_type": 4, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete content type", "content_type": 4, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view content type", "content_type": 4, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add session", "content_type": 5, "codename": "add_session"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change session", "content_type": 5, "codename": "change_session"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete session", "content_type": 5, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view session", "content_type": 5, "codename": "view_session"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add editor", "content_type": 6, "codename": "add_editor"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change editor", "content_type": 6, "codename": "change_editor"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete editor", "content_type": 6, "codename": "delete_editor"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view editor", "content_type": 6, "codename": "view_editor"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add post_bootscamp", "content_type": 7, "codename": "add_post_bootscamp"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change post_bootscamp", "content_type": 7, "codename": "change_post_bootscamp"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete post_bootscamp", "content_type": 7, "codename": "delete_post_bootscamp"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view post_bootscamp", "content_type": 7, "codename": "view_post_bootscamp"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add tag", "content_type": 8, "codename": "add_tag"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change tag", "content_type": 8, "codename": "change_tag"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete tag", "content_type": 8, "codename": "delete_tag"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view tag", "content_type": 8, "codename": "view_tag"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add post_image", "content_type": 9, "codename": "add_post_image"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change post_image", "content_type": 9, "codename": "change_post_image"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete post_image", "content_type": 9, "codename": "delete_post_image"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view post_image", "content_type": 9, "codename": "view_post_image"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add post_community", "content_type": 10, "codename": "add_post_community"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change post_community", "content_type": 10, "codename": "change_post_community"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete post_community", "content_type": 10, "codename": "delete_post_community"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view post_community", "content_type": 10, "codename": "view_post_community"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add community_image", "content_type": 11, "codename": "add_community_image"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change community_image", "content_type": 11, "codename": "change_community_image"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete community_image", "content_type": 11, "codename": "delete_community_image"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view community_image", "content_type": 11, "codename": "view_community_image"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add comment", "content_type": 12, "codename": "add_comment"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change comment", "content_type": 12, "codename": "change_comment"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete comment", "content_type": 12, "codename": "delete_comment"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view comment", "content_type": 12, "codename": "view_comment"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add editor", "content_type": 13, "codename": "add_editor"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change editor", "content_type": 13, "codename": "change_editor"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete editor", "content_type": 13, "codename": "delete_editor"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view editor", "content_type": 13, "codename": "view_editor"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add user", "content_type": 14, "codename": "add_user"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change user", "content_type": 14, "codename": "change_user"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete user", "content_type": 14, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view user", "content_type": 14, "codename": "view_user"}}, {"model": "auth.permission", "pk": 57, "fields": {"name": "Can add site", "content_type": 15, "codename": "add_site"}}, {"model": "auth.permission", "pk": 58, "fields": {"name": "Can change site", "content_type": 15, "codename": "change_site"}}, {"model": "auth.permission", "pk": 59, "fields": {"name": "Can delete site", "content_type": 15, "codename": "delete_site"}}, {"model": "auth.permission", "pk": 60, "fields": {"name": "Can view site", "content_type": 15, "codename": "view_site"}}, {"model": "auth.permission", "pk": 61, "fields": {"name": "Can add email address", "content_type": 16, "codename": "add_emailaddress"}}, {"model": "auth.permission", "pk": 62, "fields": {"name": "Can change email address", "content_type": 16, "codename": "change_emailaddress"}}, {"model": "auth.permission", "pk": 63, "fields": {"name": "Can delete email address", "content_type": 16, "codename": "delete_emailaddress"}}, {"model": "auth.permission", "pk": 64, "fields": {"name": "Can view email address", "content_type": 16, "codename": "view_emailaddress"}}, {"model": "auth.permission", "pk": 65, "fields": {"name": "Can add email confirmation", "content_type": 17, "codename": "add_emailconfirmation"}}, {"model": "auth.permission", "pk": 66, "fields": {"name": "Can change email confirmation", "content_type": 17, "codename": "change_emailconfirmation"}}, {"model": "auth.permission", "pk": 67, "fields": {"name": "Can delete email confirmation", "content_type": 17, "codename": "delete_emailconfirmation"}}, {"model": "auth.permission", "pk": 68, "fields": {"name": "Can view email confirmation", "content_type": 17, "codename": "view_emailconfirmation"}}, {"model": "auth.permission", "pk": 69, "fields": {"name": "Can add social account", "content_type": 18, "codename": "add_socialaccount"}}, {"model": "auth.permission", "pk": 70, "fields": {"name": "Can change social account", "content_type": 18, "codename": "change_socialaccount"}}, {"model": "auth.permission", "pk": 71, "fields": {"name": "Can delete social account", "content_type": 18, "codename": "delete_socialaccount"}}, {"model": "auth.permission", "pk": 72, "fields": {"name": "Can view social account", "content_type": 18, "codename": "view_socialaccount"}}, {"model": "auth.permission", "pk": 73, "fields": {"name": "Can add social application", "content_type": 19, "codename": "add_socialapp"}}, {"model": "auth.permission", "pk": 74, "fields": {"name": "Can change social application", "content_type": 19, "codename": "change_socialapp"}}, {"model": "auth.permission", "pk": 75, "fields": {"name": "Can delete social application", "content_type": 19, "codename": "delete_socialapp"}}, {"model": "auth.permission", "pk": 76, "fields": {"name": "Can view social application", "content_type": 19, "codename": "view_socialapp"}}, {"model": "auth.permission", "pk": 77, "fields": {"name": "Can add social application token", "content_type": 20, "codename": "add_socialtoken"}}, {"model": "auth.permission", "pk": 78, "fields": {"name": "Can change social application token", "content_type": 20, "codename": "change_socialtoken"}}, {"model": "auth.permission", "pk": 79, "fields": {"name": "Can delete social application token", "content_type": 20, "codename": "delete_socialtoken"}}, {"model": "auth.permission", "pk": 80, "fields": {"name": "Can view social application token", "content_type": 20, "codename": "view_socialtoken"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "posts", "model": "editor"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "posts", "model": "post_bootscamp"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "posts", "model": "tag"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "posts", "model": "post_image"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "posts", "model": "post_community"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "posts", "model": "community_image"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "posts", "model": "comment"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "accounts", "model": "editor"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "accounts", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 15, "fields": {"app_label": "sites", "model": "site"}}, {"model": "contenttypes.contenttype", "pk": 16, "fields": {"app_label": "account", "model": "emailaddress"}}, {"model": "contenttypes.contenttype", "pk": 17, "fields": {"app_label": "account", "model": "emailconfirmation"}}, {"model": "contenttypes.contenttype", "pk": 18, "fields": {"app_label": "socialaccount", "model": "socialaccount"}}, {"model": "contenttypes.contenttype", "pk": 19, "fields": {"app_label": "socialaccount", "model": "socialapp"}}, {"model": "contenttypes.contenttype", "pk": 20, "fields": {"app_label": "socialaccount", "model": "socialtoken"}}, {"model": "sessions.session", "pk": "3qqaurknz6r8z95ilmij3z4flz8p2lmp", "fields": {"session_data": ".eJxVzMEOwiAQBNB_4WwIAi2LR-9-A9llqVQNJKU9Gf9dmvSg15k38xYBtzWHraUlzCwuAsTpNyOMz1T2gh9Y7lXGWtZlJrkTebRN3iqn1_WwfwcZW-5rVNalzgdkr01U3jGAtsmywzhFZdgCWkOAo9PqTARODyNPBN34pMTnC_r9ODY:1q9M1k:KLPFafd84CjkBXLzScQ003xpwjSoZ5hOcAOCTvfFtLc", "expire_date": "2023-06-28T08:38:52.895Z"}}, {"model": "posts.tag", "pk": 1, "fields": {"name": "¹é¿£µå"}}, {"model": "posts.tag", "pk": 2, "fields": {"name": "AI"}}, {"model": "posts.tag", "pk": 3, "fields": {"name": "DB"}}, {"model": "posts.tag", "pk": 4, "fields": {"name": "python"}}, {"model": "posts.tag", "pk": 5, "fields": {"name": "algorithm"}}, {"model": "posts.tag", "pk": 6, "fields": {"name": "ÀÚ¹Ù"}}, {"model": "posts.tag", "pk": 7, "fields": {"name": "SQL"}}, {"model": "posts.tag", "pk": 8, "fields": {"name": "ChatBot"}}, {"model": "posts.tag", "pk": 9, "fields": {"name": "µ¥ÀÌÅÍ"}}, {"model": "posts.tag", "pk": 10, "fields": {"name": "Node.js"}}, {"model": "posts.tag", "pk": 11, "fields": {"name": "React"}}, {"model": "posts.tag", "pk": 12, "fields": {"name": "Django"}}, {"model": "posts.post_bootscamp", "pk": 1, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]AI ¹é¿£µå °³¹ßÀÚ Ãë¾÷Ä·ÇÁ(Python)", "url": "www.hrd.go.kr/hrdp/co/pcoeo/PCOEO0200T.do?keyword=¸ÖÆ¼Ä·ÆÛ½º&dmdr=0&_csrf=4bebb294-a862-454b-bd4a-052f3fe99f03", "start_data1": "2023-06-26", "end_data": "2023-12-13", "start_data2": "2023-06-26", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "48", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "location": "(06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼", "content": "(±âº»)\r\n1) ´ëÇÑ¹Î±¹ ±¹Àû Ã»³â±¸Á÷ÀÚ Áß ³»ÀÏ¹è¿òÄ«µå ¹ß±Þ °¡´ÉÀÚ\r\n2) ÁÖÁß 9~18½Ã ÀüÀÏ ¼ö¾÷ Âü¿©°¡ °¡´ÉÇÑÀÚ\r\n(¿ì´ë)\r\n1) À¯°ü Àü°øÀÚ\r\n- Àü»êÇÐ/ÄÄÇ»ÅÍ°øÇÐ, (ÀÀ¿ë)¼ÒÇÁÆ®¿þ¾î°øÇÐ, Á¤º¸Åë½Å/¸ð¹ÙÀÏ°øÇÐ, »ê¾÷°øÇÐ/°æ¿µÁ¤º¸ÇÐ, ÀüÀÚ°øÇÐ/Àü±â°øÇÐ, Á¤º¸º¸È£(º¸¾È) ÇÐ°ú\r\n- ÀÌ ¿Ü IT °ü·ÃÇÐ°ú\r\n2) IT °ü·Ã ±¹°¡±â¼úÀÚ°Ý º¸À¯ÀÚ\r\n- ±âÅ¸ ÀÚÃ¼ ½ÉÀÇ¸¦ ÅëÇÏ¿© ±¹°¡±â¼ú ÀÚ°Ý¿¡ ÁØÇÏ´Â ÀÚ°ÝÁõ ÃëµæÀÚ (ex. Á¤º¸Ã³¸®±â»ç, Á¤º¸Ã³¸®»ê¾÷±â»ç µî)\r\n3) À§ 1)¹ø¿¡ ÇØ´çÇÏÁö ¾Ê´Â Àü°øÀÚ Áß ±³À°°úÁ¤ À¯°üÁ÷¹« ÀçÁ÷ÀÚ È¤Àº ¼ÒÇÁÆ®¿þ¾î °³¹ß Á÷¹«°æ·Â 6°³¿ù ÀÌ»óÀÎ ÀÚ\r\n4) °ø°ø¡¤¹Î°£ SW ¾ÆÄ«µ¥¹Ì ±³À°¼ö·á»ý\r\n¡Ø Àü°ø, ±â¼úÀÚ°ÝÁõ, ÀçÁ÷Áõ¸í¼­, ±³À° ¼ö·áÁõ Á¦Ãâ µî Áõ¸í °¡´ÉÇÑ °æ¿ì¿¡¸¸ °¡»êÁ¡ ºÎ¿©", "price": "¹«·á", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [1, 2, 3, 4, 5], "like_users": []}}, {"model": "posts.post_bootscamp", "pk": 2, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]¹é¿£µå °³¹ßÀÚ Ãë¾÷Ä·ÇÁ(Java)", "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000409326&tracseTme=15&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined", "start_data1": "2023-06-26", "end_data": "2023-11-14", "start_data2": "2023-06-26", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "55", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "location": "(06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼ ", "content": "(±âº»)\r\n1) ´ëÇÑ¹Î±¹ ±¹Àû Ã»³â±¸Á÷ÀÚ Áß ³»ÀÏ¹è¿òÄ«µå ¹ß±Þ °¡´ÉÀÚ\r\n2) ÁÖÁß 9~18½Ã ÀüÀÏ ¼ö¾÷ Âü¿©°¡ °¡´ÉÇÑÀÚ", "price": "0", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [1, 5, 6, 7, 8], "like_users": []}}, {"model": "posts.post_bootscamp", "pk": 3, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]µ¥ÀÌÅÍ ºÐ¼®&¿£Áö´Ï¾î Ãë¾÷Ä·ÇÁ(Python)", "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20210000314466&tracseTme=28&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined", "start_data1": "2023-06-26", "end_data": "2023-12-05", "start_data2": "2023-06-26", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "28", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "location": "(06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼", "content": "\t- ´ëÇÑ¹Î±¹ ±¹Àû Ã»³â±¸Á÷ÀÚ ¹× ÀçÁ÷ÀÚ\r\n- µ¥ÀÌÅÍ ºÐ¼®°¡, µ¥ÀÌÅÍ ¿£Áö´Ï¾î¸¦ ¸ñÇ¥·Î ÇÏ´Â ÀÚ", "price": "0", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [4, 5, 9], "like_users": []}}, {"model": "posts.post_bootscamp", "pk": 4, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]µ¥ÀÌÅÍ ½Ã°¢È­&ºÐ¼® Ãë¾÷Ä·ÇÁ(Python)", "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000366743&tracseTme=5&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined", "start_data1": "2023-06-26", "end_data": "2023-12-11", "start_data2": "2023-06-26", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "50", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "location": "(06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼", "content": "\t- °ü·ÃÀü°ø: ¹«°ü (ITºÐ¾ß Àü°øÀÚ ¿ì´ë)\r\n- ¼±¼öÇÐ½À: ¹«°ü (SW ±³À° ÀÌ¼öÀÚ ¿ì´ë)\r\n- Á÷¹«°æ·Â: ¹«°ü (ITºÐ¾ß °æÇèÀÚ ¿ì´ë)\r\n- ±âÃëµæÀÚ°Ý: ¹«°ü (°ü·Ã ÀÚ°ÝÁõ º¸À¯ÀÚ ¿ì´ë)", "price": "0", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [2, 4, 9], "like_users": []}}, {"model": "posts.post_bootscamp", "pk": 5, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]ÇÁ·ÐÆ®¿£µå °³¹ßÀÚ Ãë¾÷Ä·ÇÁ(Python)", "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20230000412670&tracseTme=2&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined", "start_data1": "2023-06-26", "end_data": "2023-11-06", "start_data2": "2023-06-26", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "48", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "location": " (06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼", "content": "\t(±âº»)\r\n1) ´ëÇÑ¹Î±¹ ±¹Àû Ã»³â±¸Á÷ÀÚ Áß ³»ÀÏ¹è¿òÄ«µå ¹ß±Þ °¡´ÉÀÚ\r\n2) ÁÖÁß 9~18½Ã ÀüÀÏ ¼ö¾÷ Âü¿©°¡ °¡´ÉÇÑ ÀÚ\r\n3) °íµîÇÐ±³, ´ëÇÐ(¿ø) Á¹¾÷ ÈÄ ¹ÌÃë¾÷ÀÚ\r\n4) '23³â 8¿ù Á¹¾÷¿¹Á¤ÀÚ\r\n5) ´ëÇÐ Àç/ÈÞÇÐ»ý(Á¹¾÷ ¼ö¾÷¿¬ÇÑÀÌ 2³â ÀÌ³»)", "price": "0", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [3, 4, 5, 10, 11], "like_users": []}}, {"model": "posts.post_bootscamp", "pk": 6, "fields": {"user": 1, "title": "[¸ÖÆ¼ÀÕ]Ç®½ºÅÃ °³¹ßÀÚ Ãë¾÷Ä·ÇÁ(Python)", "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000366729&tracseTme=7&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined", "start_data1": "2023-07-17", "end_data": "2024-01-11", "start_data2": "2023-07-17", "time": "¿ù,È­,¼ö,¸ñ,±Ý/09~18½Ã", "people": "55", "class_method": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "equipment": "È¨ÆäÀÌÁö¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.", "onoff": "¿Â¶óÀÎ", "location": "(06220) ¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 212 (¿ª»ïµ¿ ¸ÖÆ¼Ä·ÆÛ½º) 2~3°¢Ãþ ÀüÃ¼, 5~17°¢Ãþ ÀüÃ¼", "content": "- °ü·ÃÀü°ø: ¹«°ü (ITºÐ¾ß Àü°øÀÚ ¿ì´ë)\r\n- ¼±¼öÇÐ½À: ¹«°ü (SW ±³À° ÀÌ¼öÀÚ ¿ì´ë)\r\n- Á÷¹«°æ·Â: ¹«°ü (ITºÐ¾ß °æÇèÀÚ ¿ì´ë)\r\n- ±âÃëµæÀÚ°Ý: ¹«°ü (°ü·Ã ÀÚ°ÝÁõ º¸À¯ÀÚ ¿ì´ë)", "price": "0", "card": "³»ÀÏ¹è¿ò Ä«µåÇÊ¿äÇØ¿ä", "tags": [1, 4, 5, 12], "like_users": []}}, {"model": "posts.post_community", "pk": 4, "fields": {"user": 2, "title": "¼±¹è´Ôµé ÇÑ¹ø¸¸ ÀÐ¾îÁÖ½Ã°í Á¶¾ðºÎÅ¹µå¸³´Ï´Ù", "category": "ÀÚÀ¯", "content": "<p>&nbsp;</p>\r\n\r\n<p>¹Ù»Ú½Ã°ÚÁö¸¸ ÇÑ¹ø¸¸ ÀÐ¾îÁÖ½Ã°í Á¶¾ð ÇÑ¸¶µð¾¿ ºÎÅ¹µå¸³´Ï´Ù º»¹®ÀÌ ±æ¸é ¾Æ·¡ÂÊ¿¡ ¿ä¾àÀÌ¶óµµ ÇÑ¹ø¸¸ ÀÐ¾îÁÖ¼¼¿ä...</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>*º»¹®* ¾È³çÇÏ¼¼¿ä Àú´Â ÀÌÁ¦ ÀÔ»çÇÑÁö 1³âÁ¤µµ µÈ ÁÖ´Ï¾î °³¹ßÀÚÀÔ´Ï´Ù.</p>\r\n\r\n<p>Àü °³¹ß°ú »ó°ü¾ø´Â ÇÐ°ú¸¦ ³ª¿Í¼­ ±¹ºñÇÐ¿øÀ» ÅëÇØ Áß¼Ò±â¾÷¿¡ Ãë¾÷ÇÑ ÄÉÀÌ½ºÀÎµ¥¿ä. ÇöÀç È¸»ç´Â Á¦°¡ ¸ö´ã°í ÀÖ´Â Áö¿ª¿¡¼± ³ª¸§ ±Ô¸ðµµ Å©°í ±Þ¿©¶ÇÇÑ Æò±Õ ÀÌ»óÀÔ´Ï´Ù.</p>\r\n\r\n<p>±×·±µ¥ ¹®Á¦´Â ÀÏÀÌ ¾ø½À´Ï´Ù.. ÀÛ³â¿¡ ÀÔ»çÇÏ°íºÎÅÍ ÇöÀç Áö±Ý±îÁö ÀÏÀÌ ¾ø¾î¼­ ¸ÅÀÏ ¸ð´ÏÅÍ¸¸ ¹Ù¶óº¸´Ù Åð±ÙÀ» ÇÕ´Ï´Ù. °¡²û ÀÖ´ø ÀÏÀÌ¶ó°í´Â °¡º­¿î ¹®¼­ÀÛ¾÷ Á¤µµ.. ÀÏÀ» ´Þ¶ó°í »ó´ãµµ ¸î¹ø ÇÑÀû ÀÖÁö¸¸ ³ª¾ÆÁö´Â °Ô ¾ø½À´Ï´Ù</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>¸ÅÀÏ¸ÅÀÏ 8½Ã°£µ¿¾È ¸Û¶§¸®´Â ±â°£ÀÌ ±æ¾îÁö¸é ±æ¾îÁú¼ö·Ï Á¦°¡ ¿©±â¿¡ ¿Ö ¾É¾ÆÀÖ´Â°ÇÁö, °°ÀÌ °øºÎÇÏ´ø ÇÐ¿øµ¿±âµéÀº ÀÌÁ¦ Àúº¸´Ù ¾ó¸¶³ª ¾Õ¼­ÀÖÀ»Áö µîµîÀ» »ý°¢ÇÏ¸ç ±Ø½ÉÇÑ ¿ì¿ï°¨°ú ¹«±â·ÂÇÔ¿¡ Çã¿ìÀû°Å¸®°í ÀÖ½À´Ï´Ù..</p>\r\n\r\n<p>(Àú»Ó¸¸ ¾Æ´Ï¶ó »ç¹«½Ç ÀüÃ¼°¡ ´Ùµé ÀÏÀÌ¾ø´ÂÁö Ç×»ó ³îÀÚÆÇÀÔ´Ï´Ù ´Ùµé ÈÞ´ëÆù º¸°Å³ª, ÀÚ°Å³ª ¼ö´ÙÅ¸ÀÓ..)</p>\r\n\r\n<p>ÀÌ·¡¼± ¾ÈµÇ°Ú´Ù½Í¾î, ÃÖ±Ùµé¾î Áý¿¡¼­¶óµµ °³¹ß°øºÎ¸¦ ÇÏ°íÀÚ »õº®±îÁö °øºÎÇÏ´Ù ÀáÀÌ µì´Ï´Ù. ±×·±µ¥ ÀÚ²Ù¸¸ ÀÌ¹Ì ¸ÁÇØ¹ö·È´Ù´Â »ý°¢ÀÌ µé¾î ³Ê¹«³ªµµ µÎ·Æ°í ºÒ¾ÈÇÕ´Ï´Ù.. Áö³­ 1³â°£ ÀÌ È¸»ç¸¦ ´Ù´Ï¸é¼­ ¹» ¹Ï°í °øºÎ¸¦ ¾ÈÇØµ×´ÂÁö Á¦ ÀÚ½ÅÀÌ ³Ê¹« ¹Ó°í µÚ´Ê°Ô³ª¸¶ °øºÎ¿Í °³ÀÎ ÇÁ·ÎÁ§Æ® µîÀ¸·Î Æ÷ÆúÀ» Ã¤¿ì·Á ³ë·ÂÁßÀÌÁö¸¸ ÀÌ¹Ì 1³âÀ» ¹ö·È´Ù´Â »ç½Ç¿¡ ¸¶À½ÀÌ ³Ê¹«³ªµµ Á¶±ÞÇÏ³×¿ä...</p>\r\n\r\n<p>&nbsp;</p>", "views": 5, "create_at": "2023-06-14T08:29:58.315Z", "like_user": [2]}}, {"model": "posts.post_community", "pk": 5, "fields": {"user": 2, "title": "ÀÌ·Â¼­¸¦ º¸´Âµ¥ ½½ÆÛÁö³×¿©", "category": "ÀÚÀ¯", "content": "¿ÃÇØ ÀÎÅÏÀ» »Ì´Âµ¥ ¿¹³âº¸´Ù ¸¹Àº Áö¿øÀÚ°¡ ÀÖ³×¿ä  ÀÛ³â¿¡´Â 10¸í ¾ÈÂÊÀ¸·Î Áö¿øÇÏ¿´´Âµ¥ ¿ÃÇØ´Â ¹«·Á 40¸íÀÌ ³Ñ°Ô Áö¿øÇÏ¿´½À´Ï´Ù\r\n\r\n³ªÀÌµµ ´Ù¾çÇÏ±¸ ÇÐ±³µµ ´Ù¾çÇÏ°í ´ëÃæ¾´ ÀÌ·Â¼­µµ ÀÖ°í ÀÚÀ¯·Ó°Ô ÂïÀº »çÁøµµ ÀÖ°í ´Ù¾çÇÑµ¥\r\n\r\nÀÌ·Â¼­ Æ÷Æ®Æú¸®¿À ±êÀ» º¸°íÀÖÀ¸¸é ÀÌ Ä£±¸µéÀÌ ¾ó¸¶³ª ¿­½ÉÈ÷ »ìÀÖ´ÂÁö º¸°ÔµÇ³×¿ä\r\n\r\nÀú ÀÔ»çÇÒ¶§¸¸ÇØµµ ÀÌÁ¤µµ ±êµµ¾ø¾úÀ»¡¦ ÀÌ·¯¸é ³ª¹« ¿À·¡µÈ »ç¶÷Ã³·³ º¸ÀÌ³×¿ä¡¦ ¾ÏÆ° \r\n\r\n´Ù¾çÇÑ ºÎºÐ¿¡¼­ ¿­½ÉÈ÷ »ì¾Æ¿Â ÈçÀûÀÌ º¸ÀÌ´Âµ¥ ´©±¸ÇÑ¸íÀ» °í¸£°í ³ª¸ÓÁö ÀüºÎ¸¦ ¶³¾î¶ß·Á¾ßÇÏ´Â Á¤¸» ¿­½ÉÈ÷ ÀÛ¼ºÇßÀ» ÀÌ·Â¼­¸¦ º¸°í ¼­·ù¸¦ ¶³¾î¶ß¸±¶§ ¸¶À½ÀÌ ¾ÆÇÁ³×¿ä", "views": 1, "create_at": "2023-06-14T08:31:45.520Z", "like_user": [2]}}, {"model": "posts.post_community", "pk": 6, "fields": {"user": 2, "title": "È¸»ç°¡ »ç¶÷À» ¸¶±¸ »Ì¾Ò°í, Àú´Â ÀÏÀÌ ¾ø¾î¿ä..", "category": "ÀÚÀ¯", "content": "±×·±µ¥ ÀÌ È¸»ç ¸®´õµéÀÌ..\r\n±×³É È¸»çµ· ¾²´Â°ÍÀÌÁö ¹æÇâÀÌ³ª ÇÃ·£ »ý°¢ÀÌ ¾ø¾î¼­, »ç¶÷ ½×¾Æ ¿Ã¸®µíÀÌ ÇÊ¿ä ÀÌ»óÀÇ »ç¶÷µéÀ» »Ì¾Æ´ò½À´Ï´Ù.. Ã³À½ ÀÔ»çÇÏ°í¼­µµ ÆÀ ±¸¼º ¸í¼ö º¸°í ÈñÇÑÇÏ´Ù Çß´Âµ¥, Á¡Á¡ ´õ Æ¼°¡ ³ª³×¿ä.", "views": 3, "create_at": "2023-06-14T08:32:22.733Z", "like_user": [2, 3]}}, {"model": "posts.post_community", "pk": 7, "fields": {"user": 3, "title": "Áß°í½ÅÀÔ ¸éÁ¢ Áú¹® ! ¤Ð¤Ð", "category": "ÀÚÀ¯", "content": "¾È³çÇÏ¼¼¿ä\r\n\r\nÁß°ß±â¾÷ ¿£Áö´Ï¾î Á÷¹«·Î Áß°í½ÅÀÔ 1Â÷¸éÁ¢À» ÇÕ°ÝÇß½À´Ï´Ù.\r\n\r\n2Â÷¸éÁ¢Àº °£´ÜÇÏ°Ô ÆÀÀå´Ô°ú 1´ë1·Î ÀÎÅÍºä Çü½ÄÀ¸·Î ÁøÇàµÈ´Ù°í ¾È³» ¹Þ¾Ò½À´Ï´Ù.\r\n\r\n¼­·Î ±Ã±ÝÇÑ°É ¹°¾îº¸°í Áú¹®À» ¸¹ÀÌ ÇÏ°ÔµÉ ÀÚ¸®¶ó°í ÇÏ´Âµ¥ ÀÌ·±°æ¿ì 2Â÷´Â Çü½ÄÀûÀ¸·Î ÁøÇàµÇ´Â°É±î¿ä?\r\n(¹°·Ð ÁØºñ´Â ¿­½ÉÈ÷ ÇÒ °ÅÁö¸¸ ¾ÆÁ÷ ÀÌÁ÷ÀÌ Ã³À½ÀÎÁö¶ó...)\r\n\r\n¸¶À½ ÆíÈ÷ ¸Ô°í ¹°¾îº¼°Å ´Ù ¹°¾îº¼Áö, Á» ÁøÁöÇÏ°Ô Áú¹® Àß ¼±Á¤ÇØ¼­ °¡¾ßÇÒÁö Á¶¾ð ºÎÅ¹µå¸³´Ï´Ù ¤Ð", "views": 2, "create_at": "2023-06-14T08:33:25.978Z", "like_user": []}}, {"model": "posts.post_community", "pk": 8, "fields": {"user": 3, "title": "°í¹ÎÀÌ »ý°å½À´Ï´Ù.", "category": "ÀÚÀ¯", "content": "ÀÌ È¸»ç¿¡ ¸ö´ã°í 10³â ³Ñ°Ô ÇØ¿Â A¾÷¹«°¡ ÀÖ´Âµ¥, Ãß°¡·Î B¾÷¹«¸¦ ¸Ã°Ô µÇ¸é¼­ A¾÷¹«¸¦ º´ÇàÇÏ¸é¼­ B¾÷¹«µµ µ¿½Ã¿¡ ÇÏ°í ½Í¾úÀ¸³ª À§¿¡¼­´Â A¾÷¹«¸¦ ´Ù¸¥ Á÷¿ø¿¡°Ô ÁÖ°í B¾÷¹«¿¡ ÁýÁßÀ» ÇÏ±æ ¹Ù¶ó°í ÀÖ½À´Ï´Ù. ÀÌ Á÷¿ø¿¡°Ô A¾÷¹«¸¦ ÁÖ¸é Àü ÀÎ¼öÀÎ°è¸¦ ÇØ¾ßÇÏ°í ¿øÄ¡¾Ê´Â ÀÎ¼öÀÎ°è¸¦ ÇÏ°Ô µÇ¸é¼­ ¿ÀÈ÷·Á ¾÷¹«°¡ ´õ ´Ã¾î³ª°Ô µÇ¸é¼­ ´õ ºÎ´ãÀÌ µÇ¾î¹ö¸° »óÈ²ÀÔ´Ï´Ù. ¾ÕÀ¸·Î ÇÒ ¼ö ÀÖ´Â ÇÑ ´É·Â²¯ ÀÌ È¸»ç¾÷¹« ÀüÃ¼¸¦ ´Ù °¡Á®¿Í¼­ È¥ÀÚ¼­ ´Ù ÇØ¹ö¸®°í ½ÍÀº ¿å½ÉÀÌ °­Çß´Âµ¥ Á¦°¡ ³Ê¹« ÀÌ±âÀûÀÎ °Ç°¡¿ä.. ÇÑ°³ÀÇ ¾÷¹«µµ Á¦´ë·Î ÇÏ±â ½È¾îÇÏ´Â Á÷¿øµéÀÌ ½È¾î¼­ ±×·³ ÇÏÁö¸¶ ³»°¡ ´Ù ÇÑ´Ù ¶ó´Â ¸¶À½À¸·Î ´ýº³´Âµ¥ Á÷¿øµé ´«¿¡´Â Á¦°¡ °¡½Ë°Å¸®·Î º¸ÀÌ°ÚÁÒ.. ¿©À¯µµ ¾øÀÌ ÀÏÇÏÁö¸¸ È¸»ç¿¡¼­ ÀÎÁ¤¹Þ°í ½ÍÀº ¸¶À½ÀÌ Ä¿¼­ ÀßÇÏ°í ÀÖ´ø A¾÷¹«µµ ³õÁö°í ½ÍÁö°¡ ¾Ê³×¿ä..\r\nÁ¶¾ð Á» ºÎÅ¹µå¸³´Ï´Ù..", "views": 1, "create_at": "2023-06-14T08:35:20.711Z", "like_user": [3]}}, {"model": "posts.post_community", "pk": 9, "fields": {"user": 4, "title": "Django ¸Å·ÂÀÖÀ»±î¿ä?", "category": "Django", "content": "Ãë¾÷½ÃÀåÀÌ ³Ê¹« Á¼¾Æ¿ä ¤Ð¤Ì¤Ð", "views": 5, "create_at": "2023-06-14T08:36:26.390Z", "like_user": [4, 8]}}, {"model": "posts.post_community", "pk": 10, "fields": {"user": 5, "title": "ÇÁ·ÐÆ®¾Øµå ³Ê¹« Èûµå³×¿ä", "category": "ÇÁ·ÐÆ®¾Øµå", "content": "¹é¿£µåº¸´Ù ½¬¿ïÁÙ¾Ë°í ÁøÀÔÇßÁö¸¸ ¿©±âµµ ¸¸¸¸Ä¡¾Ê³×¿ä", "views": 4, "create_at": "2023-06-14T08:37:08.669Z", "like_user": []}}, {"model": "posts.post_community", "pk": 11, "fields": {"user": 6, "title": "´ë±â¾÷ ¿¬ºÀ µµ´ëÃ¼ ¾ó¸¶ÀÎ°Ç°¡¿ä?", "category": "ÀÚÀ¯", "content": "Åé10 ±×·ì»ç¿¡ 3³âÂ÷ °æ·ÂÀÌÁ÷ÇÏ¸é 6Ãµ¿¡ °¡±î¿î°¡¿ä 8Ãµ¿¡ °¡±î¿î°¡¿ä? \r\n\r\nÀüÀÚ¸é ±»ÀÌ °¥ ÇÊ¿ä¼ºÀ» ¸ø´À²¸¼­ ¿Ã·Áº¾´Ï´Ù. ¿¬ºÀ»ó½Â·üÀÌ Áß¼Ò¿Í °°´Ù°í ÇÏ½Ã´Â ºÐµéµµ °è½Ã°í ºí¶ó¿¡ ÀÎ¼¾ ¹ÌÆ÷ÇÔ ±âº»±Þ¸¸ 7-8ÃµÀÌ¶ó´Â ºÐµéµµ °è¼Å¼­¿ä.", "views": 1, "create_at": "2023-06-14T08:37:44.596Z", "like_user": []}}, {"model": "posts.post_community", "pk": 12, "fields": {"user": 7, "title": "26»ì ³²ÀÚ ¹é¿£µå °³¹ßÀÚ", "category": "ÀÚÀ¯", "content": "ÇöÀç È¸»ç¿¡ ¸¸Á·ÇÏ°í »ç¶÷µµ ÁÁ½À´Ï´Ù.\r\n¼Ò¼ÒÇÑ ÆÁ ÇÑÁÙ Àû¾îÁÖ½Å´Ù¸é ±Í´ã¾Æ µè°Ú½À´Ï´Ù. °¨»çÇÕ´Ï´Ù.", "views": 1, "create_at": "2023-06-14T08:38:39.982Z", "like_user": [7]}}, {"model": "posts.comment", "pk": 2, "fields": {"post": 6, "user": 3, "content": "‹š·ÁÄ¡¼¼¿ä", "create_at": "2023-06-14T08:32:54.202Z"}}, {"model": "posts.comment", "pk": 3, "fields": {"post": 10, "user": 8, "content": "¤©¤·°³ºý»ú´Ï´Ù\r\n", "create_at": "2023-06-14T08:39:03.841Z"}}, {"model": "posts.comment", "pk": 4, "fields": {"post": 9, "user": 8, "content": "Àúµµ ³Ê¹« °í¹Î", "create_at": "2023-06-14T08:39:14.905Z"}}, {"model": "posts.post_image", "pk": 1, "fields": {"post": 1, "post_image": ""}}, {"model": "posts.post_image", "pk": 2, "fields": {"post": 2, "post_image": ""}}, {"model": "posts.post_image", "pk": 3, "fields": {"post": 3, "post_image": ""}}, {"model": "posts.post_image", "pk": 4, "fields": {"post": 4, "post_image": ""}}, {"model": "posts.post_image", "pk": 5, "fields": {"post": 5, "post_image": ""}}, {"model": "posts.post_image", "pk": 6, "fields": {"post": 6, "post_image": ""}}, {"model": "posts.community_image", "pk": 6, "fields": {"community_post": 4, "community_image": ""}}, {"model": "posts.community_image", "pk": 7, "fields": {"community_post": 4, "community_image": ""}}, {"model": "posts.community_image", "pk": 8, "fields": {"community_post": 4, "community_image": ""}}, {"model": "posts.community_image", "pk": 9, "fields": {"community_post": 4, "community_image": ""}}, {"model": "posts.community_image", "pk": 10, "fields": {"community_post": 5, "community_image": ""}}, {"model": "posts.community_image", "pk": 11, "fields": {"community_post": 6, "community_image": ""}}, {"model": "posts.community_image", "pk": 12, "fields": {"community_post": 7, "community_image": ""}}, {"model": "posts.community_image", "pk": 13, "fields": {"community_post": 8, "community_image": ""}}, {"model": "posts.community_image", "pk": 14, "fields": {"community_post": 9, "community_image": ""}}, {"model": "posts.community_image", "pk": 15, "fields": {"community_post": 10, "community_image": ""}}, {"model": "posts.community_image", "pk": 16, "fields": {"community_post": 11, "community_image": ""}}, {"model": "posts.community_image", "pk": 17, "fields": {"community_post": 12, "community_image": ""}}, {"model": "accounts.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$260000$mK4A38jiF6RhjL9TKtnBnL$ssxMvrr+WPqyufogtxbeNfkIanaoy48MB21+4sojSIg=", "last_login": "2023-06-14T05:51:33.688Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2023-06-14T05:51:19.287Z", "nickname": "", "level": 1, "experience": 3, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$260000$4uX4qZgJe95Ma2L74cLLNp$EsyLqhGSP6ES7lvkkfTVI5ruLuaTSJ0+GyEH1emekzI=", "last_login": "2023-06-14T08:27:13.135Z", "is_superuser": false, "username": "tester001", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T07:59:00Z", "nickname": "Æ¼³ëÆ¼³ë", "level": 1, "experience": 4, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$260000$goVgQUOywHMVaJBmrgFEHs$9JYVwTagfs/HOtqcTf00CynGIgb+q5BgDSJOxvXiFO0=", "last_login": "2023-06-14T08:32:42.891Z", "is_superuser": false, "username": "tester002", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T07:59:36Z", "nickname": "¾Ë¼ö°¡¾ø³ß", "level": 1, "experience": 3, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 4, "fields": {"password": "pbkdf2_sha256$260000$tkiVHg9iBDgur3xxk3Kzq2$Gfaci+4GvCGHRl9wFXj420IZnLbdNm1KOZvctx4Ukd8=", "last_login": "2023-06-14T08:36:03.319Z", "is_superuser": false, "username": "tester003", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T07:59:55Z", "nickname": "È£ÀÌÆÄÆÄ", "level": 1, "experience": 1, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 5, "fields": {"password": "pbkdf2_sha256$260000$0qW3lQLJYNkETekuPn1voF$3ICzuupXDf/GYmr32E728KvXnmkXfK9rZZv6JylWs10=", "last_login": "2023-06-14T08:36:47.915Z", "is_superuser": false, "username": "tester004", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:00:05Z", "nickname": "³ú¸¦½ä¾î", "level": 1, "experience": 1, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 6, "fields": {"password": "pbkdf2_sha256$260000$locKkKwp8hmwABzvnS9TYJ$7l/MKwM78aYacLXUtzA+dsK40vPG0unj6GbeddcrwUI=", "last_login": "2023-06-14T08:37:26.349Z", "is_superuser": false, "username": "tester005", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:00:20Z", "nickname": "ÆÏµµ³ÊÃ÷", "level": 1, "experience": 1, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 7, "fields": {"password": "pbkdf2_sha256$260000$uubK1P79BqfZdTAsd12202$8RNGoLFoTcpgvmWzQ1y80Ih409FYY53WQuFy1tiJVQI=", "last_login": "2023-06-14T08:38:14.634Z", "is_superuser": false, "username": "tester006", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:00:31Z", "nickname": "EAFA", "level": 1, "experience": 1, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 8, "fields": {"password": "pbkdf2_sha256$260000$SLFY0MLOx6OfZHZOua0or7$5PXgZoWV5ZZud1FtzpgiGrFHyCv1Sx4v2PSTo+OVjM0=", "last_login": "2023-06-14T08:38:52.890Z", "is_superuser": false, "username": "tester007", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:00:41Z", "nickname": "starwar", "level": 1, "experience": 2, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 9, "fields": {"password": "pbkdf2_sha256$260000$u6ElKgX7WcoOX5A31LOIaX$dO/sMnIW768cZP2gjkJZe1inWRVMksgbDm6OwFxm78k=", "last_login": null, "is_superuser": false, "username": "tester008", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:00:49Z", "nickname": "Áñ°Å¿îµµºñ", "level": 1, "experience": 0, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 10, "fields": {"password": "pbkdf2_sha256$260000$WS5fj1Oe0xV3KGazyxqZ21$IelRTaBCRMW+4eJwhWyhcHCLHj/5eMBm1VJZ3xWy3ic=", "last_login": null, "is_superuser": false, "username": "tester009", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:01:00Z", "nickname": "ruruni", "level": 1, "experience": 0, "image": "", "groups": [], "user_permissions": []}}, {"model": "accounts.user", "pk": 11, "fields": {"password": "pbkdf2_sha256$260000$WFZTne9k5lpCRWQkRbx5MC$fk78pyjIeL8J4FVPNYkT3xAmJjdhNS5xOEtaHgtEA0g=", "last_login": null, "is_superuser": false, "username": "tester010", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2023-06-14T08:01:09Z", "nickname": "´Ù½Ã½ÅÀÔ", "level": 1, "experience": 0, "image": "", "groups": [], "user_permissions": []}}, {"model": "sites.site", "pk": 1, "fields": {"domain": "example.com", "name": "example.com"}}]
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-06-14T07:59:00.794Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "tester001",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-06-14T07:59:12.404Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "tester001",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-06-14T07:59:36.470Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "tester002",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-06-14T07:59:38.162Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "tester002",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-06-14T07:59:55.933Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "tester003",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-06-14T07:59:57.655Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "tester003",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-06-14T08:00:05.474Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "tester004",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-06-14T08:00:07.360Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "tester004",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-06-14T08:00:20.435Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "6",
+      "object_repr": "tester005",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-06-14T08:00:23.222Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "6",
+      "object_repr": "tester005",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-06-14T08:00:31.561Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "7",
+      "object_repr": "tester006",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-06-14T08:00:33.065Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "7",
+      "object_repr": "tester006",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-06-14T08:00:41.143Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "8",
+      "object_repr": "tester007",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-06-14T08:00:42.906Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "8",
+      "object_repr": "tester007",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-06-14T08:00:49.922Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "9",
+      "object_repr": "tester008",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-06-14T08:00:52.088Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "9",
+      "object_repr": "tester008",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-06-14T08:01:00.555Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "10",
+      "object_repr": "tester009",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-06-14T08:01:01.994Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "10",
+      "object_repr": "tester009",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-06-14T08:01:09.102Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "11",
+      "object_repr": "tester010",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-06-14T08:01:10.863Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "11",
+      "object_repr": "tester010",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-06-14T08:01:24.336Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "tester001",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-06-14T08:24:00.452Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "10",
+      "object_repr": "tester009",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-06-14T08:24:13.197Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "11",
+      "object_repr": "tester010",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-06-14T08:24:15.737Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "10",
+      "object_repr": "tester009",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-06-14T08:24:26.019Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "9",
+      "object_repr": "tester008",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-06-14T08:24:29.891Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "9",
+      "object_repr": "tester008",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-06-14T08:24:40.199Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "8",
+      "object_repr": "tester007",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-06-14T08:24:44.080Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "8",
+      "object_repr": "tester007",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-06-14T08:24:55.161Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "7",
+      "object_repr": "tester006",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-06-14T08:25:07.768Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "6",
+      "object_repr": "tester005",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-06-14T08:25:16.957Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "tester004",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-06-14T08:25:26.225Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "tester003",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-06-14T08:25:36.451Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "tester002",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-06-14T08:25:46.421Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "tester001",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Nickname\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add editor",
+      "content_type": 6,
+      "codename": "add_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change editor",
+      "content_type": 6,
+      "codename": "change_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete editor",
+      "content_type": 6,
+      "codename": "delete_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view editor",
+      "content_type": 6,
+      "codename": "view_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add post_bootscamp",
+      "content_type": 7,
+      "codename": "add_post_bootscamp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change post_bootscamp",
+      "content_type": 7,
+      "codename": "change_post_bootscamp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete post_bootscamp",
+      "content_type": 7,
+      "codename": "delete_post_bootscamp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view post_bootscamp",
+      "content_type": 7,
+      "codename": "view_post_bootscamp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 8,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 8,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 8,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view tag",
+      "content_type": 8,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add post_image",
+      "content_type": 9,
+      "codename": "add_post_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change post_image",
+      "content_type": 9,
+      "codename": "change_post_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete post_image",
+      "content_type": 9,
+      "codename": "delete_post_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view post_image",
+      "content_type": 9,
+      "codename": "view_post_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add post_community",
+      "content_type": 10,
+      "codename": "add_post_community"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change post_community",
+      "content_type": 10,
+      "codename": "change_post_community"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete post_community",
+      "content_type": 10,
+      "codename": "delete_post_community"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view post_community",
+      "content_type": 10,
+      "codename": "view_post_community"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add community_image",
+      "content_type": 11,
+      "codename": "add_community_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change community_image",
+      "content_type": 11,
+      "codename": "change_community_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete community_image",
+      "content_type": 11,
+      "codename": "delete_community_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view community_image",
+      "content_type": 11,
+      "codename": "view_community_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 12,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 12,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 12,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 12,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add editor",
+      "content_type": 13,
+      "codename": "add_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change editor",
+      "content_type": 13,
+      "codename": "change_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete editor",
+      "content_type": 13,
+      "codename": "delete_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view editor",
+      "content_type": 13,
+      "codename": "view_editor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 14,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 14,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 14,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 14,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 15,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 15,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 15,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 15,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add email address",
+      "content_type": 16,
+      "codename": "add_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change email address",
+      "content_type": 16,
+      "codename": "change_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete email address",
+      "content_type": 16,
+      "codename": "delete_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view email address",
+      "content_type": 16,
+      "codename": "view_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add email confirmation",
+      "content_type": 17,
+      "codename": "add_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change email confirmation",
+      "content_type": 17,
+      "codename": "change_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete email confirmation",
+      "content_type": 17,
+      "codename": "delete_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view email confirmation",
+      "content_type": 17,
+      "codename": "view_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add social account",
+      "content_type": 18,
+      "codename": "add_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change social account",
+      "content_type": 18,
+      "codename": "change_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete social account",
+      "content_type": 18,
+      "codename": "delete_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view social account",
+      "content_type": 18,
+      "codename": "view_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add social application",
+      "content_type": 19,
+      "codename": "add_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change social application",
+      "content_type": 19,
+      "codename": "change_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete social application",
+      "content_type": 19,
+      "codename": "delete_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view social application",
+      "content_type": 19,
+      "codename": "view_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add social application token",
+      "content_type": 20,
+      "codename": "add_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change social application token",
+      "content_type": 20,
+      "codename": "change_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete social application token",
+      "content_type": 20,
+      "codename": "delete_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view social application token",
+      "content_type": 20,
+      "codename": "view_socialtoken"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "posts", "model": "editor" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "posts", "model": "post_bootscamp" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "posts", "model": "tag" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "posts", "model": "post_image" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "posts", "model": "post_community" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "posts", "model": "community_image" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "posts", "model": "comment" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "accounts", "model": "editor" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": { "app_label": "accounts", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": { "app_label": "sites", "model": "site" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": { "app_label": "account", "model": "emailaddress" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": { "app_label": "account", "model": "emailconfirmation" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": { "app_label": "socialaccount", "model": "socialaccount" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": { "app_label": "socialaccount", "model": "socialapp" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": { "app_label": "socialaccount", "model": "socialtoken" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3qqaurknz6r8z95ilmij3z4flz8p2lmp",
+    "fields": {
+      "session_data": ".eJxVzMEOwiAQBNB_4WwIAi2LR-9-A9llqVQNJKU9Gf9dmvSg15k38xYBtzWHraUlzCwuAsTpNyOMz1T2gh9Y7lXGWtZlJrkTebRN3iqn1_WwfwcZW-5rVNalzgdkr01U3jGAtsmywzhFZdgCWkOAo9PqTARODyNPBN34pMTnC_r9ODY:1q9M1k:KLPFafd84CjkBXLzScQ003xpwjSoZ5hOcAOCTvfFtLc",
+      "expire_date": "2023-06-28T08:38:52.895Z"
+    }
+  },
+  { "model": "posts.tag", "pk": 1, "fields": { "name": "ï¿½é¿£ï¿½ï¿½" } },
+  { "model": "posts.tag", "pk": 2, "fields": { "name": "AI" } },
+  { "model": "posts.tag", "pk": 3, "fields": { "name": "DB" } },
+  { "model": "posts.tag", "pk": 4, "fields": { "name": "python" } },
+  { "model": "posts.tag", "pk": 5, "fields": { "name": "algorithm" } },
+  { "model": "posts.tag", "pk": 6, "fields": { "name": "ï¿½Ú¹ï¿½" } },
+  { "model": "posts.tag", "pk": 7, "fields": { "name": "SQL" } },
+  { "model": "posts.tag", "pk": 8, "fields": { "name": "ChatBot" } },
+  { "model": "posts.tag", "pk": 9, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "posts.tag", "pk": 10, "fields": { "name": "Node.js" } },
+  { "model": "posts.tag", "pk": 11, "fields": { "name": "React" } },
+  { "model": "posts.tag", "pk": 12, "fields": { "name": "Django" } },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]AI ï¿½é¿£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Python)",
+      "url": "www.hrd.go.kr/hrdp/co/pcoeo/PCOEO0200T.do?keyword=ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½&dmdr=0&_csrf=4bebb294-a862-454b-bd4a-052f3fe99f03",
+      "start_data1": "2023-06-26",
+      "end_data": "2023-12-13",
+      "start_data2": "2023-06-26",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "48",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "location": "(06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼",
+      "content": "(ï¿½âº»)\r\n1) ï¿½ï¿½ï¿½Ñ¹Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½â±¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½Ä«ï¿½ï¿½ ï¿½ß±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n2) ï¿½ï¿½ï¿½ï¿½ 9~18ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n(ï¿½ï¿½ï¿½)\r\n1) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½Ç»ï¿½Í°ï¿½ï¿½ï¿½, (ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½æ¿µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£(ï¿½ï¿½ï¿½ï¿½) ï¿½Ð°ï¿½\r\n- ï¿½ï¿½ ï¿½ï¿½ IT ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½\r\n2) IT ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n- ï¿½ï¿½Å¸ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú°Ý¿ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ú°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ (ex. ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½)\r\n3) ï¿½ï¿½ 1)ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 6ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½\r\n4) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½ SW ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\nï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½",
+      "price": "ï¿½ï¿½ï¿½ï¿½",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [1, 2, 3, 4, 5],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]ï¿½é¿£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Java)",
+      "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000409326&tracseTme=15&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined",
+      "start_data1": "2023-06-26",
+      "end_data": "2023-11-14",
+      "start_data2": "2023-06-26",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "55",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "location": "(06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ",
+      "content": "(ï¿½âº»)\r\n1) ï¿½ï¿½ï¿½Ñ¹Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½â±¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½Ä«ï¿½ï¿½ ï¿½ß±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n2) ï¿½ï¿½ï¿½ï¿½ 9~18ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "price": "0",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [1, 5, 6, 7, 8],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼ï¿½&ï¿½ï¿½ï¿½ï¿½ï¿½Ï¾ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Python)",
+      "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20210000314466&tracseTme=28&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined",
+      "start_data1": "2023-06-26",
+      "end_data": "2023-12-05",
+      "start_data2": "2023-06-26",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "28",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "location": "(06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼",
+      "content": "\t- ï¿½ï¿½ï¿½Ñ¹Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½â±¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¾î¸¦ ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½",
+      "price": "0",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [4, 5, 9],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½È­&ï¿½Ð¼ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Python)",
+      "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000366743&tracseTme=5&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined",
+      "start_data1": "2023-06-26",
+      "end_data": "2023-12-11",
+      "start_data2": "2023-06-26",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "50",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "location": "(06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼",
+      "content": "\t- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ (ITï¿½Ð¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½: ï¿½ï¿½ï¿½ï¿½ (SW ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ (ITï¿½Ð¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½: ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½Ú°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)",
+      "price": "0",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [2, 4, 9],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Python)",
+      "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20230000412670&tracseTme=2&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined",
+      "start_data1": "2023-06-26",
+      "end_data": "2023-11-06",
+      "start_data2": "2023-06-26",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "48",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "location": " (06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼",
+      "content": "\t(ï¿½âº»)\r\n1) ï¿½ï¿½ï¿½Ñ¹Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½â±¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½Ä«ï¿½ï¿½ ï¿½ß±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n2) ï¿½ï¿½ï¿½ï¿½ 9~18ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½\r\n3) ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n4) '23ï¿½ï¿½ 8ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\r\n5) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½/ï¿½ï¿½ï¿½Ð»ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ì³ï¿½)",
+      "price": "0",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [3, 4, 5, 10, 11],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_bootscamp",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "title": "[ï¿½ï¿½Æ¼ï¿½ï¿½]Ç®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä·ï¿½ï¿½(Python)",
+      "url": "www.hrd.go.kr/hrdp/co/pcobo/PCOBO0100P.do?tracseId=AIG20220000366729&tracseTme=7&crseTracseSe=C0061&trainstCstmrId=500020039927#undefined",
+      "start_data1": "2023-07-17",
+      "end_data": "2024-01-11",
+      "start_data2": "2023-07-17",
+      "time": "ï¿½ï¿½,È­,ï¿½ï¿½,ï¿½ï¿½,ï¿½ï¿½/09~18ï¿½ï¿½",
+      "people": "55",
+      "class_method": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "equipment": "È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.",
+      "onoff": "ï¿½Â¶ï¿½ï¿½ï¿½",
+      "location": "(06220) ï¿½ï¿½ï¿½ï¿½Æ¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 212 (ï¿½ï¿½ï¿½ïµ¿ ï¿½ï¿½Æ¼Ä·ï¿½Û½ï¿½) 2~3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼, 5~17ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼",
+      "content": "- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ (ITï¿½Ð¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½: ï¿½ï¿½ï¿½ï¿½ (SW ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ (ITï¿½Ð¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)\r\n- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½: ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½Ú°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½)",
+      "price": "0",
+      "card": "ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ø¿ï¿½",
+      "tags": [1, 4, 5, 12],
+      "like_users": []
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "title": "ï¿½ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½Ö½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "<p>&nbsp;</p>\r\n\r\n<p>ï¿½Ù»Ú½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½Ö½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¸ï¿½ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½...</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>*ï¿½ï¿½ï¿½ï¿½* ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´Ï¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.</p>\r\n\r\n<p>ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¼Ò±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Îµï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¸ï¿½ Å©ï¿½ï¿½ ï¿½Þ¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ô´Ï´ï¿½.</p>\r\n\r\n<p>ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.. ï¿½Û³â¿¡ ï¿½Ô»ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ù¶óº¸´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Û¾ï¿½ ï¿½ï¿½ï¿½ï¿½.. ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¶ï¿½ï¿½ ï¿½ï¿½ãµµ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ 8ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½â°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½ï¿½ ï¿½É¾ï¿½ï¿½Ö´Â°ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ó¸¶³ï¿½ ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ø½ï¿½ï¿½ï¿½ ï¿½ï¿½ï°¨ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½..</p>\r\n\r\n<p>(ï¿½ï¿½ï¿½Ó¸ï¿½ ï¿½Æ´Ï¶ï¿½ ï¿½ç¹«ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ùµï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½ ï¿½Ùµï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½, ï¿½Ú°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½..)</p>\r\n\r\n<p>ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ÈµÇ°Ú´Ù½Í¾ï¿½, ï¿½Ö±Ùµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ï¿½Î¸ï¿½ ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï´ï¿½. ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ú²Ù¸ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½È´Ù´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î·Æ°ï¿½ ï¿½Ò¾ï¿½ï¿½Õ´Ï´ï¿½.. ï¿½ï¿½ï¿½ï¿½ 1ï¿½â°£ ï¿½ï¿½ È¸ï¿½ç¸¦ ï¿½Ù´Ï¸é¼­ ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½Øµ×´ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½Ó°ï¿½ ï¿½Ú´Ê°Ô³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½È´Ù´ï¿½ ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï³×¿ï¿½...</p>\r\n\r\n<p>&nbsp;</p>",
+      "views": 5,
+      "create_at": "2023-06-14T08:29:58.315Z",
+      "like_user": [2]
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "title": "ï¿½Ì·Â¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¿ï¿½",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì´Âµï¿½ ï¿½ï¿½ï¿½âº¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ö³×¿ï¿½  ï¿½Û³â¿¡ï¿½ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½Âµï¿½ ï¿½ï¿½ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ 40ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\r\n\r\nï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ù¾ï¿½ï¿½Ï±ï¿½ ï¿½Ð±ï¿½ï¿½ï¿½ ï¿½Ù¾ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½æ¾´ ï¿½Ì·Â¼ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½Ù¾ï¿½ï¿½Ñµï¿½\r\n\r\nï¿½Ì·Â¼ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ó¸¶³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÔµÇ³×¿ï¿½\r\n\r\nï¿½ï¿½ ï¿½Ô»ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½êµµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ä¡¦ ï¿½ï¿½Æ° \r\n\r\nï¿½Ù¾ï¿½ï¿½ï¿½ ï¿½ÎºÐ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ß·ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·Â¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½×¿ï¿½",
+      "views": 1,
+      "create_at": "2023-06-14T08:31:45.520Z",
+      "like_user": [2]
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 6,
+    "fields": {
+      "user": 2,
+      "title": "È¸ï¿½ç°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾Ò°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½..",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..\r\nï¿½×³ï¿½ È¸ï¿½çµ· ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­, ï¿½ï¿½ï¿½ ï¿½×¾ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾Æ´ï¿½ï¿½ï¿½Ï´ï¿½.. Ã³ï¿½ï¿½ ï¿½Ô»ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ß´Âµï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½×¿ï¿½.",
+      "views": 3,
+      "create_at": "2023-06-14T08:32:22.733Z",
+      "like_user": [2, 3]
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 7,
+    "fields": {
+      "user": 3,
+      "title": "ï¿½ß°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ! ï¿½Ð¤ï¿½",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½\r\n\r\nï¿½ß°ß±ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ°ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.\r\n\r\n2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ 1ï¿½ï¿½1ï¿½ï¿½ ï¿½ï¿½ï¿½Íºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È´Ù°ï¿½ ï¿½È³ï¿½ ï¿½Þ¾Ò½ï¿½ï¿½Ï´ï¿½.\r\n\r\nï¿½ï¿½ï¿½ï¿½ ï¿½Ã±ï¿½ï¿½Ñ°ï¿½ ï¿½ï¿½ï¿½îº¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°Ôµï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´Â°É±ï¿½ï¿½?\r\n(ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...)\r\n\r\nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô°ï¿½ ï¿½ï¿½ï¿½îº¼ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½îº¼ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½ ï¿½ï¿½",
+      "views": 2,
+      "create_at": "2023-06-14T08:33:25.978Z",
+      "like_user": []
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 8,
+    "fields": {
+      "user": 3,
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½ï¿½ È¸ï¿½ç¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ñ°ï¿½ ï¿½Ø¿ï¿½ Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Âµï¿½, ï¿½ß°ï¿½ï¿½ï¿½ Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ç¸é¼­ Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸é¼­ Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½Ï°ï¿½ ï¿½Í¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ ï¿½Ù¶ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¸ï¿½ ï¿½ï¿½ ï¿½Î¼ï¿½ï¿½Î°è¸¦ ï¿½Ø¾ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ä¡ï¿½Ê´ï¿½ ï¿½Î¼ï¿½ï¿½Î°è¸¦ ï¿½Ï°ï¿½ ï¿½Ç¸é¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ã¾î³ªï¿½ï¿½ ï¿½Ç¸é¼­ ï¿½ï¿½ ï¿½Î´ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ ï¿½É·Â²ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ È¥ï¿½Ú¼ï¿½ ï¿½ï¿½ ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½Ì±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½ï¿½.. ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ ï¿½È¾ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È¾î¼­ ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ë°Å¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½.. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ç¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Þ°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ö´ï¿½ Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê³×¿ï¿½..\r\nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½..",
+      "views": 1,
+      "create_at": "2023-06-14T08:35:20.711Z",
+      "like_user": [3]
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 9,
+    "fields": {
+      "user": 4,
+      "title": "Django ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?",
+      "category": "Django",
+      "content": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½ ï¿½Ð¤Ì¤ï¿½",
+      "views": 5,
+      "create_at": "2023-06-14T08:36:26.390Z",
+      "like_user": [4, 8]
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 10,
+    "fields": {
+      "user": 5,
+      "title": "ï¿½ï¿½ï¿½ï¿½Æ®ï¿½Øµï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½×¿ï¿½",
+      "category": "ï¿½ï¿½ï¿½ï¿½Æ®ï¿½Øµï¿½",
+      "content": "ï¿½é¿£ï¿½åº¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¾Ë°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½Ê³×¿ï¿½",
+      "views": 4,
+      "create_at": "2023-06-14T08:37:08.669Z",
+      "like_user": []
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 11,
+    "fields": {
+      "user": 6,
+      "title": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½Î°Ç°ï¿½ï¿½ï¿½?",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½ï¿½10 ï¿½×·ï¿½ç¿¡ 3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ 6Ãµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½î°¡ï¿½ï¿½ 8Ãµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½î°¡ï¿½ï¿½? \r\n\r\nï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê¿ä¼ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ ï¿½ß¼Ò¿ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ ï¿½Ï½Ã´ï¿½ ï¿½Ðµéµµ ï¿½ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº»ï¿½Þ¸ï¿½ 7-8Ãµï¿½Ì¶ï¿½ï¿½ ï¿½Ðµéµµ ï¿½ï¿½Å¼ï¿½ï¿½ï¿½.",
+      "views": 1,
+      "create_at": "2023-06-14T08:37:44.596Z",
+      "like_user": []
+    }
+  },
+  {
+    "model": "posts.post_community",
+    "pk": 12,
+    "fields": {
+      "user": 7,
+      "title": "26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½é¿£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "category": "ï¿½ï¿½ï¿½ï¿½",
+      "content": "ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ç¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\r\nï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Å´Ù¸ï¿½ ï¿½Í´ï¿½ï¿½ ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.",
+      "views": 1,
+      "create_at": "2023-06-14T08:38:39.982Z",
+      "like_user": [7]
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 2,
+    "fields": {
+      "post": 6,
+      "user": 3,
+      "content": "ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½",
+      "create_at": "2023-06-14T08:32:54.202Z"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 3,
+    "fields": {
+      "post": 10,
+      "user": 8,
+      "content": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½\r\n",
+      "create_at": "2023-06-14T08:39:03.841Z"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 4,
+    "fields": {
+      "post": 9,
+      "user": 8,
+      "content": "ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "create_at": "2023-06-14T08:39:14.905Z"
+    }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 1,
+    "fields": { "post": 1, "post_image": "" }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 2,
+    "fields": { "post": 2, "post_image": "" }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 3,
+    "fields": { "post": 3, "post_image": "" }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 4,
+    "fields": { "post": 4, "post_image": "" }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 5,
+    "fields": { "post": 5, "post_image": "" }
+  },
+  {
+    "model": "posts.post_image",
+    "pk": 6,
+    "fields": { "post": 6, "post_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 6,
+    "fields": { "community_post": 4, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 7,
+    "fields": { "community_post": 4, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 8,
+    "fields": { "community_post": 4, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 9,
+    "fields": { "community_post": 4, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 10,
+    "fields": { "community_post": 5, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 11,
+    "fields": { "community_post": 6, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 12,
+    "fields": { "community_post": 7, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 13,
+    "fields": { "community_post": 8, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 14,
+    "fields": { "community_post": 9, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 15,
+    "fields": { "community_post": 10, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 16,
+    "fields": { "community_post": 11, "community_image": "" }
+  },
+  {
+    "model": "posts.community_image",
+    "pk": 17,
+    "fields": { "community_post": 12, "community_image": "" }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$mK4A38jiF6RhjL9TKtnBnL$ssxMvrr+WPqyufogtxbeNfkIanaoy48MB21+4sojSIg=",
+      "last_login": "2023-06-14T05:51:33.688Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-06-14T05:51:19.287Z",
+      "nickname": "",
+      "level": 1,
+      "experience": 3,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$4uX4qZgJe95Ma2L74cLLNp$EsyLqhGSP6ES7lvkkfTVI5ruLuaTSJ0+GyEH1emekzI=",
+      "last_login": "2023-06-14T08:27:13.135Z",
+      "is_superuser": false,
+      "username": "tester001",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T07:59:00Z",
+      "nickname": "Æ¼ï¿½ï¿½Æ¼ï¿½ï¿½",
+      "level": 1,
+      "experience": 4,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$goVgQUOywHMVaJBmrgFEHs$9JYVwTagfs/HOtqcTf00CynGIgb+q5BgDSJOxvXiFO0=",
+      "last_login": "2023-06-14T08:32:42.891Z",
+      "is_superuser": false,
+      "username": "tester002",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T07:59:36Z",
+      "nickname": "ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "level": 1,
+      "experience": 3,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$tkiVHg9iBDgur3xxk3Kzq2$Gfaci+4GvCGHRl9wFXj420IZnLbdNm1KOZvctx4Ukd8=",
+      "last_login": "2023-06-14T08:36:03.319Z",
+      "is_superuser": false,
+      "username": "tester003",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T07:59:55Z",
+      "nickname": "È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "level": 1,
+      "experience": 1,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$0qW3lQLJYNkETekuPn1voF$3ICzuupXDf/GYmr32E728KvXnmkXfK9rZZv6JylWs10=",
+      "last_login": "2023-06-14T08:36:47.915Z",
+      "is_superuser": false,
+      "username": "tester004",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:00:05Z",
+      "nickname": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "level": 1,
+      "experience": 1,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$locKkKwp8hmwABzvnS9TYJ$7l/MKwM78aYacLXUtzA+dsK40vPG0unj6GbeddcrwUI=",
+      "last_login": "2023-06-14T08:37:26.349Z",
+      "is_superuser": false,
+      "username": "tester005",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:00:20Z",
+      "nickname": "ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½",
+      "level": 1,
+      "experience": 1,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$uubK1P79BqfZdTAsd12202$8RNGoLFoTcpgvmWzQ1y80Ih409FYY53WQuFy1tiJVQI=",
+      "last_login": "2023-06-14T08:38:14.634Z",
+      "is_superuser": false,
+      "username": "tester006",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:00:31Z",
+      "nickname": "EAFA",
+      "level": 1,
+      "experience": 1,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$SLFY0MLOx6OfZHZOua0or7$5PXgZoWV5ZZud1FtzpgiGrFHyCv1Sx4v2PSTo+OVjM0=",
+      "last_login": "2023-06-14T08:38:52.890Z",
+      "is_superuser": false,
+      "username": "tester007",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:00:41Z",
+      "nickname": "starwar",
+      "level": 1,
+      "experience": 2,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$u6ElKgX7WcoOX5A31LOIaX$dO/sMnIW768cZP2gjkJZe1inWRVMksgbDm6OwFxm78k=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tester008",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:00:49Z",
+      "nickname": "ï¿½ï¿½Å¿îµµï¿½ï¿½",
+      "level": 1,
+      "experience": 0,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$WS5fj1Oe0xV3KGazyxqZ21$IelRTaBCRMW+4eJwhWyhcHCLHj/5eMBm1VJZ3xWy3ic=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tester009",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:01:00Z",
+      "nickname": "ruruni",
+      "level": 1,
+      "experience": 0,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$WFZTne9k5lpCRWQkRbx5MC$fk78pyjIeL8J4FVPNYkT3xAmJjdhNS5xOEtaHgtEA0g=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tester010",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-14T08:01:09Z",
+      "nickname": "ï¿½Ù½Ã½ï¿½ï¿½ï¿½",
+      "level": 1,
+      "experience": 0,
+      "image": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "example.com", "name": "example.com" }
+  }
+]

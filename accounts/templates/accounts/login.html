@@ -11,7 +11,7 @@
 {% block content %}
 <main class="login-container">
   <div class="login-title">
-    <h3>로 그 인</h3>
+    <h3 style="color: #6f6e7a;  text-shadow: 1px 1px lightgray;">로 그 인</h3>
   </div>
   <form action="{% url 'accounts:login' %}", method="POST">
     {% csrf_token %}

@@ -207,6 +207,7 @@ a {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 10px;
 }
 .best_post_all {
   display: flex;
@@ -227,6 +228,7 @@ a {
   align-items: center;
   padding: 12px 20px;
   background-color: white;
+  border-radius: 10px;
 }
 
 .new_post_all {
@@ -253,6 +255,7 @@ a {
   background-color: white;
   color:black;
   cursor: auto;
+  border-radius: 10px;
 }
 a:hover {
   color: inherit;

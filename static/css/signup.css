@@ -2,6 +2,10 @@ body {
   background-color: rgb(247, 247, 240);
 }
 
+a {
+  text-decoration: none;
+}
+
 .signup-container {
   display: flex;
   flex-direction: column;

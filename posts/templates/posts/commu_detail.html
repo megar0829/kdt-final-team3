@@ -81,7 +81,9 @@
             </a>
           </div>
           <div class="commu-title">
-            <div class="commuT">{{ commus.title }}</div>
+            <div class="commuT" style="font-size:22px;">
+              {{ commus.title }}
+            </div>
             <div class="time">
               {{ commus.create_at|date:"m.j H:i" }} | 조회수 {{commus.views}}
             </div>
@@ -90,11 +92,7 @@
             <div class="commu-user-ico">
               <div class="profile-img">
                 <!-- 프로필 유저 이미지 -->
-                {% if user.image %}
-                  <img src="{{ commus.user.image.url }}" alt="">
-                {% else %}
-                  <img src="{% static 'img/user.png' %}" alt="">
-                {% endif %}
+                <img src="{% static 'img/user.png' %}" alt="">
               </div>
             </div>
             <div class="commu-user-item">
@@ -127,7 +125,7 @@
           <div class="new_post">
             댓글 달기
           </div>
-            <div style="width:100%; background-color: white;">
+            <div style="width:100%; background-color: white; border-radius: 10px;">
                 <div class="commu-content-box">
                     <div class="commu-comment-item">
                         <form id="comment-form" method="POST" action="{%url 'posts:comment' commus.pk%}">
@@ -163,12 +161,7 @@
             <div class="commu-user">
               <div class="commu-user-ico">
                 <div class="profile-img">
-                  <!-- 프로필 유저 이미지 -->
-                  {% if user.image %}
-                    <img src="{{ commus.user.image.url }}" alt="">
-                  {% else %}
-                    <img src="{% static 'img/user.png' %}" alt="">
-                  {% endif %}
+                  <img src="{% static 'img/user.png' %}" alt="">
                 </div>
               </div>
               <div class="commu-user-item">
@@ -194,10 +187,10 @@
     <div class="like-main">
       <div class="like_post">
         <div class="like_post_all">
-          <div>
+          <div style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
             👍 추천글
           </div>
-          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all">더 보기</a>
+          <a href="{% url 'posts:commu_info_like' %}" class="commu-main-all" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">더 보기</a>
         </div>
       </div>
       <div>
@@ -211,7 +204,7 @@
           <div>
             <a href="{% url 'posts:commu_detail' post.pk %}" class="commu_post mb-3 col-6" data-pk="{{ post.pk }}">
               <div class="카테고리 d-flex" style="justify-content: space-between;">
-                <div class="commuT">
+                <div class="commuT" style="color: #6f6e7a; text-shadow: 1px 1px lightgray;">
                   {{ post.title }}
                 </div>
                 <div class="commuCA {% if post.category == 'Django' %}category-django{% elif post.category == 'Java' %}category-java{% elif post.category == 'Spring' %}category-spring{% elif post.category == 'DB' %}category-db{% elif post.category == 'JPA' %}category-jpa{% elif post.category == '백앤드' %}category-back{% elif post.category == '프론트앤드' %}category-front{% endif %}">
